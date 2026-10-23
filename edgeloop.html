@@ -1,0 +1,618 @@
+<title>Edgeloop</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: DCC-tool shell. Viewport-grid header, then filters | listings | detail inspector, like outliner / viewport / properties. */
+:root {
+  --bg: #eceef1;
+  --panel: #ffffff;
+  --sunk: #f4f5f7;
+  --ink: #1a1e24;
+  --muted: #5a636e;
+  --line: #d6dae0;
+  --grid: rgba(40, 52, 70, .07);
+  --accent: #c95a16;
+  --accent-soft: #fbe6d6;
+  --on-accent: #ffffff;
+  --good: #2c7f49; --good-soft: #dff1e5;
+  --warn: #9a6512; --warn-soft: #f8ecd2;
+  --bad: #b3372f;  --bad-soft: #f8dfdc;
+  --ax-x: #d4473f; --ax-y: #5b9a2c; --ax-z: #2f6bd1;
+  --mono-l: 86%; --mono-ink: #1a1e24;
+  --shadow: 0 10px 30px rgba(20, 28, 40, .12);
+  --f-display: "Unbounded", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --r: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1b1e23; --panel: #24282e; --sunk: #1f2227; --ink: #e5e8ec; --muted: #9aa3ad; --line: #363b43;
+    --grid: rgba(200, 210, 225, .06); --accent: #f08a3c; --accent-soft: #3d2b1e; --on-accent: #1b1e23;
+    --good: #6cc78b; --good-soft: #1e3427; --warn: #e2b55a; --warn-soft: #3a3020; --bad: #ef7d73; --bad-soft: #3d2423;
+    --mono-l: 34%; --mono-ink: #eef0f2; --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1b1e23; --panel: #24282e; --sunk: #1f2227; --ink: #e5e8ec; --muted: #9aa3ad; --line: #363b43;
+  --grid: rgba(200, 210, 225, .06); --accent: #f08a3c; --accent-soft: #3d2b1e; --on-accent: #1b1e23;
+  --good: #6cc78b; --good-soft: #1e3427; --warn: #e2b55a; --warn-soft: #3a3020; --bad: #ef7d73; --bad-soft: #3d2423;
+  --mono-l: 34%; --mono-ink: #eef0f2; --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1480px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Header */
+.top {
+  border-bottom: 1px solid var(--line);
+  background-color: var(--panel);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; font-family: var(--f-display); font-weight: 700; font-size: 18px; letter-spacing: -.01em; }
+.logo svg { width: 26px; height: 26px; }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav span { padding: 6px 10px; border-radius: 6px; font-size: 13.5px; color: var(--muted); }
+.nav span.on { background: var(--ink); color: var(--panel); }
+.nav span em { font-style: normal; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; margin-left: 4px; opacity: .7; }
+
+.hero { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; padding-block: 22px 26px; }
+.hero h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 4.2vw, 44px); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 10px; text-wrap: balance; }
+.hero h1 b { color: var(--accent); font-weight: 700; }
+.hero p { margin: 0; color: var(--muted); max-width: 60ch; }
+.search { display: flex; gap: 8px; margin-top: 18px; max-width: 640px; }
+.search input { flex: 1; min-width: 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
+.search input::placeholder { color: var(--muted); }
+.viewport { position: relative; justify-self: center; width: 220px; max-width: 100%; aspect-ratio: 1; display: none; }
+.viewport canvas { width: 100%; height: 100%; display: block; }
+.viewport .hud { position: absolute; left: 0; top: 0; font-family: var(--f-mono); font-size: 10.5px; color: var(--muted); line-height: 1.4; }
+@media (min-width: 760px) { .hero { grid-template-columns: 1fr 220px; } .viewport { display: block; } }
+
+/* Stats strip */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-block: 18px; }
+.stat { background: var(--panel); padding: 12px 14px; }
+.stat .k { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.stat .v { font-family: var(--f-mono); font-weight: 600; font-size: 20px; font-variant-numeric: tabular-nums; }
+@media (min-width: 700px) { .stats { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+/* Main layout */
+.main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; padding-bottom: 48px; align-items: start; }
+@media (min-width: 900px) { .main { grid-template-columns: 240px minmax(0, 1fr); } }
+@media (min-width: 1240px) { .main { grid-template-columns: 230px minmax(0, 1fr) 390px; } }
+
+/* Filters */
+.ftoggle { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 11px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); cursor: pointer; font-weight: 600; }
+.filters { display: none; flex-direction: column; gap: 18px; margin-top: 10px; }
+.filters.show { display: flex; }
+@media (min-width: 900px) { .ftoggle { display: none; } .filters { display: flex; margin-top: 0; position: sticky; top: 12px; } }
+.fgroup h3 { margin: 0 0 8px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 10px; font-size: 13px; cursor: pointer; }
+.chip:hover { border-color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chk { display: flex; gap: 8px; align-items: center; font-size: 14px; padding: 3px 0; cursor: pointer; }
+.chk input { accent-color: var(--accent); width: 16px; height: 16px; }
+.range { display: flex; flex-direction: column; gap: 4px; }
+.range input { accent-color: var(--accent); width: 100%; }
+.range output { font-family: var(--f-mono); font-size: 13px; }
+.reset { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font-weight: 600; text-align: left; }
+
+/* Listing toolbar */
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.toolbar .count { color: var(--muted); font-size: 14px; }
+.toolbar .count b { color: var(--ink); }
+.toolbar select { padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.empty { padding: 40px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--r); }
+
+/* Job row */
+.job {
+  display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 6px 14px; align-items: start;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; cursor: pointer;
+  transition: border-color .15s;
+}
+.job:hover { border-color: var(--muted); }
+.job.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.mono { width: 44px; height: 44px; border-radius: 8px; display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: 14px; color: var(--mono-ink); background: hsl(var(--h) 38% var(--mono-l)); }
+.jt { font-weight: 600; font-size: 16px; line-height: 1.3; }
+.js { color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.tag { font-size: 12px; padding: 2px 8px; border-radius: 4px; background: var(--sunk); border: 1px solid var(--line); white-space: nowrap; }
+.tag.good { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.tag.warn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.tag.bad { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.tag.new { background: var(--accent-soft); color: var(--accent); border-color: transparent; font-weight: 600; }
+.jr { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; text-align: right; }
+.sal { font-family: var(--f-mono); font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sal small { display: block; font-family: var(--f-body); font-weight: 400; font-size: 11.5px; color: var(--muted); }
+.rate { display: flex; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: 13px; }
+.pips { display: inline-flex; gap: 2px; }
+.pips i { width: 8px; height: 8px; border-radius: 2px; background: var(--line); }
+.pips i.f { background: currentColor; }
+.rate.good { color: var(--good); } .rate.warn { color: var(--warn); } .rate.bad { color: var(--bad); }
+.rate .gd { font-family: var(--f-body); color: var(--muted); font-size: 11.5px; }
+.save { background: none; border: 1px solid var(--line); border-radius: 6px; width: 32px; height: 32px; cursor: pointer; display: grid; place-items: center; color: var(--muted); }
+.save[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.save svg { width: 16px; height: 16px; }
+.posted { font-size: 12px; color: var(--muted); }
+@media (max-width: 560px) {
+  .job { grid-template-columns: 40px minmax(0, 1fr); }
+  .mono { width: 40px; height: 40px; }
+  .jr { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; text-align: left; border-top: 1px solid var(--line); padding-top: 10px; margin-top: 4px; }
+}
+
+/* Detail inspector */
+.backdrop { position: fixed; inset: 0; background: rgba(10, 14, 20, .45); z-index: 20; }
+.detail { display: none; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); }
+.detail.open {
+  display: block; position: fixed; z-index: 21; top: 0; right: 0; bottom: 0; width: min(460px, 100%); border-radius: 0; overflow-y: auto; box-shadow: var(--shadow);
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-right: env(safe-area-inset-right, 0px);
+}
+@media (min-width: 1240px) {
+  .detail, .detail.open { display: block; position: sticky; top: 12px; width: auto; max-height: calc(100vh - 24px); overflow-y: auto; border-radius: var(--r); box-shadow: none; padding: 0; z-index: auto; }
+  .backdrop { display: none; }
+  .dclose { display: none !important; }
+}
+.dhead { padding: 18px; border-bottom: 1px solid var(--line); position: relative; }
+.dhead .eyebrow { font-family: var(--f-mono); font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.dhead h2 { font-family: var(--f-display); font-weight: 500; font-size: 21px; line-height: 1.2; margin: 6px 0 4px; text-wrap: balance; letter-spacing: -.01em; }
+.dhead .who { color: var(--muted); }
+.dclose { position: absolute; right: 12px; top: 12px; background: var(--sunk); border: 1px solid var(--line); border-radius: 6px; width: 34px; height: 34px; cursor: pointer; font-size: 18px; line-height: 1; }
+.dbody { padding: 18px; display: flex; flex-direction: column; gap: 20px; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.fact { background: var(--panel); padding: 9px 11px; min-width: 0; }
+.fact .k { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.fact .v { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+.fact .v.m { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.dsec h4 { margin: 0 0 8px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.dsec p { margin: 0; }
+.dsec ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.signal { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 6px; font-size: 14px; }
+.signal.good { background: var(--good-soft); } .signal.warn { background: var(--warn-soft); } .signal.bad { background: var(--bad-soft); }
+.signal b { display: block; }
+.signals { display: flex; flex-direction: column; gap: 6px; }
+.subs { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.sub { display: grid; grid-template-columns: minmax(0, 1fr) 90px 30px; gap: 10px; align-items: center; font-size: 14px; }
+.sub > span:first-child { color: var(--ink); }
+.sub .b { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.sub .b i { display: block; height: 100%; background: currentColor; }
+.sub .n { font-family: var(--f-mono); font-size: 13px; text-align: right; }
+.sub.good { color: var(--good); } .sub.warn { color: var(--warn); } .sub.bad { color: var(--bad); }
+.apply { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { padding: 10px 16px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); cursor: pointer; font-weight: 600; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.note { font-size: 12.5px; color: var(--muted); }
+
+.foot { border-top: 1px solid var(--line); padding-block: 18px 30px; color: var(--muted); font-size: 13px; }
+.foot p { margin: 0; max-width: 80ch; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 10v12L16 29 4 22V10z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10l12 7 12-7M16 17v12" fill="none" stroke="var(--accent)" stroke-width="2"/></svg>
+        Edgeloop
+      </div>
+      <nav class="nav" aria-label="Sections">
+        <span class="on">Jobs</span>
+        <span>Salaries<em>soon</em></span>
+        <span>Studios<em>soon</em></span>
+        <span>Art test log<em>soon</em></span>
+      </nav>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>Every 3D art job, <b>one board.</b></h1>
+        <p>Games first, plus film, animation, archviz, product viz, advertising and XR. Every listing shows salary, studio rating, work mode and whether the art test is paid.</p>
+        <form class="search" id="searchForm" role="search">
+          <input id="q" type="search" placeholder="Search roles, studios, software or cities" aria-label="Search jobs">
+        </form>
+      </div>
+      <div class="viewport" aria-hidden="true">
+        <canvas id="vp" width="440" height="440"></canvas>
+        <div class="hud">Persp · Wireframe<br><span id="vpstat">Verts 42 · Edges 120</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="stats" aria-label="Summary of matching jobs">
+    <div class="stat"><div class="k">Open roles</div><div class="v" id="sCount">0</div></div>
+    <div class="stat"><div class="k">Median pay (GBP)</div><div class="v" id="sMed">–</div></div>
+    <div class="stat"><div class="k">Remote</div><div class="v" id="sRemote">–</div></div>
+    <div class="stat"><div class="k">Paid art tests</div><div class="v" id="sPaid">–</div></div>
+    <div class="stat"><div class="k">Avg artist rating</div><div class="v" id="sRate">–</div></div>
+  </section>
+
+  <div class="main">
+    <aside>
+      <button class="ftoggle" id="ftoggle" aria-expanded="false" aria-controls="filters">Filters <span id="fcount"></span></button>
+      <div class="filters" id="filters">
+        <div class="fgroup"><h3>Discipline</h3><div class="chips" id="fDisc"></div></div>
+        <div class="fgroup"><h3>Industry</h3><div class="chips" id="fInd"></div></div>
+        <div class="fgroup"><h3>Work mode</h3><div class="chips" id="fMode"></div></div>
+        <div class="fgroup"><h3>Seniority</h3><div class="chips" id="fLvl"></div></div>
+        <div class="fgroup"><h3>Contract</h3><div class="chips" id="fType"></div></div>
+        <div class="fgroup range">
+          <h3>Minimum pay</h3>
+          <input type="range" id="minSal" min="0" max="110" step="5" value="0" aria-label="Minimum pay in thousands of pounds per year">
+          <output id="minSalOut">Any</output>
+        </div>
+        <div class="fgroup range">
+          <h3>Minimum artist rating</h3>
+          <input type="range" id="minRate" min="0" max="4.5" step="0.1" value="0" aria-label="Minimum artist rating">
+          <output id="minRateOut">Any</output>
+        </div>
+        <div class="fgroup">
+          <h3>Must have</h3>
+          <label class="chk"><input type="checkbox" id="noUnpaid"> No unpaid art test</label>
+          <label class="chk"><input type="checkbox" id="visa"> Visa sponsorship</label>
+          <label class="chk"><input type="checkbox" id="listed"> Salary listed by studio</label>
+          <label class="chk"><input type="checkbox" id="noLayoffs"> No layoffs in last 12 months</label>
+          <label class="chk"><input type="checkbox" id="savedOnly"> Saved jobs only</label>
+        </div>
+        <button class="reset" id="reset" type="button">Clear all filters</button>
+      </div>
+    </aside>
+
+    <section aria-label="Job listings">
+      <div class="toolbar">
+        <div class="count" id="countLine"></div>
+        <label>
+          <span class="note">Sort </span>
+          <select id="sort" aria-label="Sort jobs">
+            <option value="new">Newest</option>
+            <option value="pay">Highest pay</option>
+            <option value="rate">Best rated studio</option>
+          </select>
+        </label>
+      </div>
+      <div class="list" id="list"></div>
+    </section>
+
+    <div class="backdrop" id="backdrop" hidden></div>
+    <aside class="detail" id="detail" aria-label="Job details"></aside>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Concept build. Every studio, listing, salary and rating on this page is a made-up sample to show the layout. In a live version, listings would come from studio careers pages and job boards. Ratings and art test policies would come from Edgeloop's own reviews, written by artists who verify they worked at the studio. Pay is converted to GBP at approximate rates.</p>
+  </div>
+</footer>
+
+<script>
+const RATE = { GBP: 1, EUR: 0.85, USD: 0.79, CAD: 0.575, SEK: 0.075 };
+const SYM = { GBP: '£', EUR: '€', USD: '$', CAD: 'CA$', SEK: '' };
+const PER = { yr: 1000, day: 220, hr: 1760 };
+
+const JOBS = [
+  { id: 1, t: 'Senior Character Artist', s: 'Ironbark Interactive', loc: 'Leamington Spa, UK', mode: 'Hybrid', ind: 'Games', disc: 'Character', lvl: 'Senior', type: 'Full-time', sal: [52, 65], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.1, rc: 212, d: 2, test: 'Paid', visa: true, size: '150–200', eng: 'Unreal Engine 5', tools: ['ZBrush', 'Maya', 'Substance Painter', 'Marmoset'], ship: 'Ashfall Tactics (2024)', lay: null, desc: 'Own hero characters from sculpt to in-engine for an unannounced third-person action game. Work with concept and rigging to hit a realistic, slightly stylised look.' },
+  { id: 2, t: 'Environment Artist', s: 'Hollow Pine Games', loc: 'Remote, EU time zones', mode: 'Remote', ind: 'Games', disc: 'Environment', lvl: 'Mid', type: 'Full-time', sal: [45, 55], cur: 'EUR', per: 'yr', src: 'Listed', r: 4.4, rc: 38, d: 1, test: 'None', visa: false, size: '30–50', eng: 'Unreal Engine 5', tools: ['Blender', 'Substance Designer', 'SpeedTree', 'Unreal'], ship: 'Lanternfall (2023)', lay: null, desc: 'Build forest and ruin biomes for a cosy exploration game. Modular kits, trim sheets and foliage. Hiring is portfolio review plus one interview, no test.' },
+  { id: 3, t: 'Junior 3D Generalist', s: 'Brightwell Visual', loc: 'Manchester, UK', mode: 'On-site', ind: 'Product viz', disc: 'Generalist', lvl: 'Junior', type: 'Full-time', sal: [26, 30], cur: 'GBP', per: 'yr', src: 'Listed', r: 3.6, rc: 19, d: 5, test: 'Unpaid', visa: false, size: '20–30', eng: 'V-Ray', tools: ['3ds Max', 'V-Ray', 'Photoshop'], ship: 'Retail and furniture clients', lay: null, desc: 'Model, light and render furniture and homeware for e-commerce. Good first role if you like clean topology and fast turnaround.' },
+  { id: 4, t: 'Lead Technical Artist', s: 'Granite Peak Entertainment', loc: 'Montréal, Canada', mode: 'Hybrid', ind: 'Games', disc: 'Technical Art', lvl: 'Lead', type: 'Full-time', sal: [120, 145], cur: 'CAD', per: 'yr', src: 'Listed', r: 3.8, rc: 640, d: 3, test: 'None', visa: true, size: '500–1,000', eng: 'Unreal Engine 5', tools: ['Houdini', 'Python', 'HLSL', 'Unreal'], ship: 'Frontier Outriders series', lay: 'Restructure, March 2026 (about 8% of staff)', desc: 'Lead a team of five tech artists across shaders, procedural tools and performance budgets for an open-world sequel.' },
+  { id: 5, t: 'Hard Surface Artist, Weapons', s: 'Redcliff Games', loc: 'Remote, US or Canada', mode: 'Remote', ind: 'Games', disc: 'Hard Surface', lvl: 'Senior', type: 'Contract', sal: [55, 70], cur: 'USD', per: 'hr', src: 'Listed', r: 3.9, rc: 288, d: 6, test: 'Paid', visa: false, size: '250–300', eng: 'Proprietary', tools: ['Maya', 'ZBrush', 'Substance Painter', 'Marmoset'], ship: 'Breachline (2025)', lay: null, desc: 'Six-month contract making first-person weapons and attachments. High-poly to bake to texture, with an extension likely.' },
+  { id: 6, t: 'Creature Modeller', s: 'Kestrel VFX', loc: 'London, UK', mode: 'On-site', ind: 'Film & TV', disc: 'Character', lvl: 'Mid', type: 'Contract', sal: [300, 380], cur: 'GBP', per: 'day', src: 'Listed', r: 3.7, rc: 910, d: 4, test: 'None', visa: true, size: '900+', eng: 'Offline (Renderman)', tools: ['ZBrush', 'Maya', 'Mari', 'Houdini'], ship: 'Feature film and streaming series', lay: null, desc: 'Sculpt and model creatures for an unannounced fantasy series. Strong anatomy and UDIM workflow expected.' },
+  { id: 7, t: 'Archviz Artist', s: 'Parallax Visual', loc: 'Stockholm, Sweden', mode: 'Hybrid', ind: 'Archviz', disc: 'Generalist', lvl: 'Mid', type: 'Full-time', sal: [480, 560], cur: 'SEK', per: 'yr', src: 'Listed', r: 4.5, rc: 27, d: 8, test: 'Unpaid', visa: true, size: '30–40', eng: 'Corona / Unreal', tools: ['3ds Max', 'Corona', 'Forest Pack', 'Unreal'], ship: 'Residential and competition work', lay: null, desc: 'Produce stills and real-time walkthroughs for architects. Mood and lighting matter more than speed here.' },
+  { id: 8, t: 'Props Artist', s: 'Mosswood Games', loc: 'Dundee, UK', mode: 'Hybrid', ind: 'Games', disc: 'Props', lvl: 'Junior', type: 'Full-time', sal: [27, 32], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.2, rc: 54, d: 0, test: 'Paid', visa: false, size: '50–70', eng: 'Unity', tools: ['Blender', 'Substance Painter', 'Unity'], ship: 'Tidecaller (2025)', lay: null, desc: 'Hand-painted style props for a stylised co-op adventure. Mentorship from two senior artists.' },
+  { id: 9, t: 'Rigging Artist', s: 'Copperline Animation', loc: 'Vancouver, Canada', mode: 'On-site', ind: 'Animation', disc: 'Rigging', lvl: 'Mid', type: 'Full-time', sal: [78, 92], cur: 'CAD', per: 'yr', src: 'Est.', r: 3.5, rc: 176, d: 9, test: 'None', visa: true, size: '400–500', eng: 'Offline (Arnold)', tools: ['Maya', 'Python', 'mGear'], ship: 'Animated features and series', lay: 'Two rounds, late 2025', desc: 'Body and facial rigs for an animated feature. Python tooling experience a big plus.' },
+  { id: 10, t: 'Senior Lighting Artist', s: 'Fathom Interactive', loc: 'Remote, UK', mode: 'Remote', ind: 'Games', disc: 'Lighting', lvl: 'Senior', type: 'Full-time', sal: [55, 68], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.0, rc: 140, d: 2, test: 'None', visa: false, size: '200–250', eng: 'Unreal Engine 5', tools: ['Unreal', 'Lumen', 'Nuke'], ship: 'Deepwater (2024)', lay: null, desc: 'Own lighting for narrative levels in a horror title. You will work closely with the art director and level designers.' },
+  { id: 11, t: 'XR 3D Artist', s: 'Tessellate XR', loc: 'Austin, TX, USA', mode: 'Hybrid', ind: 'XR', disc: 'Generalist', lvl: 'Mid', type: 'Full-time', sal: [85, 100], cur: 'USD', per: 'yr', src: 'Listed', r: 4.3, rc: 41, d: 7, test: 'Paid', visa: false, size: '60–80', eng: 'Unity', tools: ['Blender', 'Unity', 'Substance Painter'], ship: 'Training sims for healthcare', lay: null, desc: 'Optimised assets for standalone headsets. Tight poly and draw-call budgets, so you need to love optimisation.' },
+  { id: 12, t: 'Senior CG Product Artist', s: 'Lumen & Ash', loc: 'Amsterdam, Netherlands', mode: 'Hybrid', ind: 'Advertising', disc: 'Generalist', lvl: 'Senior', type: 'Full-time', sal: [60, 72], cur: 'EUR', per: 'yr', src: 'Listed', r: 3.9, rc: 88, d: 11, test: 'Unpaid', visa: true, size: '100–150', eng: 'Redshift', tools: ['Cinema 4D', 'Redshift', 'Houdini'], ship: 'Campaigns for consumer tech brands', lay: null, desc: 'Hero product renders and motion for global ad campaigns. Strong eye for materials and studio lighting.' },
+  { id: 13, t: 'Principal Environment Artist', s: 'Saltmarsh Studios', loc: 'Guildford, UK', mode: 'Hybrid', ind: 'Games', disc: 'Environment', lvl: 'Principal', type: 'Full-time', sal: [78, 95], cur: 'GBP', per: 'yr', src: 'Est.', r: 4.0, rc: 395, d: 1, test: 'None', visa: true, size: '300–400', eng: 'Unreal Engine 5', tools: ['Unreal', 'Houdini', 'Substance Designer', 'Gaea'], ship: 'Coastline Racing series', lay: null, desc: 'Set environment quality bar across the project, build pipelines for large landscapes, mentor the environment team.' },
+  { id: 14, t: 'Character Artist (Outsourcing)', s: 'Quarry Art Services', loc: 'Remote, Warsaw hub', mode: 'Remote', ind: 'Games', disc: 'Character', lvl: 'Mid', type: 'Freelance', sal: [250, 320], cur: 'EUR', per: 'day', src: 'Listed', r: 3.4, rc: 230, d: 3, test: 'Paid', visa: false, size: '500+', eng: 'Client engines', tools: ['ZBrush', 'Maya', 'Marvelous Designer', 'Substance Painter'], ship: 'Outsourced work on AAA titles', lay: 'Contractor cuts, January 2026', desc: 'Rolling freelance work on realistic characters for AAA clients. Fast iteration with client feedback rounds.' },
+  { id: 15, t: 'Real-time VFX Artist', s: 'Velvet Signal', loc: 'Helsinki, Finland', mode: 'On-site', ind: 'Games', disc: 'VFX', lvl: 'Mid', type: 'Full-time', sal: [52, 62], cur: 'EUR', per: 'yr', src: 'Listed', r: 4.6, rc: 72, d: 5, test: 'Paid', visa: true, size: '80–100', eng: 'Unity', tools: ['Unity VFX Graph', 'Houdini', 'Photoshop'], ship: 'Pocket Kingdoms (mobile, 2022)', lay: null, desc: 'Spells, hits and UI effects for a mobile strategy game. Readable effects on small screens and tight budgets.' },
+  { id: 16, t: 'Technical Animator', s: 'Ironbark Interactive', loc: 'Leamington Spa, UK', mode: 'Hybrid', ind: 'Games', disc: 'Rigging', lvl: 'Mid', type: 'Full-time', sal: [42, 50], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.1, rc: 212, d: 12, test: 'Paid', visa: true, size: '150–200', eng: 'Unreal Engine 5', tools: ['Maya', 'Python', 'Unreal Control Rig'], ship: 'Ashfall Tactics (2024)', lay: null, desc: 'Rig characters and build animation tooling in Maya and Control Rig. Bridge between animation and code.' },
+  { id: 17, t: 'Junior Texture Artist', s: 'Kestrel VFX', loc: 'Montréal, Canada', mode: 'On-site', ind: 'Film & TV', disc: 'Texturing', lvl: 'Junior', type: 'Full-time', sal: [55, 62], cur: 'CAD', per: 'yr', src: 'Est.', r: 3.7, rc: 910, d: 6, test: 'None', visa: true, size: '900+', eng: 'Offline (Renderman)', tools: ['Mari', 'Substance Painter', 'Nuke'], ship: 'Feature film and streaming series', lay: null, desc: 'Texture and look-dev assets for film. Training programme for juniors in the first three months.' },
+  { id: 18, t: 'Medical 3D Visualiser', s: 'Corvid Medical Media', loc: 'Remote, UK', mode: 'Remote', ind: 'Product viz', disc: 'Generalist', lvl: 'Mid', type: 'Full-time', sal: [38, 46], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.2, rc: 16, d: 14, test: 'Unpaid', visa: false, size: '10–20', eng: 'Cycles', tools: ['Blender', 'ZBrush', 'After Effects'], ship: 'Device and pharma animations', lay: null, desc: 'Anatomical models and short animations explaining medical devices. Anatomy knowledge counts more than polish.' },
+  { id: 19, t: 'Senior Vehicle Artist', s: 'Granite Peak Entertainment', loc: 'Remote, Canada', mode: 'Remote', ind: 'Games', disc: 'Hard Surface', lvl: 'Senior', type: 'Full-time', sal: [105, 125], cur: 'CAD', per: 'yr', src: 'Listed', r: 3.8, rc: 640, d: 4, test: 'Paid', visa: false, size: '500–1,000', eng: 'Unreal Engine 5', tools: ['Maya', 'Substance Painter', 'Unreal'], ship: 'Frontier Outriders series', lay: 'Restructure, March 2026 (about 8% of staff)', desc: 'Drivable vehicles with damage states. Accurate scale, clean UVs and LOD chains.' },
+  { id: 20, t: 'Character Artist', s: 'Hollow Pine Games', loc: 'Remote, EU time zones', mode: 'Remote', ind: 'Games', disc: 'Character', lvl: 'Mid', type: 'Full-time', sal: [44, 52], cur: 'EUR', per: 'yr', src: 'Listed', r: 4.4, rc: 38, d: 10, test: 'None', visa: false, size: '30–50', eng: 'Unreal Engine 5', tools: ['Blender', 'ZBrush', 'Substance Painter'], ship: 'Lanternfall (2023)', lay: null, desc: 'Stylised characters and creatures. Readable silhouettes and hand-crafted textures.' },
+  { id: 21, t: 'Stylised Environment Artist', s: 'Mosswood Games', loc: 'Dundee, UK', mode: 'Hybrid', ind: 'Games', disc: 'Environment', lvl: 'Mid', type: 'Full-time', sal: [36, 44], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.2, rc: 54, d: 3, test: 'Paid', visa: false, size: '50–70', eng: 'Unity', tools: ['Blender', 'Substance Painter', 'Unity', 'Photoshop'], ship: 'Tidecaller (2025)', lay: null, desc: 'Island and village environments with a painterly look. Strong colour sense and vertex painting skills.' },
+  { id: 22, t: 'Junior Environment Artist', s: 'Saltmarsh Studios', loc: 'Guildford, UK', mode: 'On-site', ind: 'Games', disc: 'Environment', lvl: 'Junior', type: 'Full-time', sal: [28, 33], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.0, rc: 395, d: 2, test: 'Paid', visa: false, size: '300–400', eng: 'Unreal Engine 5', tools: ['Unreal', 'Maya', 'Substance Painter'], ship: 'Coastline Racing series', lay: null, desc: 'Dress trackside environments and build props under senior guidance. Graduates welcome.' },
+  { id: 23, t: 'Animator, Creatures', s: 'Copperline Animation', loc: 'Vancouver, Canada', mode: 'Hybrid', ind: 'Animation', disc: 'Animation', lvl: 'Senior', type: 'Contract', sal: [48, 58], cur: 'CAD', per: 'hr', src: 'Est.', r: 3.5, rc: 176, d: 5, test: 'None', visa: true, size: '400–500', eng: 'Offline (Arnold)', tools: ['Maya', 'Shotgrid'], ship: 'Animated features and series', lay: 'Two rounds, late 2025', desc: 'Keyframe quadrupeds and fantasy creatures for a feature. Nine-month contract.' },
+  { id: 24, t: 'Gameplay Animator', s: 'Fathom Interactive', loc: 'Bristol, UK', mode: 'Hybrid', ind: 'Games', disc: 'Animation', lvl: 'Mid', type: 'Full-time', sal: [40, 48], cur: 'GBP', per: 'yr', src: 'Listed', r: 4.0, rc: 140, d: 8, test: 'Paid', visa: false, size: '200–250', eng: 'Unreal Engine 5', tools: ['Maya', 'MotionBuilder', 'Unreal'], ship: 'Deepwater (2024)', lay: null, desc: 'Player locomotion and combat. Comfortable cleaning mocap and hand-keying.' }
+];
+
+const PORTFOLIO = {
+  Character: ['Two or three finished characters, not busts only', 'Wireframes, UV layouts and texture sheets', 'At least one shown in a real-time engine'],
+  Environment: ['One or two complete scenes with a clear story', 'Breakdowns of modular kits and trim sheets', 'Lighting and composition passes'],
+  Props: ['A range of materials: wood, metal, cloth', 'Wireframes with sensible poly counts', 'Texture maps shown flat'],
+  'Hard Surface': ['High-poly and low-poly side by side', 'Clean bakes with no artefacts', 'Material breakdown and texel density notes'],
+  'Technical Art': ['Shaders or tools with short video demos', 'Code samples or a GitHub link', 'Before and after performance numbers'],
+  Rigging: ['Rig demo reel with controls visible', 'Deformation tests at extreme poses', 'Any scripts or tools you wrote'],
+  Animation: ['A short reel, best work first, under 90 seconds', 'Body mechanics and acting shots', 'Shot breakdowns where useful'],
+  Lighting: ['Before and after lighting passes', 'Time-of-day or mood variations of one scene', 'Notes on light budgets and performance'],
+  VFX: ['Effects in context, not just isolated', 'Texture and flipbook breakdowns', 'Short reel with stats shown'],
+  Texturing: ['Close-ups of surface detail', 'UDIM layouts and material IDs', 'Turntables under neutral lighting'],
+  Generalist: ['Finished renders across a few subjects', 'Clay renders and wireframes', 'Turnaround times if you have them']
+};
+
+const DISC = ['Character', 'Environment', 'Props', 'Hard Surface', 'Technical Art', 'Rigging', 'Animation', 'Lighting', 'VFX', 'Texturing', 'Generalist'];
+const IND = ['Games', 'Film & TV', 'Animation', 'Archviz', 'Product viz', 'Advertising', 'XR'];
+const MODE = ['Remote', 'Hybrid', 'On-site'];
+const LVL = ['Junior', 'Mid', 'Senior', 'Lead', 'Principal'];
+const TYPE = ['Full-time', 'Contract', 'Freelance'];
+
+const st = { q: '', disc: new Set(), ind: new Set(), mode: new Set(), lvl: new Set(), type: new Set(), minSal: 0, minRate: 0, noUnpaid: false, visa: false, listed: false, noLayoffs: false, savedOnly: false, sort: 'new', sel: null };
+let saved = new Set();
+try { saved = new Set(JSON.parse(localStorage.getItem('edgeloop-saved') || '[]')); } catch (e) {}
+const persist = () => { try { localStorage.setItem('edgeloop-saved', JSON.stringify([...saved])); } catch (e) {} };
+
+const $ = id => document.getElementById(id);
+const gbpYear = j => ((j.sal[0] + j.sal[1]) / 2) * PER[j.per] * RATE[j.cur];
+const reviewers = j => Math.round(j.rc / 7) + 3;
+const SUBS = [['Work-life balance', 'wlb'], ['Pay fairness', 'pay'], ['Art direction & feedback', 'fb'], ['Career growth', 'grow']];
+const subScore = (j, k) => { let h = 0; for (const c of j.s + k) h = (h * 33 + c.charCodeAt(0)) % 1000; return Math.max(1, Math.min(5, j.r + (h / 1000 - 0.5) * 1.2)); };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function fmtSal(j) {
+  const sy = SYM[j.cur];
+  if (j.per === 'yr') {
+    return j.cur === 'SEK' ? `${j.sal[0]}k–${j.sal[1]}k kr` : `${sy}${j.sal[0]}k–${j.sal[1]}k`;
+  }
+  return `${sy}${j.sal[0]}–${j.sal[1]}/${j.per}`;
+}
+const fmtGbp = n => '£' + Math.round(n / 1000) + 'k';
+const rateCls = r => r >= 4 ? 'good' : r >= 3.6 ? 'warn' : 'bad';
+const testCls = t => t === 'Paid' ? 'good' : t === 'Unpaid' ? 'warn' : '';
+const testLbl = t => t === 'None' ? 'No art test' : t + ' art test';
+const posted = d => d === 0 ? 'Today' : d === 1 ? 'Yesterday' : d + ' days ago';
+const initials = s => s.split(/\s+/).filter(w => /^[A-Z]/.test(w)).slice(0, 2).map(w => w[0]).join('');
+const hue = s => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+function pips(r) {
+  let out = '<span class="pips" aria-hidden="true">';
+  for (let i = 1; i <= 5; i++) out += `<i class="${r >= i - 0.25 ? 'f' : ''}"></i>`;
+  return out + '</span>';
+}
+
+function chips(el, items, set) {
+  el.innerHTML = items.map(v => `<button type="button" class="chip" aria-pressed="false" data-v="${esc(v)}">${esc(v)}</button>`).join('');
+  el.addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    const v = b.dataset.v;
+    set.has(v) ? set.delete(v) : set.add(v);
+    b.setAttribute('aria-pressed', set.has(v));
+    render();
+  });
+}
+chips($('fDisc'), DISC, st.disc);
+chips($('fInd'), IND, st.ind);
+chips($('fMode'), MODE, st.mode);
+chips($('fLvl'), LVL, st.lvl);
+chips($('fType'), TYPE, st.type);
+
+function filtered() {
+  const q = st.q.trim().toLowerCase();
+  let out = JOBS.filter(j => {
+    if (q && ![j.t, j.s, j.loc, j.disc, j.ind, j.eng, ...j.tools].join(' ').toLowerCase().includes(q)) return false;
+    if (st.disc.size && !st.disc.has(j.disc)) return false;
+    if (st.ind.size && !st.ind.has(j.ind)) return false;
+    if (st.mode.size && !st.mode.has(j.mode)) return false;
+    if (st.lvl.size && !st.lvl.has(j.lvl)) return false;
+    if (st.type.size && !st.type.has(j.type)) return false;
+    if (st.minSal && gbpYear(j) < st.minSal * 1000) return false;
+    if (st.minRate && j.r < st.minRate) return false;
+    if (st.noUnpaid && j.test === 'Unpaid') return false;
+    if (st.visa && !j.visa) return false;
+    if (st.listed && j.src !== 'Listed') return false;
+    if (st.noLayoffs && j.lay) return false;
+    if (st.savedOnly && !saved.has(j.id)) return false;
+    return true;
+  });
+  const by = { new: (a, b) => a.d - b.d, pay: (a, b) => gbpYear(b) - gbpYear(a), rate: (a, b) => b.r - a.r || a.d - b.d };
+  return out.sort(by[st.sort]);
+}
+
+const saveSvg = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h8v12l-4-3-4 3z" fill="currentColor" fill-opacity="VAL" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+
+function card(j) {
+  const on = saved.has(j.id);
+  return `<article class="job${st.sel === j.id ? ' sel' : ''}" tabindex="0" data-id="${j.id}" aria-label="${esc(j.t)} at ${esc(j.s)}">
+    <div class="mono" style="--h:${hue(j.s)}">${initials(j.s)}</div>
+    <div style="min-width:0">
+      <div class="jt">${esc(j.t)}</div>
+      <div class="js">${esc(j.s)} · ${esc(j.loc)}</div>
+      <div class="tags">
+        ${j.d <= 2 ? '<span class="tag new">New</span>' : ''}
+        <span class="tag">${j.mode}</span>
+        <span class="tag">${j.lvl}</span>
+        <span class="tag">${j.type}</span>
+        <span class="tag">${esc(j.ind)}</span>
+        <span class="tag ${testCls(j.test)}">${testLbl(j.test)}</span>
+        ${j.lay ? '<span class="tag bad">Recent layoffs</span>' : ''}
+      </div>
+    </div>
+    <div class="jr">
+      <div class="sal">${fmtSal(j)}<small>${j.src === 'Listed' ? 'Listed' : 'Estimate'}${j.cur === 'GBP' && j.per === 'yr' ? '' : ` · ≈ ${fmtGbp(gbpYear(j))} a year`}</small></div>
+      <div class="rate ${rateCls(j.r)}" title="Artist rating from ${reviewers(j)} verified artists">${pips(j.r)} ${j.r.toFixed(1)} <span class="gd">${reviewers(j)} artists</span></div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="posted">${posted(j.d)}</span>
+        <button type="button" class="save" aria-pressed="${on}" aria-label="${on ? 'Remove from saved' : 'Save job'}" data-save="${j.id}">${saveSvg.replace('VAL', on ? '1' : '0')}</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function median(a) { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; }
+
+function render() {
+  const list = filtered();
+  $('list').innerHTML = list.length ? list.map(card).join('') :
+    '<div class="empty">No roles match these filters. Try removing a discipline or lowering the minimum pay.</div>';
+  $('countLine').innerHTML = `<b>${list.length}</b> of ${JOBS.length} roles`;
+  $('sCount').textContent = list.length;
+  $('sMed').textContent = list.length ? fmtGbp(median(list.map(gbpYear))) : '–';
+  $('sRemote').textContent = list.length ? Math.round(100 * list.filter(j => j.mode === 'Remote').length / list.length) + '%' : '–';
+  $('sPaid').textContent = list.filter(j => j.test === 'Paid').length;
+  $('sRate').textContent = list.length ? (list.reduce((a, j) => a + j.r, 0) / list.length).toFixed(1) : '–';
+  const n = st.disc.size + st.ind.size + st.mode.size + st.lvl.size + st.type.size + (st.minSal ? 1 : 0) + (st.minRate ? 1 : 0) + ['noUnpaid', 'visa', 'listed', 'noLayoffs', 'savedOnly'].filter(k => st[k]).length;
+  $('fcount').textContent = n ? `(${n} on)` : '';
+  if (wide() && (!st.sel || !list.some(j => j.id === st.sel)) && list.length) { st.sel = list[0].id; showDetail(false); render(); return; }
+  if (st.sel && wide()) showDetail(false);
+}
+
+const wide = () => window.matchMedia('(min-width: 1240px)').matches;
+
+function showDetail(open) {
+  const j = JOBS.find(x => x.id === st.sel);
+  const d = $('detail');
+  if (!j) { d.innerHTML = ''; return; }
+  const signals = [];
+  signals.push(j.r >= 4
+    ? { c: 'good', h: `Artists rate it ${j.r.toFixed(1)}`, b: `From ${reviewers(j)} verified artists. Above the 4.0 mark most people look for.` }
+    : { c: j.r >= 3.6 ? 'warn' : 'bad', h: `Artists rate it ${j.r.toFixed(1)}`, b: `From ${reviewers(j)} verified artists. Read the recent ones on crunch and management before applying.` });
+  signals.push(j.lay
+    ? { c: 'bad', h: 'Layoffs in the last 12 months', b: j.lay }
+    : { c: 'good', h: 'No reported layoffs in the last 12 months', b: 'Based on public reports and news coverage.' });
+  signals.push(j.test === 'Paid'
+    ? { c: 'good', h: 'Art test is paid', b: 'The studio pays for your time on the test.' }
+    : j.test === 'Unpaid'
+      ? { c: 'warn', h: 'Art test is unpaid', b: 'Ask for the expected hours and deadline up front.' }
+      : { c: 'good', h: 'No art test', b: 'Hiring is based on portfolio review and interviews.' });
+
+  d.innerHTML = `
+    <div class="dhead">
+      <button type="button" class="dclose" id="dclose" aria-label="Close details">×</button>
+      <div class="eyebrow">${esc(j.disc.toUpperCase())} · ${esc(j.ind.toUpperCase())} · POSTED ${posted(j.d).toUpperCase()}</div>
+      <h2>${esc(j.t)}</h2>
+      <div class="who">${esc(j.s)} · ${esc(j.loc)}</div>
+    </div>
+    <div class="dbody">
+      <div class="facts">
+        <div class="fact"><div class="k">Salary</div><div class="v m">${fmtSal(j)}</div></div>
+        <div class="fact"><div class="k">GBP per year</div><div class="v m">≈ ${fmtGbp(gbpYear(j))}</div></div>
+        <div class="fact"><div class="k">Work mode</div><div class="v">${j.mode}</div></div>
+        <div class="fact"><div class="k">Seniority</div><div class="v">${j.lvl}</div></div>
+        <div class="fact"><div class="k">Contract</div><div class="v">${j.type}</div></div>
+        <div class="fact"><div class="k">Salary source</div><div class="v">${j.src === 'Listed' ? 'Listed by studio' : 'Estimate'}</div></div>
+        <div class="fact"><div class="k">Visa sponsorship</div><div class="v">${j.visa ? 'Yes' : 'No'}</div></div>
+        <div class="fact"><div class="k">Studio size</div><div class="v m">${j.size}</div></div>
+        <div class="fact"><div class="k">Engine / renderer</div><div class="v">${esc(j.eng)}</div></div>
+        <div class="fact"><div class="k">Known for</div><div class="v">${esc(j.ship)}</div></div>
+      </div>
+      <div class="dsec"><h4>The role</h4><p>${esc(j.desc)}</p></div>
+      <div class="dsec"><h4>Software</h4><div class="tags">${j.tools.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></div>
+      <div class="dsec"><h4>Portfolio they want to see</h4><ul>${PORTFOLIO[j.disc].map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>
+      <div class="dsec"><h4>Artist rating breakdown</h4>
+        <div class="subs">${SUBS.map(([l, k]) => { const v = subScore(j, k); return `<div class="sub ${rateCls(v)}"><span>${l}</span><span class="b"><i style="width:${v / 5 * 100}%"></i></span><span class="n">${v.toFixed(1)}</span></div>`; }).join('')}</div>
+        <p class="note">From ${reviewers(j)} artists who verified they worked there with a studio email or payslip.</p>
+      </div>
+      <div class="dsec"><h4>Studio signals</h4><div class="signals">${signals.map(s => `<div class="signal ${s.c}"><div><b>${esc(s.h)}</b>${esc(s.b)}</div></div>`).join('')}</div></div>
+      <div class="dsec">
+        <div class="apply">
+          <button type="button" class="btn primary" id="applyBtn">Apply on studio site</button>
+          <button type="button" class="btn" id="dsave">${saved.has(j.id) ? 'Saved' : 'Save'}</button>
+        </div>
+        <p class="note" id="applyNote" hidden>Concept only. In the live version this opens the studio's own posting.</p>
+      </div>
+    </div>`;
+  $('dclose').onclick = closeDetail;
+  $('applyBtn').onclick = () => { $('applyNote').hidden = false; };
+  $('dsave').onclick = () => { toggleSave(j.id); showDetail(false); };
+  if (open && !wide()) { d.classList.add('open'); $('backdrop').hidden = false; d.scrollTop = 0; $('dclose').focus(); }
+}
+function closeDetail() { $('detail').classList.remove('open'); $('backdrop').hidden = true; }
+function toggleSave(id) { saved.has(id) ? saved.delete(id) : saved.add(id); persist(); render(); }
+
+$('list').addEventListener('click', e => {
+  const sv = e.target.closest('[data-save]');
+  if (sv) { e.stopPropagation(); toggleSave(+sv.dataset.save); return; }
+  const c = e.target.closest('.job'); if (!c) return;
+  st.sel = +c.dataset.id; render(); showDetail(true);
+});
+$('list').addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('job')) { e.preventDefault(); e.target.click(); }
+});
+$('backdrop').addEventListener('click', closeDetail);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+window.matchMedia('(min-width: 1240px)').addEventListener('change', () => { closeDetail(); render(); });
+
+$('q').addEventListener('input', e => { st.q = e.target.value; render(); });
+$('searchForm').addEventListener('submit', e => e.preventDefault());
+$('sort').addEventListener('change', e => { st.sort = e.target.value; render(); });
+$('minSal').addEventListener('input', e => { st.minSal = +e.target.value; $('minSalOut').textContent = st.minSal ? `£${st.minSal}k+ a year` : 'Any'; render(); });
+$('minRate').addEventListener('input', e => { st.minRate = +e.target.value; $('minRateOut').textContent = st.minRate ? `${st.minRate.toFixed(1)}+ from artists` : 'Any'; render(); });
+['noUnpaid', 'visa', 'listed', 'noLayoffs', 'savedOnly'].forEach(k => $(k).addEventListener('change', e => { st[k] = e.target.checked; render(); }));
+$('ftoggle').addEventListener('click', () => { const f = $('filters'); f.classList.toggle('show'); $('ftoggle').setAttribute('aria-expanded', f.classList.contains('show')); });
+$('reset').addEventListener('click', () => {
+  ['disc', 'ind', 'mode', 'lvl', 'type'].forEach(k => st[k].clear());
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
+  st.minSal = 0; st.minRate = 0; $('minSal').value = 0; $('minRate').value = 0; $('minSalOut').textContent = 'Any'; $('minRateOut').textContent = 'Any';
+  ['noUnpaid', 'visa', 'listed', 'noLayoffs', 'savedOnly'].forEach(k => { st[k] = false; $(k).checked = false; });
+  st.q = ''; $('q').value = '';
+  render();
+});
+
+render();
+
+/* Wireframe viewport: subdivided icosphere with a few selected verts and an axis gizmo */
+(function () {
+  const cv = $('vp'); if (!cv) return;
+  const ctx = cv.getContext('2d');
+  const t = (1 + Math.sqrt(5)) / 2;
+  let V = [[-1, t, 0], [1, t, 0], [-1, -t, 0], [1, -t, 0], [0, -1, t], [0, 1, t], [0, -1, -t], [0, 1, -t], [t, 0, -1], [t, 0, 1], [-t, 0, -1], [-t, 0, 1]];
+  let F = [[0, 11, 5], [0, 5, 1], [0, 1, 7], [0, 7, 10], [0, 10, 11], [1, 5, 9], [5, 11, 4], [11, 10, 2], [10, 7, 6], [7, 1, 8], [3, 9, 4], [3, 4, 2], [3, 2, 6], [3, 6, 8], [3, 8, 9], [4, 9, 5], [2, 4, 11], [6, 2, 10], [8, 6, 7], [9, 8, 1]];
+  const norm = v => { const l = Math.hypot(...v); return v.map(c => c / l); };
+  V = V.map(norm);
+  const cache = {};
+  const mid = (a, b) => { const k = a < b ? a + '_' + b : b + '_' + a; if (cache[k] != null) return cache[k]; V.push(norm(V[a].map((c, i) => (c + V[b][i]) / 2))); return cache[k] = V.length - 1; };
+  const F2 = [];
+  F.forEach(([a, b, c]) => { const ab = mid(a, b), bc = mid(b, c), ca = mid(c, a); F2.push([a, ab, ca], [b, bc, ab], [c, ca, bc], [ab, bc, ca]); });
+  const E = new Map();
+  F2.forEach(f => f.forEach((a, i) => { const b = f[(i + 1) % 3]; E.set(a < b ? a + '_' + b : b + '_' + a, [a, b]); }));
+  const edges = [...E.values()];
+  const selected = new Set([5, 0, 1, 12, 13, 14]);
+  $('vpstat').textContent = `Verts ${V.length} · Edges ${edges.length}`;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ang = 0.6;
+
+  function frame() {
+    const css = getComputedStyle(document.documentElement);
+    const ink = css.getPropertyValue('--muted').trim(), acc = css.getPropertyValue('--accent').trim();
+    const W = cv.width, H = cv.height, cx = W / 2, cy = H / 2 + 10, R = W * 0.34;
+    ctx.clearRect(0, 0, W, H);
+    const ca = Math.cos(ang), sa = Math.sin(ang), tilt = 0.42, ct = Math.cos(tilt), stt = Math.sin(tilt);
+    const P = V.map(([x, y, z]) => {
+      const x1 = x * ca + z * sa, z1 = -x * sa + z * ca;
+      const y2 = y * ct - z1 * stt, z2 = y * stt + z1 * ct;
+      return [cx + x1 * R, cy - y2 * R, z2];
+    });
+    ctx.lineWidth = 1.4;
+    ctx.strokeStyle = ink;
+    edges.forEach(([a, b]) => {
+      const z = (P[a][2] + P[b][2]) / 2;
+      ctx.globalAlpha = z > 0 ? 0.85 : 0.18;
+      ctx.beginPath(); ctx.moveTo(P[a][0], P[a][1]); ctx.lineTo(P[b][0], P[b][1]); ctx.stroke();
+    });
+    ctx.globalAlpha = 1; ctx.fillStyle = acc;
+    selected.forEach(i => { if (P[i][2] > -0.2) { ctx.fillRect(P[i][0] - 4, P[i][1] - 4, 8, 8); } });
+    // gizmo
+    const gx = W - 44, gy = H - 44, gl = 26;
+    const axes = [['X', [1, 0, 0], '--ax-x'], ['Y', [0, 1, 0], '--ax-y'], ['Z', [0, 0, 1], '--ax-z']];
+    ctx.font = '600 16px ' + css.getPropertyValue('--f-mono');
+    axes.forEach(([l, [x, y, z], tok]) => {
+      const x1 = x * ca + z * sa, z1 = -x * sa + z * ca, y2 = y * ct - z1 * stt;
+      const col = css.getPropertyValue(tok).trim();
+      ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.moveTo(gx, gy); ctx.lineTo(gx + x1 * gl, gy - y2 * gl); ctx.stroke();
+      ctx.fillText(l, gx + x1 * (gl + 8) - 5, gy - y2 * (gl + 8) + 6);
+    });
+    if (!reduce) { ang += 0.004; requestAnimationFrame(frame); }
+  }
+  frame();
+})();
+</script>

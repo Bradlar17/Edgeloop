@@ -1,0 +1,47 @@
+name: Update jobs
+
+on:
+  schedule:
+    - cron: '0 5 * * *'   # every day at 05:00 UTC
+  workflow_dispatch:       # adds a "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jobs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch jobs from studio job pages and job boards
+        run: node scripts/fetch-jobs.mjs
+        env:
+          # Add these under Settings → Secrets and variables → Actions. Any that are missing are skipped.
+          JOBSPIPE_API_KEY: ${{ secrets.JOBSPIPE_API_KEY }}
+          JOBSPIPE_BACKFILL: ${{ vars.JOBSPIPE_BACKFILL }}   # set the variable to 1 for one run to re-collect 30 days, then delete it
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          REED_API_KEY: ${{ secrets.REED_API_KEY }}
+          JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
+
+      - name: Commit new data if anything changed
+        run: |
+          git config user.name "edgeloop-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update jobs $(date -u +%Y-%m-%d)"
+            git push
+          fi

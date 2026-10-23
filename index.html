@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Edgeloop</title>
+<meta name="description" content="Every 3D art job in one place: games, film, animation, archviz and XR, pulled daily from studio job pages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: DCC-tool shell. Viewport-grid header, then filters | listings | detail inspector, like outliner / viewport / properties. */
+:root {
+  --bg: #eceef1; --panel: #ffffff; --sunk: #f4f5f7; --ink: #1a1e24; --muted: #5a636e; --line: #d6dae0;
+  --grid: rgba(40, 52, 70, .07); --accent: #c95a16; --accent-soft: #fbe6d6; --on-accent: #ffffff;
+  --good: #2c7f49; --good-soft: #dff1e5; --warn: #9a6512; --warn-soft: #f8ecd2;
+  --ax-x: #d4473f; --ax-y: #5b9a2c; --ax-z: #2f6bd1;
+  --mono-l: 86%; --mono-ink: #1a1e24; --shadow: 0 10px 30px rgba(20, 28, 40, .12);
+  --f-display: "Unbounded", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --r: 8px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1b1e23; --panel: #24282e; --sunk: #1f2227; --ink: #e5e8ec; --muted: #9aa3ad; --line: #363b43;
+    --grid: rgba(200, 210, 225, .06); --accent: #f08a3c; --accent-soft: #3d2b1e; --on-accent: #1b1e23;
+    --good: #6cc78b; --good-soft: #1e3427; --warn: #e2b55a; --warn-soft: #3a3020;
+    --mono-l: 34%; --mono-ink: #eef0f2; --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1b1e23; --panel: #24282e; --sunk: #1f2227; --ink: #e5e8ec; --muted: #9aa3ad; --line: #363b43;
+  --grid: rgba(200, 210, 225, .06); --accent: #f08a3c; --accent-soft: #3d2b1e; --on-accent: #1b1e23;
+  --good: #6cc78b; --good-soft: #1e3427; --warn: #e2b55a; --warn-soft: #3a3020;
+  --mono-l: 34%; --mono-ink: #eef0f2; --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1480px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.top { border-bottom: 1px solid var(--line); background-color: var(--panel);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; font-family: var(--f-display); font-weight: 700; font-size: 18px; letter-spacing: -.01em; }
+.logo svg { width: 26px; height: 26px; }
+.updated { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.hero { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; padding-block: 22px 26px; }
+.hero h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 4.2vw, 44px); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 10px; text-wrap: balance; }
+.hero h1 b { color: var(--accent); }
+.hero p { margin: 0; color: var(--muted); max-width: 60ch; }
+.search { display: flex; gap: 8px; margin-top: 18px; max-width: 640px; }
+.search input { flex: 1; min-width: 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
+.search input::placeholder { color: var(--muted); }
+.viewport { position: relative; justify-self: center; width: 220px; max-width: 100%; aspect-ratio: 1; display: none; }
+.viewport canvas { width: 100%; height: 100%; display: block; }
+.viewport .hud { position: absolute; left: 0; top: 0; font-family: var(--f-mono); font-size: 10.5px; color: var(--muted); line-height: 1.4; }
+@media (min-width: 760px) { .hero { grid-template-columns: 1fr 220px; } .viewport { display: block; } }
+
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-block: 18px; }
+.stat { background: var(--panel); padding: 12px 14px; }
+.stat .k { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.stat .v { font-family: var(--f-mono); font-weight: 600; font-size: 20px; font-variant-numeric: tabular-nums; }
+.stat .s { font-size: 12px; color: var(--muted); }
+@media (min-width: 700px) { .stats { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+.main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; padding-bottom: 48px; align-items: start; }
+@media (min-width: 900px) { .main { grid-template-columns: 240px minmax(0, 1fr); } }
+@media (min-width: 1240px) { .main { grid-template-columns: 230px minmax(0, 1fr) 390px; } }
+
+.ftoggle { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 11px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); cursor: pointer; font-weight: 600; }
+.filters { display: none; flex-direction: column; gap: 18px; margin-top: 10px; }
+.filters.show { display: flex; }
+@media (min-width: 900px) { .ftoggle { display: none; } .filters { display: flex; margin-top: 0; } }
+.fgroup h3 { margin: 0 0 8px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 10px; font-size: 13px; cursor: pointer; }
+.chip:hover { border-color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip .n { opacity: .65; font-size: 11.5px; margin-left: 3px; font-variant-numeric: tabular-nums; }
+.chk { display: flex; gap: 8px; align-items: center; font-size: 14px; padding: 3px 0; cursor: pointer; }
+.chk input { accent-color: var(--accent); width: 16px; height: 16px; }
+.range { display: flex; flex-direction: column; gap: 4px; }
+.range input { accent-color: var(--accent); width: 100%; }
+.range output { font-family: var(--f-mono); font-size: 13px; }
+.reset { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font-weight: 600; text-align: left; }
+
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.toolbar .count { color: var(--muted); font-size: 14px; }
+.toolbar .count b { color: var(--ink); }
+.toolbar select { padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.empty { padding: 40px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--r); }
+.more { margin-top: 12px; width: 100%; }
+
+.job { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 6px 14px; align-items: start;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; cursor: pointer; transition: border-color .15s; }
+.job:hover { border-color: var(--muted); }
+.job.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.mono { width: 44px; height: 44px; border-radius: 8px; display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: 14px; color: var(--mono-ink); background: hsl(var(--h) 38% var(--mono-l)); }
+.jt { font-weight: 600; font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
+.js { color: var(--muted); font-size: 13.5px; margin-top: 2px; overflow-wrap: anywhere; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.tag { font-size: 12px; padding: 2px 8px; border-radius: 4px; background: var(--sunk); border: 1px solid var(--line); white-space: nowrap; }
+.tag.good { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.tag.new { background: var(--accent-soft); color: var(--accent); border-color: transparent; font-weight: 600; }
+.tag.warn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.js .via { font-size: 12.5px; }
+.jr { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; text-align: right; }
+.sal { font-family: var(--f-mono); font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sal small { display: block; font-family: var(--f-body); font-weight: 400; font-size: 11.5px; color: var(--muted); }
+.sal.none { font-family: var(--f-body); font-weight: 400; font-size: 13px; color: var(--muted); }
+.save { background: none; border: 1px solid var(--line); border-radius: 6px; width: 32px; height: 32px; cursor: pointer; display: grid; place-items: center; color: var(--muted); }
+.save[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.save svg { width: 16px; height: 16px; }
+.posted { font-size: 12px; color: var(--muted); }
+@media (max-width: 560px) {
+  .job { grid-template-columns: 40px minmax(0, 1fr); }
+  .mono { width: 40px; height: 40px; }
+  .jr { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; text-align: left; border-top: 1px solid var(--line); padding-top: 10px; margin-top: 4px; }
+}
+
+.backdrop { position: fixed; inset: 0; background: rgba(10, 14, 20, .45); z-index: 20; }
+.detail { display: none; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); }
+.detail.open { display: block; position: fixed; z-index: 21; top: 0; right: 0; bottom: 0; width: min(460px, 100%); border-radius: 0; overflow-y: auto; box-shadow: var(--shadow);
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-right: env(safe-area-inset-right, 0px); }
+@media (min-width: 1240px) {
+  .detail, .detail.open { display: block; position: sticky; top: 12px; width: auto; max-height: calc(100vh - 24px); overflow-y: auto; border-radius: var(--r); box-shadow: none; padding: 0; z-index: auto; }
+  .backdrop { display: none; }
+  .dclose { display: none !important; }
+}
+.dhead { padding: 18px; border-bottom: 1px solid var(--line); position: relative; }
+.dhead .eyebrow { font-family: var(--f-mono); font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.dhead h2 { font-family: var(--f-display); font-weight: 500; font-size: 21px; line-height: 1.2; margin: 6px 0 4px; text-wrap: balance; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.dhead .who { color: var(--muted); }
+.dclose { position: absolute; right: 12px; top: 12px; background: var(--sunk); border: 1px solid var(--line); border-radius: 6px; width: 34px; height: 34px; cursor: pointer; font-size: 18px; line-height: 1; }
+.dbody { padding: 18px; display: flex; flex-direction: column; gap: 20px; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.fact { background: var(--panel); padding: 9px 11px; min-width: 0; }
+.fact .k { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.fact .v { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+.fact .v.m { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.dsec h4 { margin: 0 0 8px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.dsec p { margin: 0; }
+.dsec ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.desc { white-space: pre-line; font-size: 14px; color: var(--ink); max-height: 260px; overflow-y: auto; border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; background: var(--sunk); }
+.apply { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { padding: 10px 16px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); cursor: pointer; font-weight: 600; text-decoration: none; color: var(--ink); display: inline-block; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.note { font-size: 12.5px; color: var(--muted); }
+
+.foot { border-top: 1px solid var(--line); padding-block: 18px 30px; color: var(--muted); font-size: 13px; }
+.foot p { margin: 0 0 6px; max-width: 80ch; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 10v12L16 29 4 22V10z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10l12 7 12-7M16 17v12" fill="none" stroke="var(--accent)" stroke-width="2"/></svg>
+        Edgeloop
+      </div>
+      <div class="updated" id="updated"></div>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>Every 3D art job, <b>one board.</b></h1>
+        <p>Pulled every morning from studio job pages across games, film, animation, viz and XR. Salaries shown in pounds wherever the studio lists them.</p>
+        <form class="search" id="searchForm" role="search">
+          <input id="q" type="search" placeholder="Search roles, studios or cities" aria-label="Search jobs">
+        </form>
+      </div>
+      <div class="viewport" aria-hidden="true">
+        <canvas id="vp" width="440" height="440"></canvas>
+        <div class="hud">Persp · Wireframe<br><span id="vpstat"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="stats" aria-label="Summary of matching jobs">
+    <div class="stat"><div class="k">Open roles</div><div class="v" id="sCount">0</div></div>
+    <div class="stat"><div class="k">Studios hiring</div><div class="v" id="sStudios">0</div></div>
+    <div class="stat"><div class="k">Median pay (GBP)</div><div class="v" id="sMed">–</div><div class="s" id="sMedNote"></div></div>
+    <div class="stat"><div class="k">Remote</div><div class="v" id="sRemote">–</div></div>
+    <div class="stat"><div class="k">New this week</div><div class="v" id="sNew">0</div></div>
+  </section>
+
+  <div class="main">
+    <aside>
+      <button class="ftoggle" id="ftoggle" aria-expanded="false" aria-controls="filters">Filters <span id="fcount"></span></button>
+      <div class="filters" id="filters">
+        <div class="fgroup"><h3>Region</h3><div class="chips" id="fRegion"></div></div>
+        <div class="fgroup"><h3>Discipline</h3><div class="chips" id="fDisc"></div></div>
+        <div class="fgroup"><h3>Industry</h3><div class="chips" id="fInd"></div></div>
+        <div class="fgroup"><h3>Work mode</h3><div class="chips" id="fMode"></div></div>
+        <div class="fgroup"><h3>Seniority</h3><div class="chips" id="fLvl"></div></div>
+        <div class="fgroup"><h3>Contract</h3><div class="chips" id="fType"></div></div>
+        <div class="fgroup range">
+          <h3>Minimum pay</h3>
+          <input type="range" id="minSal" min="0" max="150" step="5" value="0" aria-label="Minimum pay in thousands of pounds per year">
+          <output id="minSalOut">Any</output>
+        </div>
+        <div class="fgroup">
+          <h3>Show only</h3>
+          <label class="chk"><input type="checkbox" id="listed"> Pay listed</label>
+          <label class="chk"><input type="checkbox" id="savedOnly"> Saved jobs</label>
+        </div>
+        <button class="reset" id="reset" type="button">Clear all filters</button>
+      </div>
+    </aside>
+
+    <section aria-label="Job listings">
+      <div class="toolbar">
+        <div class="count" id="countLine"></div>
+        <label><span class="note">Sort </span>
+          <select id="sort" aria-label="Sort jobs">
+            <option value="new">Newest</option>
+            <option value="pay">Highest pay</option>
+            <option value="studio">Studio A–Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="list" id="list"></div>
+      <button type="button" class="btn more" id="more" hidden>Show more</button>
+    </section>
+
+    <div class="backdrop" id="backdrop" hidden></div>
+    <aside class="detail" id="detail" aria-label="Job details"></aside>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Listings come from each studio's public job page and from job board partners, refreshed daily. Always check the studio's own posting before applying. Pay in other currencies is converted to pounds at approximate rates.</p>
+    <p id="srcNote"></p>
+  </div>
+</footer>
+
+<script src="data/jobs.js"></script>
+<script>
+const DATA = window.EDGELOOP || { jobs: [], report: [], generatedAt: null };
+const JOBS = DATA.jobs;
+const SYM = { GBP: '£', EUR: '€', USD: '$', CAD: 'CA$', AUD: 'A$' };
+const PAGE = 40;
+
+const ORDER = {
+  region: ['UK', 'Europe', 'North America', 'Asia-Pacific', 'Other'],
+  disc: ['Character', 'Environment', 'Props', 'Hard Surface', 'Modelling', 'Technical Art', 'Rigging', 'Animation', 'Lighting', 'VFX', 'Texturing', 'Art Direction', 'Generalist'],
+  industry: ['Games', 'Film & TV', 'Animation', 'Archviz', 'Product viz', 'Advertising', 'XR', 'Other'],
+  mode: ['Remote', 'Hybrid', 'On-site', 'Not stated'],
+  level: ['Junior', 'Mid', 'Senior', 'Lead', 'Principal+'],
+  type: ['Full-time', 'Contract', 'Part-time', 'Internship', 'Not stated']
+};
+const PORTFOLIO = {
+  Character: ['Two or three finished characters, not busts only', 'Wireframes, UV layouts and texture sheets', 'At least one shown in a real-time engine'],
+  Environment: ['One or two complete scenes with a clear story', 'Breakdowns of modular kits and trim sheets', 'Lighting and composition passes'],
+  Props: ['A range of materials: wood, metal, cloth', 'Wireframes with sensible poly counts', 'Texture maps shown flat'],
+  'Hard Surface': ['High-poly and low-poly side by side', 'Clean bakes with no artefacts', 'Material breakdown and texel density notes'],
+  'Technical Art': ['Shaders or tools with short video demos', 'Code samples or a GitHub link', 'Before and after performance numbers'],
+  Rigging: ['Rig demo reel with controls visible', 'Deformation tests at extreme poses', 'Any scripts or tools you wrote'],
+  Animation: ['A short reel, best work first, under 90 seconds', 'Body mechanics and acting shots', 'Shot breakdowns where useful'],
+  Lighting: ['Before and after lighting passes', 'Time-of-day or mood variations of one scene', 'Notes on light budgets and performance'],
+  VFX: ['Effects in context, not just isolated', 'Texture and flipbook breakdowns', 'Short reel with stats shown'],
+  Texturing: ['Close-ups of surface detail', 'UDIM layouts and material IDs', 'Turntables under neutral lighting'],
+  Modelling: ['Clean wireframes on every piece', 'Range: organic and hard-surface', 'Turntables and clay renders before texturing'],
+  'Art Direction': ['Shipped work and your role on each project', 'Style guides or paintovers you made', 'Examples of feedback that improved a team’s work'],
+  Generalist: ['Finished renders across a few subjects', 'Clay renders and wireframes', 'Turnaround times if you have them']
+};
+
+const st = { q: '', region: new Set(), disc: new Set(), industry: new Set(), mode: new Set(), level: new Set(), type: new Set(), minSal: 0, listed: false, savedOnly: false, sort: 'new', sel: null, shown: PAGE };
+let saved = new Set();
+try { saved = new Set(JSON.parse(localStorage.getItem('edgeloop-saved') || '[]')); } catch (e) {}
+const persist = () => { try { localStorage.setItem('edgeloop-saved', JSON.stringify([...saved])); } catch (e) {} };
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const k = n => Math.round(n / 1000) + 'k';
+const fmtGbp = n => '£' + k(n);
+function fmtSal(s) {
+  const sy = SYM[s.cur] ?? s.cur + ' ';
+  const range = s.min === s.max ? null : true;
+  if (s.per === 'hr' || s.per === 'day') return range ? `${sy}${s.min}–${s.max}/${s.per}` : `${sy}${s.min}/${s.per}`;
+  return range ? `${sy}${k(s.min)}–${k(s.max)}` : `${sy}${k(s.min)}`;
+}
+const SOURCE_NAME = { greenhouse: 'Studio job page', lever: 'Studio job page', ashby: 'Studio job page', smartrecruiters: 'Studio job page', workable: 'Studio job page', reed: 'Reed', adzuna: 'Adzuna', jsearch: 'Google Jobs', jobspipe: 'JobsPipe' };
+const sourceLabel = j => j.source === 'jsearch' && j.via ? `${j.via} via Google Jobs` : j.source === 'jobspipe' && j.via ? j.via : SOURCE_NAME[j.source] || j.source;
+const isBoard = j => ['reed', 'adzuna', 'jsearch', 'jobspipe'].includes(j.source);
+const days = iso => iso ? Math.max(0, Math.floor((Date.now() - new Date(iso)) / 864e5)) : null;
+function posted(iso) {
+  const d = days(iso);
+  if (d === null) return 'Date not given';
+  return d === 0 ? 'Today' : d === 1 ? 'Yesterday' : d < 60 ? d + ' days ago' : Math.round(d / 30) + ' months ago';
+}
+const initials = s => s.split(/[\s-]+/).filter(w => /^[A-Z0-9]/.test(w)).slice(0, 2).map(w => w[0]).join('') || s.slice(0, 2).toUpperCase();
+const hue = s => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+
+function chips(el, key) {
+  const counts = {};
+  JOBS.forEach(j => counts[j[key]] = (counts[j[key]] || 0) + 1);
+  const vals = ORDER[key].filter(v => counts[v]);
+  el.innerHTML = vals.map(v => `<button type="button" class="chip" aria-pressed="false" data-v="${esc(v)}">${esc(v)}<span class="n">${counts[v]}</span></button>`).join('');
+  el.addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    const v = b.dataset.v, set = st[key];
+    set.has(v) ? set.delete(v) : set.add(v);
+    b.setAttribute('aria-pressed', set.has(v));
+    st.shown = PAGE;
+    render();
+  });
+}
+chips($('fRegion'), 'region');
+chips($('fDisc'), 'disc');
+chips($('fInd'), 'industry');
+chips($('fMode'), 'mode');
+chips($('fLvl'), 'level');
+chips($('fType'), 'type');
+
+function filtered() {
+  const q = st.q.trim().toLowerCase();
+  const out = JOBS.filter(j => {
+    if (q && ![j.title, j.studio, j.location, j.disc, j.industry].join(' ').toLowerCase().includes(q)) return false;
+    for (const key of ['region', 'disc', 'industry', 'mode', 'level', 'type']) if (st[key].size && !st[key].has(j[key])) return false;
+    if (st.listed && !j.salary) return false;
+    if (st.minSal && (!j.salary || j.salary.gbp < st.minSal * 1000)) return false;
+    if (st.savedOnly && !saved.has(j.url)) return false;
+    return true;
+  });
+  const by = {
+    new: (a, b) => (b.posted || '').localeCompare(a.posted || ''),
+    pay: (a, b) => (b.salary?.gbp || 0) - (a.salary?.gbp || 0),
+    studio: (a, b) => a.studio.localeCompare(b.studio) || a.title.localeCompare(b.title)
+  };
+  return out.sort(by[st.sort]);
+}
+
+const saveSvg = on => `<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h8v12l-4-3-4 3z" fill="currentColor" fill-opacity="${on ? 1 : 0}" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>`;
+
+function card(j, i) {
+  const on = saved.has(j.url);
+  const d = days(j.posted);
+  const note = [j.salary?.est ? 'Estimate' : '', j.salary && !(j.salary.cur === 'GBP' && j.salary.per === 'yr') ? `≈ ${fmtGbp(j.salary.gbp)} a year` : ''].filter(Boolean).join(' · ');
+  const sal = j.salary
+    ? `<div class="sal">${fmtSal(j.salary)}${note ? `<small>${note}</small>` : ''}</div>`
+    : '<div class="sal none">Pay not listed</div>';
+  return `<article class="job${st.sel === j.url ? ' sel' : ''}" tabindex="0" data-i="${i}" aria-label="${esc(j.title)} at ${esc(j.studio)}">
+    <div class="mono" style="--h:${hue(j.studio)}">${esc(initials(j.studio))}</div>
+    <div style="min-width:0">
+      <div class="jt">${esc(j.title)}</div>
+      <div class="js">${esc(j.studio)} · ${esc(j.location || 'Location not given')}${isBoard(j) ? ` · <span class="via">via ${esc(sourceLabel(j))}</span>` : ''}</div>
+      <div class="tags">
+        ${d !== null && d <= 3 ? '<span class="tag new">New</span>' : ''}
+        ${j.recruiter ? '<span class="tag warn">Recruiter</span>' : ''}
+        ${j.mode !== 'Not stated' ? `<span class="tag${j.mode === 'Remote' ? ' good' : ''}">${j.mode}</span>` : ''}
+        <span class="tag">${esc(j.disc)}</span>
+        <span class="tag">${j.level}</span>
+        ${j.type !== 'Not stated' ? `<span class="tag">${j.type}</span>` : ''}
+        <span class="tag">${esc(j.industry)}</span>
+      </div>
+    </div>
+    <div class="jr">
+      ${sal}
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="posted">${posted(j.posted)}</span>
+        <button type="button" class="save" aria-pressed="${on}" aria-label="${on ? 'Remove from saved' : 'Save job'}" data-save="${i}">${saveSvg(on)}</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function median(a) { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; }
+const wide = () => window.matchMedia('(min-width: 1240px)').matches;
+let current = [];
+
+function render() {
+  current = filtered();
+  if (!JOBS.length) {
+    $('list').innerHTML = '<div class="empty">No job data yet. Run <code>node scripts/fetch-jobs.mjs</code>, or wait for the daily update to run.</div>';
+  } else if (!current.length) {
+    $('list').innerHTML = '<div class="empty">No roles match these filters. Try removing a region or lowering the minimum pay.</div>';
+  } else {
+    $('list').innerHTML = current.slice(0, st.shown).map((j, i) => card(j, i)).join('');
+  }
+  $('more').hidden = current.length <= st.shown;
+  $('more').textContent = `Show more (${current.length - st.shown} left)`;
+  $('countLine').innerHTML = `<b>${current.length}</b> of ${JOBS.length} roles`;
+  const paid = current.filter(j => j.salary && j.salary.per === 'yr' && !j.salary.est);
+  $('sCount').textContent = current.length;
+  $('sStudios').textContent = new Set(current.map(j => j.studio)).size;
+  $('sMed').textContent = paid.length ? fmtGbp(median(paid.map(j => j.salary.gbp))) : '–';
+  $('sMedNote').textContent = current.length ? `from ${paid.length} with pay listed` : '';
+  $('sRemote').textContent = current.length ? Math.round(100 * current.filter(j => j.mode === 'Remote').length / current.length) + '%' : '–';
+  $('sNew').textContent = current.filter(j => { const d = days(j.posted); return d !== null && d <= 7; }).length;
+  const n = ['region', 'disc', 'industry', 'mode', 'level', 'type'].reduce((a, key) => a + st[key].size, 0) + (st.minSal ? 1 : 0) + (st.listed ? 1 : 0) + (st.savedOnly ? 1 : 0);
+  $('fcount').textContent = n ? `(${n} on)` : '';
+  if (wide() && current.length && !current.slice(0, st.shown).some(j => j.url === st.sel)) {
+    st.sel = current[0].url;
+    document.querySelector('.job')?.classList.add('sel');
+  }
+  if (wide()) showDetail(false);
+}
+
+function showDetail(open) {
+  const j = JOBS.find(x => x.url === st.sel);
+  const d = $('detail');
+  if (!j) { d.innerHTML = ''; return; }
+  const atStudio = JOBS.filter(x => x.studio === j.studio).length;
+  d.innerHTML = `
+    <div class="dhead">
+      <button type="button" class="dclose" id="dclose" aria-label="Close details">×</button>
+      <div class="eyebrow">${esc(j.disc.toUpperCase())} · ${esc(j.industry.toUpperCase())} · ${posted(j.posted).toUpperCase()}</div>
+      <h2>${esc(j.title)}</h2>
+      <div class="who">${esc(j.studio)} · ${esc(j.location || 'Location not given')}</div>
+    </div>
+    <div class="dbody">
+      <div class="facts">
+        <div class="fact"><div class="k">Salary${j.salary?.est ? ' (estimate)' : ''}</div><div class="v m">${j.salary ? fmtSal(j.salary) : 'Not listed'}</div></div>
+        <div class="fact"><div class="k">GBP per year</div><div class="v m">${j.salary ? '≈ ' + fmtGbp(j.salary.gbp) : '–'}</div></div>
+        <div class="fact"><div class="k">Work mode</div><div class="v">${j.mode}</div></div>
+        <div class="fact"><div class="k">Seniority</div><div class="v">${j.level}</div></div>
+        <div class="fact"><div class="k">Contract</div><div class="v">${j.type}</div></div>
+        <div class="fact"><div class="k">Region</div><div class="v">${j.region}</div></div>
+        <div class="fact"><div class="k">Found on</div><div class="v">${esc(sourceLabel(j))}</div></div>
+        <div class="fact"><div class="k">Posted by</div><div class="v">${j.recruiter ? 'Recruitment agency' : isBoard(j) ? 'Employer' : 'Studio'}</div></div>
+      </div>
+      ${j.salary?.est ? `<p class="note">The employer didn’t list pay. This is ${j.source === 'adzuna' ? 'Adzuna’s' : 'an'} estimate for similar roles.</p>` : ''}
+      <div class="apply">
+        <a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener">${isBoard(j) ? `View on ${esc(['jsearch', 'jobspipe'].includes(j.source) ? (j.via || 'source site') : SOURCE_NAME[j.source])}` : 'Apply on studio site'}</a>
+        <button type="button" class="btn" id="dsave">${saved.has(j.url) ? 'Saved' : 'Save'}</button>
+      </div>
+      ${j.desc ? `<div class="dsec"><h4>From the listing</h4><div class="desc">${esc(j.desc)}${j.desc.length >= 900 ? '…' : ''}</div></div>` : ''}
+      <div class="dsec"><h4>Portfolio tips for ${esc(j.disc.toLowerCase())} roles</h4><ul>${(PORTFOLIO[j.disc] || PORTFOLIO.Generalist).map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>
+      <div class="dsec"><h4>Studio</h4><p>${esc(j.studio)} has ${atStudio} open art ${atStudio === 1 ? 'role' : 'roles'} on Edgeloop. <button type="button" class="reset" id="allAtStudio">Show them all</button></p></div>
+    </div>`;
+  $('dclose').onclick = closeDetail;
+  $('dsave').onclick = () => { toggleSave(j.url); };
+  $('allAtStudio').onclick = () => { st.q = j.studio; $('q').value = j.studio; st.shown = PAGE; closeDetail(); render(); };
+  if (open && !wide()) { d.classList.add('open'); $('backdrop').hidden = false; d.scrollTop = 0; $('dclose').focus(); }
+}
+function closeDetail() { $('detail').classList.remove('open'); $('backdrop').hidden = true; }
+function toggleSave(url) { saved.has(url) ? saved.delete(url) : saved.add(url); persist(); render(); if (!wide()) showDetail(false); }
+
+$('list').addEventListener('click', e => {
+  const sv = e.target.closest('[data-save]');
+  if (sv) { e.stopPropagation(); toggleSave(current[+sv.dataset.save].url); return; }
+  const c = e.target.closest('.job'); if (!c) return;
+  st.sel = current[+c.dataset.i].url;
+  document.querySelectorAll('.job.sel').forEach(x => x.classList.remove('sel'));
+  c.classList.add('sel');
+  showDetail(true);
+});
+$('list').addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('job')) { e.preventDefault(); e.target.click(); }
+});
+$('more').addEventListener('click', () => { st.shown += PAGE; render(); });
+$('backdrop').addEventListener('click', closeDetail);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+window.matchMedia('(min-width: 1240px)').addEventListener('change', () => { closeDetail(); render(); });
+
+$('q').addEventListener('input', e => { st.q = e.target.value; st.shown = PAGE; render(); });
+$('searchForm').addEventListener('submit', e => e.preventDefault());
+$('sort').addEventListener('change', e => { st.sort = e.target.value; render(); });
+$('minSal').addEventListener('input', e => { st.minSal = +e.target.value; $('minSalOut').textContent = st.minSal ? `£${st.minSal}k+ a year` : 'Any'; st.shown = PAGE; render(); });
+['listed', 'savedOnly'].forEach(key => $(key).addEventListener('change', e => { st[key] = e.target.checked; st.shown = PAGE; render(); }));
+$('ftoggle').addEventListener('click', () => { const f = $('filters'); f.classList.toggle('show'); $('ftoggle').setAttribute('aria-expanded', f.classList.contains('show')); });
+$('reset').addEventListener('click', () => {
+  ['region', 'disc', 'industry', 'mode', 'level', 'type'].forEach(key => st[key].clear());
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
+  st.minSal = 0; $('minSal').value = 0; $('minSalOut').textContent = 'Any';
+  ['listed', 'savedOnly'].forEach(key => { st[key] = false; $(key).checked = false; });
+  st.q = ''; $('q').value = ''; st.shown = PAGE;
+  render();
+});
+
+if (DATA.generatedAt) {
+  const when = new Date(DATA.generatedAt).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+  $('updated').textContent = `Updated ${when} · ${DATA.studiosOk} studios`;
+  const failed = (DATA.report || []).filter(r => r.kind === 'studio' && !r.ok).length;
+  const boards = DATA.boards || [];
+  $('srcNote').innerHTML = esc(`Last update checked ${DATA.studiosChecked} studio job pages${failed ? ` (${failed} could not be reached and will be retried tomorrow)` : ''}${boards.length ? ` and searched ${boards.join(', ')}` : ''}.`)
+    + (boards.includes('Adzuna') ? ' <a href="https://www.adzuna.co.uk" target="_blank" rel="noopener">Jobs by Adzuna</a>.' : '');
+}
+render();
+
+/* Wireframe viewport: subdivided icosphere with a few selected verts and an axis gizmo */
+(function () {
+  const cv = $('vp'); if (!cv) return;
+  const ctx = cv.getContext('2d');
+  const t = (1 + Math.sqrt(5)) / 2;
+  let V = [[-1, t, 0], [1, t, 0], [-1, -t, 0], [1, -t, 0], [0, -1, t], [0, 1, t], [0, -1, -t], [0, 1, -t], [t, 0, -1], [t, 0, 1], [-t, 0, -1], [-t, 0, 1]];
+  const F = [[0, 11, 5], [0, 5, 1], [0, 1, 7], [0, 7, 10], [0, 10, 11], [1, 5, 9], [5, 11, 4], [11, 10, 2], [10, 7, 6], [7, 1, 8], [3, 9, 4], [3, 4, 2], [3, 2, 6], [3, 6, 8], [3, 8, 9], [4, 9, 5], [2, 4, 11], [6, 2, 10], [8, 6, 7], [9, 8, 1]];
+  const norm = v => { const l = Math.hypot(...v); return v.map(c => c / l); };
+  V = V.map(norm);
+  const cache = {};
+  const mid = (a, b) => { const key = a < b ? a + '_' + b : b + '_' + a; if (cache[key] != null) return cache[key]; V.push(norm(V[a].map((c, i) => (c + V[b][i]) / 2))); return cache[key] = V.length - 1; };
+  const F2 = [];
+  F.forEach(([a, b, c]) => { const ab = mid(a, b), bc = mid(b, c), ca = mid(c, a); F2.push([a, ab, ca], [b, bc, ab], [c, ca, bc], [ab, bc, ca]); });
+  const E = new Map();
+  F2.forEach(f => f.forEach((a, i) => { const b = f[(i + 1) % 3]; E.set(a < b ? a + '_' + b : b + '_' + a, [a, b]); }));
+  const edges = [...E.values()];
+  const selected = new Set([5, 0, 1, 12, 13, 14]);
+  $('vpstat').textContent = `Verts ${V.length} · Edges ${edges.length}`;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ang = 0.6;
+  function frame() {
+    const css = getComputedStyle(document.documentElement);
+    const ink = css.getPropertyValue('--muted').trim(), acc = css.getPropertyValue('--accent').trim();
+    const W = cv.width, H = cv.height, cx = W / 2, cy = H / 2 + 10, R = W * 0.34;
+    ctx.clearRect(0, 0, W, H);
+    const ca = Math.cos(ang), sa = Math.sin(ang), tilt = 0.42, ct = Math.cos(tilt), stt = Math.sin(tilt);
+    const P = V.map(([x, y, z]) => { const x1 = x * ca + z * sa, z1 = -x * sa + z * ca; return [cx + x1 * R, cy - (y * ct - z1 * stt) * R, y * stt + z1 * ct]; });
+    ctx.lineWidth = 1.4; ctx.strokeStyle = ink;
+    edges.forEach(([a, b]) => {
+      ctx.globalAlpha = (P[a][2] + P[b][2]) / 2 > 0 ? 0.85 : 0.18;
+      ctx.beginPath(); ctx.moveTo(P[a][0], P[a][1]); ctx.lineTo(P[b][0], P[b][1]); ctx.stroke();
+    });
+    ctx.globalAlpha = 1; ctx.fillStyle = acc;
+    selected.forEach(i => { if (P[i][2] > -0.2) ctx.fillRect(P[i][0] - 4, P[i][1] - 4, 8, 8); });
+    const gx = W - 44, gy = H - 44, gl = 26;
+    ctx.font = '600 16px ' + css.getPropertyValue('--f-mono');
+    [['X', [1, 0, 0], '--ax-x'], ['Y', [0, 1, 0], '--ax-y'], ['Z', [0, 0, 1], '--ax-z']].forEach(([l, [x, y, z], tok]) => {
+      const x1 = x * ca + z * sa, z1 = -x * sa + z * ca, y2 = y * ct - z1 * stt;
+      const col = css.getPropertyValue(tok).trim();
+      ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.moveTo(gx, gy); ctx.lineTo(gx + x1 * gl, gy - y2 * gl); ctx.stroke();
+      ctx.fillText(l, gx + x1 * (gl + 8) - 5, gy - y2 * (gl + 8) + 6);
+    });
+    if (!reduce) { ang += 0.004; requestAnimationFrame(frame); }
+  }
+  frame();
+})();
+</script>
+</body>
+</html>

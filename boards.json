@@ -1,0 +1,36 @@
+{
+  "keywords": [
+    "3d artist",
+    "technical artist",
+    "character artist",
+    "environment artist",
+    "vfx artist",
+    "lighting artist",
+    "animator",
+    "rigger",
+    "3d visualiser",
+    "cg artist"
+  ],
+  "jobspipe": {
+    "countries": ["GB"],
+    "backfillDays": 30,
+    "pageSize": 5,
+    "maxPerRun": 150,
+    "titles": ["3d artist", "technical artist", "character artist", "environment artist", "vfx artist", "fx artist", "lighting artist", "texture artist", "animator", "character rigger", "rigging artist", "rigging td", "technical animator", "3d generalist", "3d modeller", "3d modeler", "cg artist", "lookdev", "level artist", "hard surface", "prop artist", "3d visualiser", "3d visualizer"],
+    "titlesNot": ["2d", "illustrator", "ui", "ux", "concept", "motion graphics", "graphic designer", "make-up", "makeup", "tattoo", "nail", "video editor", "engineer", "developer", "programmer", "producer", "marketing", "teacher", "lecturer", "crane", "scaffold", "steel", "offshore", "multimedia"]
+  },
+  "adzuna": {
+    "countries": ["gb"],
+    "maxDaysOld": 30
+  },
+  "reed": {},
+  "jsearch": {
+    "queries": [
+      "3D artist jobs in United Kingdom",
+      "technical artist jobs in United Kingdom",
+      "game artist jobs in United Kingdom",
+      "VFX artist jobs in United Kingdom"
+    ],
+    "datePosted": "week"
+  }
+}
