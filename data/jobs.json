@@ -1,12 +1,12 @@
 {
- "generatedAt": "2026-10-31T10:40:25.232Z",
+ "generatedAt": "2026-11-01T11:35:01.831Z",
  "studiosChecked": 33,
  "studiosOk": 33,
  "boards": [
   "JobsPipe"
  ],
- "jobspipeSince": "2026-10-31 09:39:22",
- "jobspipeCredits": 861,
+ "jobspipeSince": "2026-11-01 10:33:49",
+ "jobspipeCredits": 860,
  "jobs": [
   {
    "id": "0",
@@ -5673,7 +5673,7 @@
    "name": "Ubisoft",
    "kind": "studio",
    "ok": true,
-   "total": 314,
+   "total": 306,
    "art": 42
   },
   {
@@ -5743,8 +5743,8 @@
    "name": "JobsPipe",
    "kind": "board",
    "ok": true,
-   "total": 2,
-   "art": 1
+   "total": 1,
+   "art": 0
   },
   {
    "name": "Adzuna",
