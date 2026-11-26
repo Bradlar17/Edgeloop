@@ -1,15 +1,129 @@
 {
- "generatedAt": "2026-11-25T15:07:19.614Z",
+ "generatedAt": "2026-11-26T14:35:46.875Z",
  "studiosChecked": 33,
  "studiosOk": 33,
  "boards": [
   "JobsPipe"
  ],
- "jobspipeSince": "2026-11-25 14:06:14",
- "jobspipeCredits": 780,
+ "jobspipeSince": "2026-11-26 13:35:08",
+ "jobspipeCredits": 774,
  "jobs": [
   {
    "id": "0",
+   "title": "Stage - 6 mois - Level Artist (F/H/NB) [AAA Project] - Janvier 2027",
+   "studio": "Ubisoft",
+   "industry": "Games",
+   "location": "Annecy, Auvergne-Rhône-Alpes, France",
+   "region": "Europe",
+   "mode": "Not stated",
+   "type": "Full-time",
+   "disc": "Environment",
+   "level": "Mid",
+   "salary": null,
+   "posted": "2026-11-26T11:23:53.427Z",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000163854970",
+   "source": "smartrecruiters",
+   "via": null,
+   "recruiter": false,
+   "desc": "La ou Le Stagiaire Level Artist contribue à la création d'environnements de jeu cohérents, lisibles et immersifs au sein de l'équipe World.\nAccompagné.e par la ou le Lead Level Art et les Level Artists, il.elle travaille en étroite collaboration avec les Level Designers pour traduire leurs intentions de conception en environnements visuels cohérents et adaptés à l'expérience joueur.\nIl.Elle apprend à concevoir ses choix artistiques en tenant compte de la jouabilité, de la navigation, de la lisibilité des espaces et des contraintes techniques du projet, tout en développant sa maîtrise des outils et méthodes de production AAA.\nIl.Elle contribue à l'application de la vision de l'Art Direction et participe progressivement aux réflexions artistiques autour des environnements.\nResponsabilités\nProduction Level Art\n• Participer à la création et à la mise en scène d'environnements de jeu.\n• Intég"
+  },
+  {
+   "id": "1",
+   "title": "Lead VFX Artist",
+   "studio": "Gameloft",
+   "industry": "Games",
+   "location": "Barcelona, CT, Spain",
+   "region": "Europe",
+   "mode": "Hybrid",
+   "type": "Full-time",
+   "disc": "VFX",
+   "level": "Lead",
+   "salary": null,
+   "posted": "2026-11-26T09:09:46.802Z",
+   "url": "https://jobs.smartrecruiters.com/gameloft/744000163831209",
+   "source": "smartrecruiters",
+   "via": null,
+   "recruiter": false,
+   "desc": "WHAT YOU WILL BE WORKING ON\nMain challenge\nAs a Lead VFX Artist, you will have the opportunity to build, shape, and elevate the VFX discipline across our PC and console projects.\nThis is a high-impact leadership role where you'll guide a talented team, influence studio-wide standards and workflows, and help define how VFX are created and delivered across our games.\nAlongside the Studio Art Director and key stakeholders, you'll combine artistic vision, team leadership, and technical innovation to bring exceptional player experiences to life.\nWhat it means on a daily basis\nVFX Team Leadership\n• Lead, mentor and develop the VFX team, with clear goals and regular feedback.\n• Set priorities and ensure quality and delivery expectations are met.\n• Foster a collaborative, feedback-driven environment.\n• Take part in recruitment and support talent development.\nVisual Direction & Quality\n• Partner "
+  },
+  {
+   "id": "2",
+   "title": "Artiste FX - Manifestation d’intérêt - Rodeo FX",
+   "studio": "Rodeo FX",
+   "industry": "Film & TV",
+   "location": "Montreal, QC, Canada",
+   "region": "North America",
+   "mode": "Not stated",
+   "type": "Contract",
+   "disc": "VFX",
+   "level": "Mid",
+   "salary": null,
+   "posted": "2026-11-25T20:22:45.893Z",
+   "url": "https://jobs.smartrecruiters.com/rodeofx/744000163759819",
+   "source": "smartrecruiters",
+   "via": null,
+   "recruiter": false,
+   "desc": "Veuillez noter qu’il s’agit d’une expression d’intérêt. Aucun poste n’est actuellement ouvert, mais nous pourrons communiquer avec vous si une opportunité correspondant à votre profil se présente.\nL’artiste d’effets conçoit et réalise des simulations visuelles complexes, feu, fumée, fluides, destructions, effets abstraits, dans le respect des standards artistiques et techniques de Rodeo FX. Intégré.e au cœur du pipeline 3D, il.elle collabore étroitement avec la supervision FX, CG et les autres départements pour livrer des plans photoréalistes, dynamiques et techniquement solides. Sa créativité, sa rigueur et sa maîtrise des outils procéduraux permettent de traduire les intentions visuelles du projet avec efficacité.\nPrincipales responsabilités :\nMaîtrise de son métier\n• Produire des simulations complexes (fumée, feu, explosions, liquides, destructions, effets magiques ou abstraits) en re"
+  },
+  {
+   "id": "3",
+   "title": "FX Artist - Expression of interest - Rodeo FX",
+   "studio": "Rodeo FX",
+   "industry": "Film & TV",
+   "location": "Montreal, QC, Canada",
+   "region": "North America",
+   "mode": "Not stated",
+   "type": "Contract",
+   "disc": "VFX",
+   "level": "Mid",
+   "salary": null,
+   "posted": "2026-11-25T20:22:17.182Z",
+   "url": "https://jobs.smartrecruiters.com/rodeofx/744000163759739",
+   "source": "smartrecruiters",
+   "via": null,
+   "recruiter": false,
+   "desc": "Please note that this is an expression of interest. No position is currently open, but we may contact you if a suitable opportunity becomes available.\nThe FX Artist designs and creates complex visual simulations such as fire, smoke, fluids, destructions, and abstract effects, while respecting Rodeo FX’s artistic and technical standards. Integrated at the heart of the 3D pipeline, they collaborate closely with the FX and CG supervision teams, as well as with other departments, to deliver photorealistic, dynamic, and technically solid shots. Their creativity, precision, and mastery of procedural tools allow them to effectively translate the project's visual intentions.\nMain responsibilities:\nMastery of his craft\n• Produce complex simulations (smoke, fire, explosions, liquids, destruction, magical or abstract effects) while respecting artistic and technical guidelines.\n• Use Houdini effecti"
+  },
+  {
+   "id": "4",
+   "title": "Technicien.ne Comptable - Mikros Animation",
+   "studio": "Rodeo FX",
+   "industry": "Film & TV",
+   "location": "Montreal, QC, Canada",
+   "region": "North America",
+   "mode": "Not stated",
+   "type": "Full-time",
+   "disc": "Animation",
+   "level": "Mid",
+   "salary": null,
+   "posted": "2026-11-25T19:43:57.180Z",
+   "url": "https://jobs.smartrecruiters.com/rodeofx/744000163755999",
+   "source": "smartrecruiters",
+   "via": null,
+   "recruiter": false,
+   "desc": "Sous la supervision de la Directrice Finance, le ou la Technicien·ne comptable contribue au bon fonctionnement des opérations comptables de Mikros Animation.\nLa personne titulaire du poste participe à l’ensemble du cycle comptable, assure l’exactitude des transactions et contribue aux clôtures mensuelles et annuelles ainsi qu’à la préparation de l’information nécessaire aux rapports financiers.\nAu sein d’un environnement créatif, dynamique et international, elle travaille en étroite collaboration avec l’équipe Finance et les différents départements afin d’assurer la fiabilité des données comptables, le respect des échéanciers et l’amélioration continue des processus.\nCe rôle s’adresse à une personne qui souhaite mettre à profit son expertise en comptabilité et s’investir durablement dans la rigueur et l’efficacité des opérations comptables du studio.\nPrincipales responsabilités\nOpération"
+  },
+  {
+   "id": "5",
+   "title": "VFX Artist - March of Giants",
+   "studio": "Ubisoft",
+   "industry": "Games",
+   "location": "Montreal, QC, Canada",
+   "region": "North America",
+   "mode": "Not stated",
+   "type": "Full-time",
+   "disc": "VFX",
+   "level": "Mid",
+   "salary": null,
+   "posted": "2026-11-25T16:49:36.195Z",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000163733078",
+   "source": "smartrecruiters",
+   "via": null,
+   "recruiter": false,
+   "desc": "As a Visual Effects Artist at Ubisoft Montréal, you will design, integrate, and optimize real-time visual effects for a competitive multiplayer online battle arena (MOBA) game. Your work will focus on battlefield and gameplay effects, helping players quickly understand actions, threats, outcomes, and priorities during combat.\nYou will combine artistic judgment with technical expertise in Unreal Engine to create expressive, readable effects that meet performance needs and follow the project’s artistic direction. You will collaborate with the Game Design, Programming, Animation, Realization, and Art teams to support the game’s visual identity and a clear player experience.\nWhat you’ll do\n• Create and integrate real-time visual effects in Unreal Engine , using Niagara, materials, material instances, shaders, textures, meshes, and Blueprints as needed\n• Design effects that clearly communicat"
+  },
+  {
+   "id": "6",
    "title": "Senior Technical Animator [Rainbow Six]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -28,7 +142,7 @@
    "desc": "Please note: Visa sponsorship is not available for this position. Candidates must possess current eligibility to live and work in the UK in order for their application to be considered.\nAs a Senior Technical Animator on the Rainbow Six brand, you’ll play a key role in designing and building rigging systems that support the creation of a variety of high-quality assets. Your technical proficiency with character aesthetics will bring immersive, authentic worlds to life. You’re adaptable, thrive on creative challenges, and take pride in shaping the visual identity of realistic AAA games through thoughtful animation systems.\nWorking closely with multidisciplinary team members, you’ll ensure a cohesive visual style across features, with a core focus on gameplay character elements, such as skinning, physics, and modelling. Your ability to translate mock-ups into high-quality integrated visualis"
   },
   {
-   "id": "1",
+   "id": "7",
    "title": "Senior Technical Animator [Cinematics]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -47,7 +161,7 @@
    "desc": "As a Senior Technical Animator at Ubisoft Malmö, you will develop technical solutions for animators for our Cinematics team. Your work will include body and facial rigging, tools and pipeline development, and supporting animators working with motion capture and keyframe animation.\nYou’ll contribute to both pre-rendered and real-time cinematics for major game projects, collaborating with studios around the world to improve animation quality and workflows.\nWhat you’ll do\n• Collaborate with art and animation teams to understand the project vision and its rigging and skinning needs\n• Create rigs for characters, creatures and objects, providing solutions for character art and animation teams\n• Maintain the required quality of character deformations\n• Work with production teams to create animation controls that support the intended movement and quality of characters and objects\n• Test, trouble"
   },
   {
-   "id": "2",
+   "id": "8",
    "title": "FX Artist - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -66,7 +180,7 @@
    "desc": "Design and create realistic simulations of visual effects such as fire, smoke, water, hair, cloth, fur, muscles and destruction.\nWhat You'll Do\n• Own complex simulations from start to finish, from initial design and timing through to final cache and/or render\n• Work with your lead or supervisor to find the best approach for each shot\n• Collaborate closely with other departments (modeling, animation, rigging, etc.) as needed\n• Use particle systems, dynamics, expressions, soft and rigid bodies, and cloth dynamics\n• Favor procedural approaches wherever possible\n• Help develop tools and scripts to improve productivity\n• Learn and apply studio FX standards and tools while gaining experience with our pipeline workflows\n• 5+ years of experience in the film and visual effects industry\n• A highly creative mind, with the ability to envision complex FX scenes for feature films\n• Strong experience s"
   },
   {
-   "id": "3",
+   "id": "9",
    "title": "Artiste FX  - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -85,7 +199,7 @@
    "desc": "Concevoir et créer des simulations réalistes d'effets visuels tels que le feu, la fumée, l'eau, les cheveux, les tissus, la fourrure, les muscles et la destruction.\nCE QUE TU FERAS\n• Prendre en charge des simulations complexes du début à la fin, de la conception et du timing jusqu'à la cache et/ou au rendu final\n• Déterminer la meilleure approche pour chaque plan en collaboration avec votre lead ou superviseur\n• Travailler étroitement avec les autres départements (modélisation, animation, rigging, etc.) selon les besoins\n• Utiliser les systèmes de particules, la dynamique, les expressions, les corps mous et rigides ainsi que la dynamique des tissus\n• Privilégier une approche procédurale autant que possible\n• Contribuer au développement d'outils et de scripts pour améliorer la productivité\n• Apprendre et appliquer les standards et outils FX du studio tout en acquérant de l'expérience avec"
   },
   {
-   "id": "4",
+   "id": "10",
    "title": "Senior Lighting Artist",
    "studio": "Lighthouse Games",
    "industry": "Games",
@@ -104,7 +218,7 @@
    "desc": "Lighthouse Games is an established AAA studio in Leamington Spa. We are defined by our pedigree of talent and serious ambition to build a new best-in-class game. When you join us at Lighthouse, you'll create the best work of your career within a collaborative, hybrid working environment. You'll learn from the best and work alongside the future greats of the gaming industry.\n\nAs our Senior Lighting Artist, you will play a key role in shaping the aesthetic and ambience of our games. Lighting is critical to every aspect of content creation and can make or break the immersion of a game. As we aim to create memorable experiences for our players, we're looking for someone with a keen eye for detail and a passion for bringing worlds to life through lighting and post-processing. You will work closely with the Lead Lighting Artist and other art disciplines to achieve the highest quality and maint"
   },
   {
-   "id": "5",
+   "id": "11",
    "title": "Senior Level Artist (Splinter Cell Remake)",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -123,7 +237,7 @@
    "desc": "As a Senior Level Artist at Ubisoft Toronto, you will shape environments for Splinter Cell from early visual direction through production and polish. You will bring together art, gameplay, storytelling and technology to create cohesive, believable levels in collaboration with teams across the project.\nWhat you’ll do\n• Shape the artistic direction and visual quality of assigned levels and environments\n• Establish each location’s theme, mood, composition and environmental storytelling using research and visual references\n• Partner with Level Design to support gameplay flow, navigation, player guidance and visual clarity\n• Create and refine placeholder geometry, structural models and blockouts to develop visual ideas\n• Build, refine and troubleshoot environments using Snowdrop and project tools\n• Apply lighting principles to support mood, color, composition and gameplay clarity\n• Collaborat"
   },
   {
-   "id": "6",
+   "id": "12",
    "title": "Senior Technical Animator - [Splinter Cell]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -142,7 +256,7 @@
    "desc": "As a Senior Technical Animator on Splinter Cell at Ubisoft Toronto, you will support, improve, and innovate animation systems used in game production. You will work closely with animators, riggers, game designers, and programmers to ensure animation systems are efficient, reliable, and aligned with creative and technical goals.\nWhat you’ll do:\n• Support and evolve animation systems , including motion capture, facial animation, and lip sync;\n• Collaborate with animators and riggers to develop and maintain animation rigs and procedural systems;\n• Analyze production needs and propose tools, workflows, and best practices ;\n• Perform technical validation of animation assets and support animators in nodal system creation;\n• Support the integration of animations into the game engine;\n• Prototype and test animation and physics systems directly in the engine;\n• Maintain and improve the animation "
   },
   {
-   "id": "7",
+   "id": "13",
    "title": "Technical Animator",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -161,7 +275,7 @@
    "desc": "Your daily adventure\nINTEGRATE ANIMATION ASSETS\nInto the game engine\nSupport the animation team with technical issues\nDESIGN, CREATE AND TEST\nAnimation state machines, graphs and blend trees\nCharacters, props and specialized custom rigs\nCREATE CUSTOM TOOLS AND SCRIPTS\nTo increase the productivity and efficiency for the animation team\nCOLLABORATE EFFECTIVELY\nWith different teams (art, designers and programmers) to fulfill tasks according to production plan\nRESEARCH AND SHARE KNOWLEDGE\nOf existing engines and animation packages within the industry\nYour skills\nKNOWLEDGE\nAnimation state machines, graphs and blend trees\nExpertise in rigging and skinning assets\nUnderstanding of technical implementations and limitations\nEXPERIENCE\nFamiliar with Motion capture and data transfer\nGood insight of standard industry tools like Motion Builder, Maya\nPROACTIVENESS\nHigh self-driven personality looking fo"
   },
   {
-   "id": "8",
+   "id": "14",
    "title": "3D Animator",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -180,7 +294,7 @@
    "desc": "Your role\nAs an Animator you will create animation for characters and/or objects based on rigged 3D models and contribute to the visual elements of the gameplay and/or cut scenes. Always improving with the interest of the team and project in mind.\nYour daily adventure\nCREATE HIGH-QUALITY ANIMATIONS\nWhile optimizing them to meet technical constraints and make any changes that are requested based on the artistic direction\nMOCAP DATA\nUnderstand and manipulate mocap data\nKEYFRAME ANIMATION\nFor characters and objects\nPROTOTYPE ANIMATION SYSTEMS\nFor gameplay and other game features\nCOLLABORATE EFFECTIVELY\nWith the lead animators, technical directors, game designers and programmers\nUNDERSTAND THE QUALITY OBJECTIVES & GAMEPLAY INTENTIONS\nWithin the engine restrictions, in order to anticipate the in-game look of the animations\nESTIMATE AND MANAGE TIME\nThat is required to carry out own tasks and m"
   },
   {
-   "id": "9",
+   "id": "15",
    "title": "3D Technical Artist (Intern / Contractor) – Blender [Remote]",
    "studio": "Bigwing Venturetech Ltd",
    "industry": "Games",
@@ -199,7 +313,7 @@
    "desc": "3D Technical Artist [ Intern I Freelancer | Contractor ] – Blender ( Remote )\n\nCompany Overview:\n\nBigwing Venturetech is offering an exciting opportunity for a 3D Technical Artist to join our team as an intern/freelancer. We are seeking an individual with good experience using Blender to generate 3D hard surface vehicle game assets for game development, modelling, simulation & training applications. This internship/freelancer contract provides a unique chance to contribute to real-world projects and gain valuable hands-on commercial experience.\n\nPosition Overview:\n\nAs a 3D Technical Artist Intern/freelancer at Bigwing Venturetech, you will play a pivotal role in our IT Special Projects Team, contributing to the development of 3D hard surface vehicle game assets for projects spanning Game Development, Modelling, Simulation, and Training. This internship/freelance contract offers a unique "
   },
   {
-   "id": "10",
+   "id": "16",
    "title": "On-site Senior/Lead Animator",
    "studio": "Lunar Animation",
    "industry": "Advertising",
@@ -218,7 +332,7 @@
    "desc": "📍 Sheffield, UK | On-site\n\n🎬 Lunar Animation\n\nLunar Animation is looking for a talented Senior / Lead Animator to join our team inhouse team in Sheffield.\n\nWe’re looking for an experienced animator with a strong understanding of character performance, storytelling and cinematic animation. Someone who can take direction, bring characters to life, and deliver high-quality animation across a range of projects in multiple animation styles.\n\nWe work across CG animation, cinematics, commercials and immersive experiences, so we’re looking for someone adaptable who enjoys tackling different styles, characters and creative challenges.\n\nWhat we’re looking for:\n\n- Strong experience in character animation at Senior or Lead level.\n\n- Excellent understanding of body mechanics, posing, timing, weight, performance and acting.\n\n- Ability to work from a range of references, storyboards, previs and direc"
   },
   {
-   "id": "11",
+   "id": "17",
    "title": "Technical Animator",
    "studio": "Cloud Imperium Games",
    "industry": "Games",
@@ -237,7 +351,7 @@
    "desc": "Founded in 2012 by renowned game developer Chris Roberts, Cloud Imperium Games (CIG) is one of the largest independent studios globally, dedicated to delivering next-generation AAA experiences. We think outside the box, encourage creativity, and develop ground-breaking technology that raises the bar for the gaming industry and our community.\n\nAbout the Role:\n\nJoin an industry-leading team of veterans building the pinnacle of animation pipelines and technologies. As a Technical Animator III, you'll bridge the gap between technical innovation and creative expression-making highly complex systems accessible and empowering for artists and animators across the company.\n\nYour work spans the full spectrum of animation technology: next-gen facial and body rigs, Maya pipeline development, cross-platform deformation systems, version control workflows, external tool integration, and in-engine imple"
   },
   {
-   "id": "12",
+   "id": "18",
    "title": "3D ARTIST",
    "studio": "Evolution XR",
    "industry": "Games",
@@ -256,7 +370,7 @@
    "desc": "Company: Evolution XR\n\nLocation: Hartlepool, UK\n\nExperience: Minimum 2 years in the industry\n\nAbout Evolution XR:\n\nEvolution XR is a cutting-edge virtual learning and development company dedicated to creating immersive and engaging educational products for VR, tablet, PC, and mobile platforms. Our innovative solutions leverage the power of technology to redefine learning experiences and drive positive outcomes.\n\nPosition Overview:\n\nWe are seeking a talented 3D Artist to join our dynamic team. As a 3D Artist at Evolution XR, you will play a crucial role in the creation of high-end 3D assets, environment design, UV unwrapping, and texturing for our diverse range of virtual learning products. The ideal candidate should have a minimum of 2 years of industry experience and a strong portfolio showcasing proficiency in 3Ds Max or Maya, Unity, Substance Painter, and Adobe Photoshop.\n\nResponsibil"
   },
   {
-   "id": "13",
+   "id": "19",
    "title": "GenFX Artist",
    "studio": "Rodeo FX",
    "industry": "Film & TV",
@@ -275,7 +389,7 @@
    "desc": "The GenFX Artist creates images and sequences that support every stage of a project at Rodeo FX: visual direction, pitches, previs, IP development, and increasingly, final shots for broadcast. At Rodeo FX, AI is a creative tool in service of an artistic intention. It does not replace it.\nWithin the Ads, Post & AI department, this person works closely with our compositing, 3D, real-time, and art direction teams. Their role is to extend what these teams can do: explore more creative directions earlier and deliver imagery that holds up in production.\nThis is a hybrid role grounded in the realities of advertising production, requiring both a strong creative eye and technical rigor.\nKey Responsibilities\nMaster Your Craft\n• Build and maintain your own workflows in ComfyUI, combining multiple models based on the needs of each shot.\n• Train LoRAs on image and video models and prepare the require"
   },
   {
-   "id": "14",
+   "id": "20",
    "title": "Senior Technical Artist",
    "studio": "Dovetail Games",
    "industry": "Games",
@@ -294,7 +408,7 @@
    "desc": "We are hiring a Senior Technical Artist to bridge art and engineering on our Unreal Engine rail simulation titles, helping deliver detailed locomotives, routes and environments that run smoothly across PC and console. You will set technical standards for the art pipeline and build the tools and shaders that help a small team deliver at scale.\n\nOur studio is in a river-front building in the Historic Dockyard in Chatham, Kent. We build our games with cutting-edge technology for PC, PlayStation and Xbox, and you will have a direct and significant impact on their future.\n\nWhat you’ll get from us!\n\nWork where you work best –UK Based Remote, Hybrid or in Office? You choose!\n\n-\n37.5 hour working week with true flexible working\n\n-\nCollaborative, supportive team environment\n\n-\nAccess to the latest tools & tech\n\n-\nCompany funded away days and team building\n\n-\nOpportunity to grow and work on much l"
   },
   {
-   "id": "15",
+   "id": "21",
    "title": "Level Artist",
    "studio": "Pole To Win International",
    "industry": "Games",
@@ -313,7 +427,7 @@
    "desc": "Role: Level Artist\n\nStructure: Remote\n\nLocation: Based in Europe and able to work embedded in Sweden time zone\n\n* Candidates need excellent English speaking skills. CVs and resumes must be submitted in English to be considered *\n\nSide is looking for a Level Artist that will take the approved blockout to a polished, shippable standard using environment assets supplied by the client. The visual direction is dark fantasy: swamp, mire, dead trees, wooden structures, dirt, decay and dilapidation. Candidates must have experience in AAA or indie game development.\n\nAs these are project-based opportunities, positions may be amended, postponed, or withdrawn as a result of changing client requirements and project priorities.\n\nWhat you'll be doing:\n\n- Take greybox or blockout layouts from level designers and transform them into detailed, playable 3D worlds.\n\n- Place 3D models, foliage, architecture,"
   },
   {
-   "id": "16",
+   "id": "22",
    "title": "Senior Gameplay Animator",
    "studio": "Astrid Entertainment",
    "industry": "Games",
@@ -332,7 +446,7 @@
    "desc": "Astrid Transforming Games into Transformative Experiences.\n\nAstrid is a gaming studio that brings together accomplished worldbuilders and game developers to create multiplayer creative experiences. Our first project is a cooperative open-world sim, designed to foster connection, problem-solving, and shared discovery. Players embark on a profound social experience in a richly imagined world shaped by dynamic systems, immersive storytelling, and community-driven play.\n\nOur team spans the US, the UK, and beyond. We are taking a fully remote approach, but have regular in-person meetups to synchronize, huddle and build our culture.\n\nWe are looking for a Senior Gameplay Animator to help bring our world and characters to life. Our ideal candidate is passionate about cooperative games that give players creative tools to craft, build, and shape their environments. You will work closely with our A"
   },
   {
-   "id": "17",
+   "id": "23",
    "title": "Principal Animator",
    "studio": "Epic Games",
    "industry": "Games",
@@ -357,7 +471,7 @@
    "desc": "WHAT MAKES US EPIC?\nAt the core of Epic’s success are talented, passionate people. Epic prides itself on creating a collaborative, welcoming, and creative environment. Whether it’s building award-winning games or crafting engine technology that enables others to make visually stunning interactive experiences, we’re always innovating.\nBeing Epic means being a part of a team that continually strives to do right by our community and users. We’re constantly innovating to raise the bar of engine and game development.\nART\nWhat We Do\nPush your artistic talent to the limit on a team of world-class environment, character and concept artists who strive to innovate and inspire.\nWhat You'll Do\nEpic Games is searching for a Principal Animator to join our Fortnite team and help shape the future of gameplay animation. In this highly influential, hands-on role, you'll create exceptional keyframed gamepl"
   },
   {
-   "id": "18",
+   "id": "24",
    "title": "Principal Animator",
    "studio": "Epic Games",
    "industry": "Games",
@@ -376,26 +490,7 @@
    "desc": "WHAT MAKES US EPIC?\nAt the core of Epic’s success are talented, passionate people. Epic prides itself on creating a collaborative, welcoming, and creative environment. Whether it’s building award-winning games or crafting engine technology that enables others to make visually stunning interactive experiences, we’re always innovating.\nBeing Epic means being a part of a team that continually strives to do right by our community and users. We’re constantly innovating to raise the bar of engine and game development.\nART\nWhat We Do\nPush your artistic talent to the limit on a team of world-class environment, character and concept artists who strive to innovate and inspire.\nWhat You'll Do\nEpic Games is searching for a Principal Animator to join our Fortnite team and help shape the future of gameplay animation. In this highly influential, hands-on role, you'll create exceptional keyframed gamepl"
   },
   {
-   "id": "19",
-   "title": "Lead VFX Artist",
-   "studio": "Gameloft",
-   "industry": "Games",
-   "location": "Barcelona, CT, Spain",
-   "region": "Europe",
-   "mode": "Hybrid",
-   "type": "Full-time",
-   "disc": "VFX",
-   "level": "Lead",
-   "salary": null,
-   "posted": "2026-11-19T15:53:27.793Z",
-   "url": "https://jobs.smartrecruiters.com/gameloft/744000162550119",
-   "source": "smartrecruiters",
-   "via": null,
-   "recruiter": false,
-   "desc": "WHAT YOU WILL BE WORKING ON\nMain challenge\nWe are looking for a Lead VFX Artist to lead the VFX discipline across our games, combining strong artistic expertise with team coordination, visual direction, and pipeline development. You will work closely with the Art Director and key stakeholders across the studio to ensure a consistent visual and technical quality across all VFX, while supporting project and studio goals.\nYou will oversee the VFX process from initial concepts and prototyping through implementation, iteration, optimisation, and final delivery. Working with our proprietary engine and in-house tools, you will also contribute to the evolution of our VFX workflows, standards, and technology.\nWhat it means on a daily basis\n• VFX Team Leadership: Oversee and coordinate the VFX team, establish priorities, and ensure deadlines and quality targets are met. Identify and remove systemi"
-  },
-  {
-   "id": "20",
+   "id": "25",
    "title": "Lead Animator",
    "studio": "Tripledot Studios",
    "industry": "Games",
@@ -420,7 +515,7 @@
    "desc": "Who are we?\nTripledot Studios is one of the largest independent mobile games companies in the world.\nWe are a multi-award-winning organisation, with a global 2,500+ strong team across 12 studios.\nOur expanded portfolio includes some of the biggest titles in mobile gaming, collectively reaching top chart positions around the world and engaging over 25 million daily active users.\nTripledot’s guiding principle is that when people love what they do, what they do will be loved by others.\nWe’re building a company we’re proud of. One filled with driven, incredibly smart and detail-orientated people, who LOVE making games.\nOur ambition is to be the most successful games company in the world, and we’re just getting started.\nThis role will be working at our Clipwire Games studio.\nClipwire Games is one of Canada's top grossing mobile game developers, and the creator of Monopoly: Bingo!, TPIR: Bingo"
   },
   {
-   "id": "21",
+   "id": "26",
    "title": "Lead Animator",
    "studio": "Tripledot Studios",
    "industry": "Games",
@@ -445,7 +540,7 @@
    "desc": "Who are we?\nTripledot Studios is one of the largest independent mobile games companies in the world.\nWe are a multi-award-winning organisation, with a global 2,500+ strong team across 12 studios.\nOur expanded portfolio includes some of the biggest titles in mobile gaming, collectively reaching top chart positions around the world and engaging over 25 million daily active users.\nTripledot’s guiding principle is that when people love what they do, what they do will be loved by others.\nWe’re building a company we’re proud of. One filled with driven, incredibly smart and detail-orientated people, who LOVE making games.\nOur ambition is to be the most successful games company in the world, and we’re just getting started.\nThis role will be working at our Clipwire Games studio.\nClipwire Games is one of Canada's top grossing mobile game developers, and the creator of Monopoly: Bingo!, TPIR: Bingo"
   },
   {
-   "id": "22",
+   "id": "27",
    "title": "Lead Animator",
    "studio": "Tripledot Studios",
    "industry": "Games",
@@ -470,7 +565,7 @@
    "desc": "Who are we?\nTripledot Studios is one of the largest independent mobile games companies in the world.\nWe are a multi-award-winning organisation, with a global 2,500+ strong team across 12 studios.\nOur expanded portfolio includes some of the biggest titles in mobile gaming, collectively reaching top chart positions around the world and engaging over 25 million daily active users.\nTripledot’s guiding principle is that when people love what they do, what they do will be loved by others.\nWe’re building a company we’re proud of. One filled with driven, incredibly smart and detail-orientated people, who LOVE making games.\nOur ambition is to be the most successful games company in the world, and we’re just getting started.\nThis role will be working at our Clipwire Games studio.\nClipwire Games is one of Canada's top grossing mobile game developers, and the creator of Monopoly: Bingo!, TPIR: Bingo"
   },
   {
-   "id": "23",
+   "id": "28",
    "title": "3D Artist",
    "studio": "Jobgether",
    "industry": "Games",
@@ -489,7 +584,7 @@
    "desc": "This position is listed on behalf of a partner company, which manages all applications and next steps. Our partner is looking for a 3D Artist (Middle / Middle+) based in United Kingdom.\n\nWe are looking for a talented 3D Artist to contribute to the development of an exciting new mobile racing game.\nIn this role, you will focus on creating high-quality 3D vehicles, automotive components, and customization assets.\nYou will work across the entire 3D production pipeline, from modeling and UV mapping to texturing, baking, and Unity integration.\nA strong understanding of automotive design, proportions, and realistic materials will be essential to delivering visually compelling assets.\nYou will also leverage AI-powered tools to explore creative solutions, accelerate workflows, and support content production.\nWorking within a small, collaborative team, you will have the opportunity to influence t"
   },
   {
-   "id": "24",
+   "id": "29",
    "title": "Animation Artist - Senior",
    "studio": "Rodeo FX",
    "industry": "Film & TV",
@@ -508,7 +603,7 @@
    "desc": "The Animation Artist at Rodeo FX is responsible for delivering high-end, hyper-realistic performances for creatures, characters, and animated objects. With a sharp eye for timing, weight, and emotion, the artist brings life and credibility to animated assets, whether realistic or stylized. Working closely with the Animation Lead and Supervisor, the artist contributes creatively and technically to the success of each shot, while adhering to the project’s artistic vision, technical specifications, and deadlines.\nKey Responsibilities:\nMaster your craft\n• Deliver polished animation work that meets both creative intent and production specifications.\n• Demonstrate a solid grasp of animation principles—timing, weight, arcs, and posing—across different performance styles.\n• Adapt quickly to varying animation contexts (realistic creatures, mechanical objects, stylized characters).\nCreative Qualit"
   },
   {
-   "id": "25",
+   "id": "30",
    "title": "Senior Technical Artist (Contract)",
    "studio": "Kabam",
    "industry": "Games",
@@ -527,7 +622,7 @@
    "desc": "At Kabam, we’re constantly raising the bar of excellence in free-to-play gaming. We hire for passion and diversity so that we can triumph in our collective skill. Our teams are made up of a fusion of personalities and interests bound together by a collaborative nature, fun-loving culture, and a drive to do what it takes to make great games. And this is where you come in...\n \nYou possess a combination of strong technical ability, a thorough understanding of art pipelines across modeling, animation and VFX, and a passion for tools and pipelines development and innovation, including optimizing the use of AI. You also have the ability to contribute to VFX production.\n \nYou are adaptable, you like technical challenges including developing art tools, establishing art strong pipelines and troubleshooting technical issues. You are recognized as a bridge between artists and engineers. You like wo"
   },
   {
-   "id": "26",
+   "id": "31",
    "title": "3D Animator",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -546,7 +641,7 @@
    "desc": "RESPONSIBILITIES:\n• Create believable, high-quality animations and directly participating in implementing them in games.\n• Define the animation style and workflows for new products under the supervision of the Producer and Lead Artist.\n• Be able to rigging/skinning with low to medium polygon counts.\n• Take active part in the game creation process by interacting with the design team.\n• Contribute effectively to the art pipeline while understanding target platform constraints.\n• Have a strong time management skills to reach project deadlines/milestones.\n• Collaborate with the rest of the Art Team to obtain a consistent visual style for the game.\n• Work with the Programming Team to integrate your animations in the game while respecting technical constraints.\nPORTFOLIO REQUIREMENTS\nIn order for your application to be considered, you must submit a portfolio or other samples of your work. All "
   },
   {
-   "id": "27",
+   "id": "32",
    "title": "Animator",
    "studio": "1X2 Network",
    "industry": "Games",
@@ -565,7 +660,7 @@
    "desc": "1X2 Network, the multi-award winning iGaming supplier, is looking for an Animator. This is an opportunity to join a highly creative, rapidly expanding independent software company.\n\nAbout 1X2 Network\n\nFounded in 2002, 1X2 Network has pioneered Virtual Gaming products and continues to be at the forefront of game development within the iGaming industry. With a portfolio of over 150 titles spanning Virtual Sports, Table Games, Slots, Instant Win and upcoming Multiplayer games, we work with more than 250 globally recognised operators including Bet365, BetVictor and Entain (Ladbrokes, Coral, bwin and more).\n\nSeveral brands form the wider 1X2 Network, each focused on delivering unique gaming experiences across different market sectors. Our key brands include Iron Dog Studio and 1X2gaming, alongside a broad network of development and distribution partners.\n\nThe business operates across multiple"
   },
   {
-   "id": "28",
+   "id": "33",
    "title": "3D Styalised Environment Artist (volunteer)",
    "studio": "Wee Tattie Studios",
    "industry": "Games",
@@ -584,7 +679,7 @@
    "desc": "How to apply\nApply through our Wee Tattie Studios Waiting List.\n\nPlease note: We will only be considering candidates who apply through this form. We will not be accepting applications through LinkedIn, so please make sure you apply using the link above.\n\nAbout the opportunity\n\nWee Tattie Studios is an incubation game studio bringing together talented creatives to develop games, gain practical production experience and build their portfolios. Our long-term aim is to build a sustainable game studio that creates our own games and generates paid job opportunities as we grow.\n\nWe are looking for an Environment Artist to help bring our game world to life. This is an opportunity to take an active creative role in shaping the visual identity of the project, with the potential to develop into the Lead Artist position as the project progresses.\n\nWe are looking for someone with a strong eye for com"
   },
   {
-   "id": "29",
+   "id": "34",
    "title": "Level Artist",
    "studio": "Side",
    "industry": "Games",
@@ -603,7 +698,7 @@
    "desc": "Role: Level Artist\n\nStructure: Remote\n\nLocation: Based in Europe and able to work embedded in Sweden time zone\n\n* Candidates need excellent English speaking skills. CVs and resumes must be submitted in English to be considered *\n\nSide is looking for a Level Artist that will take the approved blockout to a polished, shippable standard using environment assets supplied by the client. The visual direction is dark fantasy: swamp, mire, dead trees, wooden structures, dirt, decay and dilapidation. Candidates must have experience in AAA or indie game development.\n\nAs these are project-based opportunities, positions may be amended, postponed, or withdrawn as a result of changing client requirements and project priorities.\n\nWhat you'll be doing:\n\n- Take greybox or blockout layouts from level designers and transform them into detailed, playable 3D worlds.\n\n- Place 3D models, foliage, architecture,"
   },
   {
-   "id": "30",
+   "id": "35",
    "title": "3D Gameplay Animator",
    "studio": "Gameloft",
    "industry": "Games",
@@ -622,7 +717,7 @@
    "desc": "WHAT YOU WILL BE WORKING ON\nMain challenge\nBring beloved Disney and Pixar characters to life through high-quality, expressive, and engaging gameplay animations for Disney Magic Kingdoms , a mobile game enjoyed by players around the world.\nWhat it means on a daily basis\n• Create high-quality, stylized character and creature animations that reflect the personality and charm of Disney characters.\n• Develop and refine gameplay animations while ensuring smooth integration into the game engine.\n• Collaborate with artists, game designers, and developers to ensure animations support gameplay and creative objectives.\n• Identify and resolve technical and artistic animation issues while respecting mobile performance constraints.\n• Contribute to improving animation workflows, tools, and production pipelines.\nWhat success will look like\nYou consistently deliver polished, expressive, and technically o"
   },
   {
-   "id": "31",
+   "id": "36",
    "title": "Tech Art Intern",
    "studio": "Wildlife Studios",
    "industry": "Games",
@@ -641,7 +736,7 @@
    "desc": "Tech Art Intern\nWildlife is looking for a Tech Art Intern to join our Tech Art team!\nTech Art is the bridge between creativity and technology. As a Tech Art Intern, you’ll work alongside artists and engineers to build the pipelines and tools that bring our games to life. You’ll optimize assets and workflows so millions of players get stunning visuals at smooth performance. From automating production processes to solving technical challenges, you’ll turn constraints into creative possibilities.\nWhat you'll do\n• Content: Support the production of 3D and 2D game content, such as characters, props, environments and UI elements, helping artists bring their work from concept to a game-ready asset.\n• Engine integration: Set up and integrate assets in Unity, making sure they follow project standards, and help solve the technical issues that come up along the way.\n• Look-dev: Assist with material"
   },
   {
-   "id": "32",
+   "id": "37",
    "title": "Junior Character Artist — 3-Month Contract [In-Office or Remote]",
    "studio": "Silent Games",
    "industry": "Games",
@@ -660,7 +755,7 @@
    "desc": "Silent Games is a game development studio with a focus on making excellent RPG games that our players will love! Based in the heart of Newcastle-upon-Tyne, we’re an award winning studio - most recently winning GI Biz's Best Places to Work 2026. If this sounds like something that appeals to you, then check out our roles below or get in touch with a speculative application!\n\nNewcastle upon Tyne, UK\n\nJunior Character Artist — 3-Month Contract\n\nCompany Description\n\nSilent Games is a game development studio with a focus on RPG games! We’re making a new stylised RPG inspired by Magical Girl anime, think Sailor Moon, Cardcaptor Sakura and Madoka Magica. We hope to bring the passion and authenticity needed to create a game that this community will love for years to come!\n\nJob Description\n\nOverview:\n\nWe’re looking for a Junior Character Artist to join us on a 3-month contract to work on our Magic"
   },
   {
-   "id": "33",
+   "id": "38",
    "title": "Texture Lookdev Artist - Senior",
    "studio": "Rodeo FX",
    "industry": "Film & TV",
@@ -679,7 +774,7 @@
    "desc": "The Texture Lookdev Artist generates high-quality textures from photographic references, scans, digital painting, or procedural methods. They create and refine the look of 3D models to ensure hyper-realistic rendering, combining textures, shading nuances, and surface properties. They contribute directly to the artistic and technical quality of delivered assets, ensuring they meet Rodeo FX’s high standards and integrate seamlessly into sequences.\nWorking closely with Modeling, Lighting, Compositing, Supervision, and Production teams, they actively contribute to the pipeline and the achievement of creative and technical goals.\nKey Responsibilities:\nMaster your craft\n• Develop complete looks by combining textures, shaders, and validation lighting tailored to production needs.\n• Create or refine textures to ensure visual and technical consistency of assets.\n• Produce validation renders (turn"
   },
   {
-   "id": "34",
+   "id": "39",
    "title": "Gameplay Capture Artist II",
    "studio": "Riot Games",
    "industry": "Games",
@@ -698,7 +793,7 @@
    "desc": "At Riot Games, Gameplay Capture Artists combine their in-game mastery and filmmaking sensibilities to tell engaging stories within the virtual walls of Riot’s game engines. Where others see only the game, capture artists see opportunities to move the audience.\nAs a Gameplay Capture Artist II on the Marketing Creative Services team, you will report to the Gameplay Capture Manager. You will collaborate with product and publishing teams to identify the most compelling gameplay scenarios and visual storytelling opportunities. You will work with developers, creative leads, brand managers, producers, editors, and other gameplay capture artists, working to creative briefs while holding the line for the authenticity your audience expects. Your years of craft experience, collaborative spirit, and in-game skills allow you to calmly direct complex scenarios that demonstrate a game’s sky-high skill "
   },
   {
-   "id": "35",
+   "id": "40",
    "title": "Subject Matter Expert - VFX Artists",
    "studio": "Prolific",
    "industry": "Games",
@@ -717,7 +812,7 @@
    "desc": "About Prolific\n\nProlific is not just another player in the AI space – we are building the biggest pool of quality human data in the world.\n\nOver 35,000 AI developers, researchers, and organizations use Prolific to gather data from paid study participants with a wide variety of experiences, knowledge, and skills.\n\nThe Opportunity\n\nWe are inviting 3D Artists and VFX experts with experience creating computer generated scenes and assets to join our global network for a high level gaming project.\n\nRather than traditional VFX work, we are offering an opportunity to licence existing ‘on-the-shelf’ works from your archives, plus hourly compensation for technical processing.\n\nWhat You Will Be Doing\n\n- Asset licencing: Licence existing works from your personal/ studio archives for a flat fee\n\n- Technical processing including rendering, layering, and preparing these files to our data specifications"
   },
   {
-   "id": "36",
+   "id": "41",
    "title": "3D Artist (Remote)",
    "studio": "Joblet-AI",
    "industry": "Other",
@@ -736,7 +831,7 @@
    "desc": "- Role Title: 3D Artist (Remote)\n\n- Role Type: Project-based\n\n- Location: Remote\n\n3D design professionals with Blender experience contribute to short-term design and production projects. The work involves tasks comparable to those performed in 3D modeling, texturing, rendering, animation, or visualization roles.\n\nAssignments are offered on a project-by-project basis and completed asynchronously. This opportunity is suited to designers who can apply their existing Blender experience to practical 3D production tasks over the stated project period.\n\nScope of Work\n\n1. Complete assigned 3D design tasks using your Blender experience.\n\n2. Apply relevant production skills to work involving modeling, texturing, rendering, animation, or visualization.\n\n3. Carry out the tasks associated with each project you accept.\n\n4. Complete project work asynchronously within the stated engagement period.\n\nRequ"
   },
   {
-   "id": "37",
+   "id": "42",
    "title": "3D Visual Artist (Short Term)",
    "studio": "Roblox",
    "industry": "Games",
@@ -761,7 +856,7 @@
    "desc": "Every day, tens of millions of people come to Roblox to explore, create, play, learn, and connect with friends in 3D immersive digital experiences– all created by our global community of developers and creators.\nAt Roblox, we’re building the tools and platform that empower our community to bring any experience that they can imagine to life. Our vision is to reimagine the way people come together, from anywhere in the world, and on any device. We’re on a mission to connect a billion people with optimism and civility, and looking for amazing talent to help us get there.\nA career at Roblox means you’ll be working to shape the future of human interaction, solving unique technical challenges at scale, and helping to create safer, more civil shared experiences for everyone.\nRoblox is looking for an accomplished and experienced concept artist with a focus on character and prop design, who is al"
   },
   {
-   "id": "38",
+   "id": "43",
    "title": "LookDev Artist - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -780,7 +875,7 @@
    "desc": "You will work closely with the Team Lead, Supervisor and the Texture artists to create and refine materials for characters, environments and props. You will be responsible for developing the look of assets to achieve a high level of realism, guided by references and the overall art direction.\nWhat you’ll do:\n• Collaborate with modeling, texture, and lighting teams to deliver physically accurate and realistic materials for hard-surface and organic assets, ensuring photorealism in shot context.\n• Analyze and calibrate photographic references to establish material and color targets.\n• Prepare models for optimal shading assignation and texture creation.\n• Create texture-independent look development assets that define material behavior, provide shading targets for Texture Artists, and enable Lighting Artists to begin asset integration prior to final texture delivery.\n• Work closely with Textu"
   },
   {
-   "id": "39",
+   "id": "44",
    "title": "Artiste LookDev - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -799,7 +894,7 @@
    "desc": "Vous travaillerez en étroite collaboration avec le Team Lead, le Supervisor et les Texture Artists pour créer et peaufiner les matériaux des personnages, environnements et props. Vous serez responsable de développer le look des assets afin d’atteindre un haut niveau de réalisme, en vous appuyant sur les références et sur la direction artistique globale.\nCe que vous ferez :\n• Collaborer avec les équipes de modeling, texture et lighting pour livrer des matériaux physiquement exacts et réalistes pour des assets hard-surface et organiques, en assurant le photoréalisme dans le contexte du shot.\n• Analyser et calibrer les références photographiques afin d’établir les cibles de matériaux et de couleurs.\n• Préparer les modèles pour une assignation optimale des shaders et pour la création des textures.\n• Créer des assets de look development indépendants des textures, qui définissent le comporteme"
   },
   {
-   "id": "40",
+   "id": "45",
    "title": "Rigging Artist - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -818,7 +913,7 @@
    "desc": "You will be working closely with your team lead to build and maintain high-end rigs for photoreal props, characters and creatures.\nWhat You’ll Do\n• Work closely with other departments (modeling, animation, fx/cfx, tds) to provide high-quality rigs\n• Use our in-house rigging system (Maya)\n• Act as a support to animators\n• Help develop tools and scripts to improve productivity\n• Learn and apply studio rigging standards as well as tools while gaining experience in our pipeline workflows\n• Optimize rigs for efficiency\n• Minimum 3 years rigging in the field of VFX, film or television, with the ability to ensure a high level of technical quality\n• Has experience rigging high-end creatures\n• Has a good understanding of fx/cfx requirements\n• Strong knowledge of Maya\n• Be proactive\n• Has programming skills (Python)\n• Knowledge of FACS an asset\n• Good understanding of anatomy and biomechanics\nNice"
   },
   {
-   "id": "41",
+   "id": "46",
    "title": "Artiste Rigging - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -837,8 +932,8 @@
    "desc": "Vous travaillerez en étroite collaboration avec votre team lead pour créer et maintenir des rigs haut de gamme pour des props, personnages et créatures photoréalistes.\nCe que vous ferez\n• Collaborer étroitement avec les autres départements (modeling, animation, FX/CFX, TDs) afin de livrer des rigs de grande qualité\n• Utiliser notre système de rigging interne (Maya)\n• Agir comme soutien auprès des animateurs\n• Contribuer au développement d’outils et de scripts pour améliorer la productivité\n• Apprendre et appliquer les standards de rigging et les outils du studio, tout en acquérant de l’expérience avec nos workflows de pipeline\n• Optimiser les rigs pour plus d’efficacité\n• Minimum de 3 ans d’expérience en rigging dans le domaine des VFX, du cinéma ou de la télévision, avec la capacité d’assurer un haut niveau de qualité technique\n• Expérience en rigging de créatures haut de gamme\n• Bonne "
   },
   {
-   "id": "42",
-   "title": "VFX Artist",
+   "id": "47",
+   "title": "Associate VFX Artist - Marvel Strike Force",
    "studio": "Scopely",
    "industry": "Games",
    "location": "MX - Mexico City, Mexico",
@@ -846,7 +941,7 @@
    "mode": "Not stated",
    "type": "Not stated",
    "disc": "VFX",
-   "level": "Mid",
+   "level": "Junior",
    "salary": null,
    "posted": "2026-11-16T17:25:27.000Z",
    "url": "https://job-boards.greenhouse.io/scopely/jobs/5483045008?gh_jid=5483045008",
@@ -856,26 +951,7 @@
    "desc": "Scopely is looking for a VFX Artist to join our MARVEL Strike Force team in Mexico City on a hybrid basis!\nAt Scopely, we care deeply about what we do and want to inspire play, every day - whether in our work environments alongside our talented colleagues, or through our deep connections with our communities of players. We are a global team of game lovers who are developing, publishing, and innovating the mobile games industry, connecting millions of people around the world daily.\nMarvel Strike Force is Scopely’s squad-based Hero Collector RPG, featuring heroes and villains across the Marvel Universe.\nWhat You Will Do\nYou will create real-time visual effects in Unity for Heroes, Villains, and Creatures from the Marvel universe. You will work with Tech Artists, Animators, Designers, and Engineers to create industry-leading mobile game visual effects and memorable player experiences\n• Work"
   },
   {
-   "id": "43",
-   "title": "Principal VFX Artist - March of Giants",
-   "studio": "Ubisoft",
-   "industry": "Games",
-   "location": "Montreal, QC, Canada",
-   "region": "North America",
-   "mode": "Not stated",
-   "type": "Full-time",
-   "disc": "VFX",
-   "level": "Principal+",
-   "salary": null,
-   "posted": "2026-11-16T15:28:55.702Z",
-   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000161844029",
-   "source": "smartrecruiters",
-   "via": null,
-   "recruiter": false,
-   "desc": "As a Principal Visual Effects (VFX) Artist at Ubisoft Montréal, you will help define and develop the artistic and technical vision for the project’s effects. You will create effects that support gameplay, improve readability and strengthen player immersion.\nYou will serve as a reference for the discipline and guide production teams in creating quality effects. Working with the creative, art and technical directors, you will help maintain visual consistency and technical performance throughout development.\nWhat you’ll do\n• Help define and develop the artistic vision for VFX in line with the project’s creative goals\n• Establish quality standards , production pipelines and best practices for the discipline\n• Create and integrate VFX that serve as quality benchmarks for the team\n• Collaborate with the art, creative and technical directors to maintain consistency across the project\n• Balance "
-  },
-  {
-   "id": "44",
+   "id": "48",
    "title": "3D Animator",
    "studio": "Machnet Medical Robotics",
    "industry": "Other",
@@ -894,7 +970,7 @@
    "desc": "About Us\n\nMachnet Medical Robotics (MMR), founded in 2020, is on a mission to revolutionise medical robotics. Our guiding principle is simple: innovation must improve patient outcomes, support clinicians without disrupting workflows, and empower healthcare staff rather than adding burden.\n\nMMR is a well-funded company with long-term investors and a strong financial foundation. Our hardware and software teams have developed a fully functional medical robotic platform that has successfully completed animal trials. As we move into the next phase, we are refining the platform for production with a focus on safety, reliability, usability, and scalability, preparing our technology for deployment in hospitals worldwide.\n\nAbout the Role\n\nWe are seeking a 3D Animator to create clear, engaging instructional animations that guide users through the setup of our medical robotic platform, step by step"
   },
   {
-   "id": "45",
+   "id": "49",
    "title": "Graduate Character Artist",
    "studio": "targetjobs UK",
    "industry": "Games",
@@ -913,7 +989,7 @@
    "desc": "Frontier is an independent video game developer and publisher, crafting immersive gaming experiences with fun gameplay and unparalleled artistic quality. Renowned for its iconic creative management simulation games, Frontier captivates players worldwide with immersive and authentic game worlds. The modern studio is located in the vibrant technology hub of Cambridge (UK). The talented team at Frontier are dedicated to nurturing our existing portfolio and delivering our exciting future roadmap.\n\nThis role is offered on a full in-studio basis or a hybrid basis (minimum 3 days per week in the studio). We can provide a comprehensive relocation support package as part of any offer, should you need to relocate.\n\nWe welcome applications from all, however please note that this role is not eligible for visa.\n\nWHAT’S THE ROLE?\n\nWe’re looking for a Graduate Character Artist to join our team. As a co"
   },
   {
-   "id": "46",
+   "id": "50",
    "title": "3D Technical Artist (Unity)",
    "studio": "nerd agency",
    "industry": "Games",
@@ -932,7 +1008,7 @@
    "desc": "[Hiring (Hackney, London UK) - 3D Technical Artist, Art Director and Mobile Games Enthusiast - 4 week Contract]\n\nWe are looking for an experienced and ambitious 3D artist and art director who is keen to Up-skill with Unity games software (if you became a wizard at blender, then it is easy).\n\nIf you enjoy seeing your work go live quickly, have confident experience in creating beautiful and highly optimised game art and have ambitions of creating the best looking mobile games in the market, please apply through linkedin.\n\nYou will be joining a football game RPG project in development, with a demo almost complete.\n\nYour main task will be creating simple Humanoids. Secondary task will be creating environmental objects.\n\nThe job requires:\n\n• Build characters in Blender, that match a provided art direction.\n\n• Rig and fit animations with Mixamo.\n\n• Apply the art into Unity directly (Nice to ha"
   },
   {
-   "id": "47",
+   "id": "51",
    "title": "Art Director",
    "studio": "2K",
    "industry": "Games",
@@ -951,7 +1027,7 @@
    "desc": "WE ARE GAME MAKERS\nWho we are:\nWe are a diverse team of developers driven by a passion for our art, united by our core values and inspired by a culture of inclusivity to build amazing games that thrill players everywhere. We pursue growth and innovation in an environment of safety and trust. Our culture is built on the belief that the more varied voices in our collective will strengthen our team and our games. We are looking for our next teammate who will raise our bar and make us better.\nWhat we need:\n31st Union is looking for a strategic, supportive Art Director to own the visual direction for a major area of our game. Reporting to the Studio Art Director, you will lead Associate Art Directors and Art Leads, set the quality bar, and shape the visual storytelling of our game alongside the rest of our Creative Leadership team.\nResponsibilities:\n• Leadership\n• Lead, coach, and develop Ass"
   },
   {
-   "id": "48",
+   "id": "52",
    "title": "3D Player Animator wanted for Project Namefall",
    "studio": "ThunderForge",
    "industry": "Games",
@@ -970,7 +1046,7 @@
    "desc": "We're a small founder-led studio building a semi-realistic souls-like RPG in Unreal Engine 5. Traversal is in, our combat ruleset is locked, and the team is growing. The player character is the thing you look at for every second of the game, so we want one animator who owns it end to end.\n\nTeaser here: https://www.youtube.com/watch?v=QBv3V2MImD8 👀\n\nThis is a souls-like role, so we're looking for someone who lives and breathes the genre. You know why a Dark Souls roll feels different from a Devil May Cry dodge. You can feel the difference between a windup that telegraphs commitment and one that just looks flashy. Weight, timing, anticipation and recovery are what make this genre work, and that's what the player animation has to deliver.\n\nYou'd own player animation: locomotion, dodges, attack strings, parries, hit reactions. UE5 experience ideal.\n\nWhat we need to see in your reel:\n\n⚔️ Mel"
   },
   {
-   "id": "49",
+   "id": "53",
    "title": "3D Modeler",
    "studio": "Getfigure",
    "industry": "Other",
@@ -989,7 +1065,7 @@
    "desc": "3D Character Modeller – GetFigure\n\nCompany: GetFigure\nLocation: Remote\nJob Type: Freelance / Contract\n\nAbout GetFigure\n\nGetFigure is a UK-based business specialising in personalised 3D figurines created from customer photographs. We transform real people, pets, and special memories into high-quality, custom-made 3D figures.\n\nWe're looking for a talented 3D Character Modeller to join our growing team and help bring our customers' ideas to life.\n\nResponsibilities\n\n- Create detailed, recognisable 3D character models from customer photographs.\n- Design both stylised (chibi/cartoon) and realistic figurines.\n- Ensure models are suitable for physical 3D printing.\n- Optimise models for structural strength, minimising fragile parts and printing failures.\n- Make revisions based on customer feedback.\n- Prepare and export production-ready STL/OBJ files.\n- Maintain consistent quality and meet agreed "
   },
   {
-   "id": "50",
+   "id": "54",
    "title": "Senior Technical Artist - Unannounced Project",
    "studio": "Scopely",
    "industry": "Games",
@@ -1008,7 +1084,7 @@
    "desc": "Scopely is looking for a Senior Technical Artist to join our new unannounced project in Barcelona, Spain to work on a hybrid basis 3 times a week. We can support with visa sponsorship and relocation support.\nAt Scopely, we care deeply about what we do and want to inspire play, every day - whether in our work environments alongside our talented colleagues, or through our deep connections with our communities of players. We are a distributed team of game enthusiasts who are developing, publishing, and innovating in the mobile games industry, connecting millions of people around the world every day.\nWe are in the development stages of one of our new unannounced projects. We are looking for passionate game makers to collaborate, get in early and make their mark on this exciting venture\nWe are in the early stages of development on a bold, unannounced, cross-platform Strategy/MMO title, crafti"
   },
   {
-   "id": "51",
+   "id": "55",
    "title": "Senior Previs Modeller",
    "studio": "Outpost VFX",
    "industry": "Film & TV",
@@ -1027,7 +1103,7 @@
    "desc": "About the Role\nOutpost VFX is looking for a talented Senior Previs Modeller to join our team working on a high-profile TV series at Leavesden Studios.\nYou'll be responsible for creating high-quality, efficient 3D assets to support our previs team, including environments, props and occasional character assets. The role requires someone who can work quickly and creatively, producing assets that help bring sequences and ideas to life throughout the previs process.\nKey Responsibilities\n• Create 3D models and assets for previs sequences, including environments, props and characters where required.\n• Produce quick, efficient mock-ups and assets to support creative development and client requirements.\n• Work closely with previs artists, supervisors and other team members to ensure assets meet production needs.\n• Adapt and refine models based on creative feedback and evolving production requirem"
   },
   {
-   "id": "52",
+   "id": "56",
    "title": "FX Artist - Senior",
    "studio": "Rodeo FX",
    "industry": "Film & TV",
@@ -1046,7 +1122,7 @@
    "desc": "The FX Artist designs and creates complex visual simulations such as fire, smoke, fluids, destructions, and abstract effects, while respecting Rodeo FX’s artistic and technical standards. Integrated at the heart of the 3D pipeline, they collaborate closely with the FX and CG supervision teams, as well as with other departments, to deliver photorealistic, dynamic, and technically solid shots. Their creativity, precision, and mastery of procedural tools allow them to effectively translate the project's visual intentions.\nMain responsibilities:\nMastery of his craft\n• Produce complex simulations (smoke, fire, explosions, liquids, destruction, magical or abstract effects) while respecting artistic and technical guidelines.\n• Use Houdini effectively (Pyro, Flip, RBD, Vellum, SOPs) to generate optimized and adaptable effects.\n• Maintain a high level of autonomy in the management of assigned FX "
   },
   {
-   "id": "53",
+   "id": "57",
    "title": "Animation Co-Op",
    "studio": "Kabam",
    "industry": "Games",
@@ -1071,7 +1147,7 @@
    "desc": "At Kabam, we’re constantly raising the bar of excellence in free-to-play gaming. We hire for passion and diversity so that we can triumph in our collective skill. Our teams are made up of a fusion of personalities and interests bound together by a collaborative nature, fun-loving culture, and a drive to do what it takes to make great games.\nThe key function of an Animation Co-op is to deliver high quality animations for our games. This role will work collaboratively with other animators and artists to produce dynamic and polished art, and improve workflows and pipeline.\nThis is a 4-month position from January to April 2027. This role is a full-time, on-site position based 5 days a week at our Montréal studio.\n\n\nIn this role, you can expect to:\nKey Accountabilities\nDeliver World-Class Assets and Animations for Our Games\n• Work under the guidance of experienced animators to help with vario"
   },
   {
-   "id": "54",
+   "id": "58",
    "title": "VFX Artist (Assassin's Creed Invictus)",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1090,7 +1166,7 @@
    "desc": "As a VFX Artist at Ubisoft Montréal , you will create impactful visual moments that enrich gameplay and elevate the player experience. You will help bring immersive worlds to life through environmental effects such as smoke, fire, explosions, snow, water, and other real-time visual effects .\nIn this role, you will combine creativity and technical expertise to design, integrate, and optimize high-quality visual effects directly in the game engine . You will collaborate with multiple teams to deliver a cohesive, performant, and visually engaging experience.\nWhat you’ll do\n• Collaborate with creative direction to understand the project vision and define visual effects priorities\n• Create environmental effects using particle systems and original textures\n• Partner with programming teams to assess needs and support tool development\n• Design visual effects that respect technical constraints wh"
   },
   {
-   "id": "55",
+   "id": "59",
    "title": "Associate Art Director",
    "studio": "2K",
    "industry": "Games",
@@ -1109,7 +1185,7 @@
    "desc": "Who We Are\nFounded in 2023, Small Axe Studios is 2K’s newest stand-alone studio, built to push the boundaries of game development and bring 2K’s next groundbreaking sports franchise to life. Headquartered in Burnaby, we are assembling a world-class team of visionaries, builders, and passionate gamers who thrive on creative collaboration, technical excellence, and bold ideas. At Small Axe Studios, we believe big things start with sharp focus—and we’re crafting an exceptional, player-first experience from the ground up. If you’re ready to tackle unique challenges, leave your mark on a brand-new IP, and help shape the future of interactive sports entertainment, we want you on our team!\nWhat We Need\nWe’re looking for an experienced Associate Art Director to help translate the Art Director’s vision into cohesive, high-quality work across our internal teams and external partners. You bring str"
   },
   {
-   "id": "56",
+   "id": "60",
    "title": "Senior CG Artist",
    "studio": "Happy Finish",
    "industry": "XR",
@@ -1135,7 +1211,7 @@
    "desc": "About HF\n\nWe are HF (Happy Finish), a creative technology studio built on Content Design Thinking: visuals at the speed of culture, narratives that truly resonate and participatory experiences that inspire.\n\nOur work spans Hero Visuals, Content Solutions, Immersive XR and Applied R&D. We pair craft with R&D that pushes boundaries and workflows engineered to perform, for global brands.\n\nWe're a team of versatile experts across strategy, concept, and craft and execution, with studios in London, Portland, Milan and Verona. HF is proud to be part of Different Factory.\n\nThe role\n\nWe're hiring a Senior CGI Artist to create photoreal stills and animation for world-class brands, from first brief to final frame. It's a full-time, permanent role in our London studio.\n\nYou'll be a hands-on senior artist with deep craft in product visualisation, lighting and look development. You'll own briefs with "
   },
   {
-   "id": "57",
+   "id": "61",
    "title": "VFX Artist - Agency Contract",
    "studio": "Playground Games",
    "industry": "Games",
@@ -1154,7 +1230,7 @@
    "desc": "Playground Games is looking for a VFX Artist to work alongside our talented Forza Horizon team in Leamington Spa on an agency contract.\n\nAbout us\n\nAs a premier first-party Xbox Game Studio, we are passionate about creating genre-defining games that are accessible, beautiful, and, most of all, fun. As we continue to evolve our BAFTA award-winning Forza Horizon franchise, we are looking for exceptional talent to contribute to our already diverse team of developers.\n\nAbout the role\n\nAs a VFX Artist, you will create high-quality effects, elevate the visuals of Forza Horizon, and deliver strong creative ideas while communicating and collaborating with the wider team.\n\nYou should have an appreciation of a broad range of art styles, and the ability to emulate this through artwork in real-time engine or offline rendering using your grasp of the principles of animation, dynamics and lighting. You"
   },
   {
-   "id": "58",
+   "id": "62",
    "title": "Technical Artist – UNITY – PC Game Development",
    "studio": "TINK TEAM LTD.",
    "industry": "Games",
@@ -1173,7 +1249,7 @@
    "desc": "Platform: PC / Steam\n\nEngine: Unity\n\nAvailability: Full-time or Part-time (Remote)\n\nAbout Us\n\nWe are TINK TEAM LTD, a UK-based technology company and independent game development studio.\n\nWe are currently developing multiple Mobile-Ready PC game projects in parallel, with a strong focus on high-quality 3D gameplay, scalable production pipelines, efficient rendering, and modern Unity workflows.\n\nOur projects are supported by dedicated artists and developers working collaboratively to deliver visually appealing, performance-optimized games.\n\nWe are looking for an experienced Technical Artist to bridge the gap between art and engineering, improve production efficiency, and establish reliable technical art workflows across our projects.\n\nQuick Note About Compensation\n\nThis role operates on a revenue-share basis rather than a fixed monthly salary.\n\nWe are a small, independent studio currently"
   },
   {
-   "id": "59",
+   "id": "63",
    "title": "Rendering Technical Art Intern, League of Legends - Summer 2027",
    "studio": "Riot Games",
    "industry": "Games",
@@ -1192,7 +1268,7 @@
    "desc": "As a Technical Artist , you will focus on supporting artists with art asset prototypes so they can realize their work in-game. You will work with artists across all departments from modeling to lighting to ensure all assets work within the scope of the technical pipeline requirements. Working closely with each artistic department, you will standardize and improve development processes for the production of in game assets, materials, shaders, and scalable development pipelines.\nAs a Rendering Technical Artist Intern on League, you will focus on supporting artists with shaders, materials, and art asset prototypes so they can realize their work in-game. You will work with artists across all departments from modeling to VFX to ensure all assets work within the scope of the technical pipeline requirements. Working closely with each artistic department, you will help standardize and improve de"
   },
   {
-   "id": "60",
+   "id": "64",
    "title": "Rendering Technical Art Intern (Lighting), League of Legends - Summer 2027",
    "studio": "Riot Games",
    "industry": "Games",
@@ -1211,7 +1287,7 @@
    "desc": "As a Lighting Artist , you will focus on building and executing our lighting workflows to realize the product’s creative direction in-game. You will work with art direction, technical artists, and rendering engineers to collaborate in developing the right tools, shaders, technical budgets, and art assets to hit an ideal balance of fidelity and performance to delight our players.\nAs a Lighting Artist Intern on League, you will work with artists, designers, and technical artists to help implement lighting that supports the intended look and gameplay readability. You will also assist with setting up and testing lighting scenarios and PBR materials in-engine, then document observations and share feedback with the team. Interns will contribute to assigned improvements to lighting examples, tools, or workflow documentation with guidance, build an understanding of how lighting choices affect vi"
   },
   {
-   "id": "61",
+   "id": "65",
    "title": "Senior 3D Artist - Animation",
    "studio": "Binyan Studios",
    "industry": "Archviz",
@@ -1230,7 +1306,7 @@
    "desc": "Binyan Studios is an integrated content agency that creates a sense of place and belonging for some of the world's most iconic landmarks. With over 3,000 world-class projects in its portfolio, Binyan Studios is known for pushing creative boundaries and delivering award-winning work.\n\nEstablished in 2007, the company originated in creative innovation and real estate and operates globally with studios in locations such as Sydney, Melbourne, Brisbane, New York, London, and Dubai. Binyan Studios is dedicated to enhancing the real estate and architectural visualization industry through expertise and creativity.The quality of our work is regarded internationally as among the best to be found anywhere.\n\nJob Description\n\nThe Senior 3D Artist of Animation is a senior production role within Binyan Studios. They are responsible for the uncompromising aesthetic quality and visual execution of indivi"
   },
   {
-   "id": "62",
+   "id": "66",
    "title": "Animation Art Intern - Summer 2027",
    "studio": "Riot Games",
    "industry": "Games",
@@ -1249,7 +1325,7 @@
    "desc": "As an Animation Artist Intern at Riot, you will bring champions and characters to life through classic animation principles and body mechanics. You will create high quality animations for a diverse and rapidly growing universe, including bipeds, quadrupeds, and creatures. A great reel will showcase a variety of body types, a diverse selection of action oriented game-related animation, and a strong foundation in the principles of animation, including weight, anticipation, and impact. Also working to expand our current content pipeline, you will collaborate with designers and artists to develop new features and technologies. Your craft expertise will breathe life into iconic and beloved characters for players.\nIn your application, you will select which product you prefer to apply for:\nTeamfight Tactics\nAs an Animation Artist Intern on Teamfight Tactics, you will animate a large variety of "
   },
   {
-   "id": "63",
+   "id": "67",
    "title": "Senior Previz Artist",
    "studio": "CD PROJEKT RED",
    "industry": "Games",
@@ -1274,7 +1350,7 @@
    "desc": "We’re looking for a Senior Previz Artist to join our Boston Hub to work on Cyberpunk 2 . In this position you will be responsible for creating complete movie sequences and shots that help support the director’s vision through the appropriate use of staging, blocking, cameras, composition, motion, and editing.\nTogether, with our storytellers, you will create scenes that are compelling and emotional or spectacular and bursting with action. We have them all!\nResponsibilities\n• Creating previz for gameplay, cinematic, and cutscene concepts before they are fully implemented, helping teams visualize how ideas could work and feel in the game.\n• Creating placeholder character animation that clearly communicates action, intention, and timing.\n• Establishing strong pacing, staging, composition, and camera work so previz provides a clear visual direction for later scene design and layout.\n• Explori"
   },
   {
-   "id": "64",
+   "id": "68",
    "title": "Lead VFX Artist",
    "studio": "CD PROJEKT RED",
    "industry": "Games",
@@ -1293,7 +1369,7 @@
    "desc": "We’re looking for a Lead VFX Artist to join the CD PROJEKT RED team dedicated to crafting the studio’s first-ever original IP and video game, codenamed Project Hadar. We believe the universe we are creating is one bursting with limitless potential, and we want you to help us broaden and utilize it, making sure it not only matches gamers’ high expectations set by past CD PROJEKT RED titles but exceeds them.\nAs a Lead VFX Artist, you will play a key role in shaping the visual identity and future of Project Hadar. Your responsibilities will include building and fostering a strong VFX team, leading R&D development projects, designing efficient pipelines, and closely collaborating with other teams.\nIf you are a leader who thrives on solving complex challenges, taking ownership, and is passionate about pushing the limits of what's possible in games, we’d love to hear from you.\n(This position r"
   },
   {
-   "id": "65",
+   "id": "69",
    "title": "CG Artist",
    "studio": "Union Visual Effects",
    "industry": "Other",
@@ -1312,7 +1388,7 @@
    "desc": "We’re looking for a CG Artist to help deliver high-quality visual effects for our film and high-end TV projects. You’ll collaborate with the CG and 2D teams to execute a broad range of tasks across modelling, texturing, lighting, FX, rendering and layout, ensuring seamless integration of CG elements into live-action plates. With strong creative and technical skills, you’ll work closely with Leads and Supervisors to deliver shots that meet our artistic and technical standards.\n\nWhat you’ll do:\n\n-\nDeliver high-end CG assets and shots across modelling, texturing, lookdev, lighting, FX, layout and rendering\n\n-\n\nAssemble and light CG scenes to match plate photography, ensuring realism and continuity\n\n-\n\nContribute to lookdev, problem-solving and workflow discussions with Leads and Supervisors\n\n-\n\nComposite basic versions of your shots to validate hand-off to 2D\n\n-\n\nCollaborate with production"
   },
   {
-   "id": "66",
+   "id": "70",
    "title": "Senior 3D Artist - Unreal Engine / Synthetic Data",
    "studio": "MFK Recruitment",
    "industry": "Games",
@@ -1338,7 +1414,7 @@
    "desc": "Meet Our Recruiter\n\nMatthew Mills\n\nManaging Director\n\n07493 267443\n\nmatthew@mfkrecruitment.co.uk\n\nAbout the Role\n\nSenior 3D Artist - Unreal Engine / Synthetic Data\n\nSalary: £45,000 to £60,000\n\nLocation: West London\n\nWorking arrangement: Predominantly office and customer-site based, with some remote working available\n\nEmployment: Permanent, full-time\n\nMFK Recruitment is recruiting a Senior 3D Artist for an innovative UK technology company developing advanced Artificial Intelligence and Machine Learning solutions for defence, security and other demanding real-world environments.\n\nThe company specialises in computer vision, perception and autonomy, combining modern deep learning with neuroscience-inspired technology to create accurate, robust and reliable AI systems.\n\nMFK Recruitment has successfully recruited four Engineers to this company over the past five years, and all four are still w"
   },
   {
-   "id": "67",
+   "id": "71",
    "title": "Senior 3D Artist",
    "studio": "2K",
    "industry": "Games",
@@ -1357,7 +1433,7 @@
    "desc": "WHO WE ARE\nAt 2K, we create some of the most iconic and culture-shaping video games in entertainment, including NBA® 2K, one of the top-selling franchises in the world, and legendary titles like BioShock®, Borderlands®, Mafia, Sid Meier’s Civilization®, and XCOM®, as well as fan favorites WWE® 2K, TopSpin®, and PGA TOUR® 2K. We build unforgettable experiences by pushing the boundaries of creativity, authenticity and innovation across every genre.\nOur portfolio is brought to life by some of the most influential game development studios in the world. Visual Concepts, Firaxis Games, Hangar 13, Cat Daddy Games, 31st Union, Cloud Chamber, Gearbox, HB Studios, and 2K SportsLab create world-class experiences across platforms.\nBut what truly powers 2K is our people.\nWe believe the best ideas come from teams that feel empowered, supported, and inspired. As an equal opportunity employer, we are co"
   },
   {
-   "id": "68",
+   "id": "72",
    "title": "TEXTURE & LOOKDEV SUPERVISOR - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1376,7 +1452,7 @@
    "desc": "Department & Team Leadership\n• Assign tasks, mentor artists, and ensure the department delivers top-tier organic and hard-surface assets for high-end VFX.\n• Assist with hiring, crewing decisions, talent reviews, and ongoing performance management.\n• Enforce strict department Quality Control (QC) standards across all published assets before downstream delivery.\nCreative Execution & Look Development\n• Build high-detail textures from internal art or client-supplied references.\n• Lead look development and shading in Arnold for Houdini, delivering physically accurate materials for creatures, characters, and hard-surface assets that hold up in shot context.\n• Partner closely with the Lighting team to verify that assets lookdev behaves consistently photoreal\n• Build optimized procedural shading networks and custom material setups when production requires it.\nPipeline, Technical & Production\n• C"
   },
   {
-   "id": "69",
+   "id": "73",
    "title": "3D Environment Artist (Middle/Senior)",
    "studio": "Gameloft",
    "industry": "Games",
@@ -1395,7 +1471,7 @@
    "desc": "WHAT YOU WILL BE WORKING ON\nWhat you will focus on\nJoin Gameloft’s Artist team to bring game worlds to life by creating high-quality 3D environments, from terrain and architecture to props and key landmarks. You’ll transform concepts and references into visually compelling, technically optimized assets that meet the project’s art direction and production requirements.\nWhat it means on a daily basis\n• Create immersive 3D environments: Model and texture terrain, architecture, props, and landmarks based on concepts, references, 3D mock-ups, and art direction.\n• Build and optimize assets: Create high-poly and low-poly models, develop PBR assets and textures, and optimize environments for real-time rendering on mobile and console platforms.\n• Support visual quality: Help define material and lighting properties for environment shaders, ensuring consistency with the project's artistic direction"
   },
   {
-   "id": "70",
+   "id": "74",
    "title": "3D Character Artist (Middle/Senior)",
    "studio": "Gameloft",
    "industry": "Games",
@@ -1414,7 +1490,7 @@
    "desc": "WHAT YOU WILL BE WORKING ON\nWhat you will focus on\nJoin Gameloft’s Art team to create high-quality 3D characters and objects for our games, bringing artistic concepts to life while meeting technical requirements and production deadlines. You’ll work with different art styles, from realistic to stylized, ensuring every asset meets the project’s visual and technical standards.\nWhat it means on a daily basis\n• Create high-quality 3D assets: Model and texture characters and objects in realistic or stylized art styles, following the project's art direction and creative guidelines.\n• Optimize assets for games: Produce high- and low-poly models, handle UV mapping and texture creation, and optimize assets for real-time rendering and next-generation games.\n• Ensure quality and implementation: Check that assets meet artistic and technical standards, troubleshoot issues, and work within production "
   },
   {
-   "id": "71",
+   "id": "75",
    "title": "Technical Artist",
    "studio": "1956 Individuals",
    "industry": "Games",
@@ -1433,7 +1509,7 @@
    "desc": "Technical Artist (Unity)\n\n£55–65k + benefits | Cambridge / Suffolk\n\nLooking to make your mark in a growing team where your technical artistry actually shapes the product?\n\nWho They Are\n\nThis is a well-funded, fast-moving tech business building cutting-edge interactive experiences.\n\nTheir in-house team blends artistry and engineering to create expressive, real-time 3D characters — and they’re scaling up. With a collaborative culture and a clear product vision, they’re offering the chance to get in early and help shape something genuinely innovative.\n\nThe Job\n\nThis role offers the chance to work on expressive, 3D characters — built in-house using industry-standard tools and the PBR pipeline — and bring them to life in real-time. You’ll be the bridge between creative vision and technical execution, with the autonomy to improve workflows, performance, and visual fidelity from day one.\n\nWhat "
   },
   {
-   "id": "72",
+   "id": "76",
    "title": "Technical Animator",
    "studio": "1956 Individuals",
    "industry": "Other",
@@ -1452,7 +1528,7 @@
    "desc": "Technical Animator - Character - Maya / Blender\n\nHaverhill, England, United Kingdom (On-site)\n\nThe Company\n\nThis is a well-funded, fast-moving tech business building cutting-edge interactive experiences.\n\nTheir in-house team blends artistry and engineering to create expressive, real-time 3D characters — and they’re scaling up. With a collaborative culture and a clear product vision, they’re offering the chance to get in early and help shape something genuinely innovative.\n\nRole Overview:\n\nWe’re looking for an experienced 3D Technical Character Animator to join creative team and help bring a diverse range of hand-crafted 3D characters to life. Built entirely in-house using industry-standard tools and the PBR pipeline, these characters are designed for expressive, real-time interaction.\n\nThis hands-on, production-focused role involves working closely with their Art Director, and 3D artists"
   },
   {
-   "id": "73",
+   "id": "77",
    "title": "Graduate Character Artist",
    "studio": "Frontier",
    "industry": "Games",
@@ -1471,7 +1547,7 @@
    "desc": "Frontier is an independent video game developer and publisher, crafting immersive gaming experiences with fun gameplay and unparalleled artistic quality. Renowned for its iconic creative management simulation games, Frontier captivates players worldwide with immersive and authentic game worlds. The modern studio is located in the vibrant technology hub of Cambridge (UK). The talented team at Frontier are dedicated to nurturing our existing portfolio and delivering our exciting future roadmap.\n\nThis role is offered on a full in-studio basis or a hybrid basis (minimum 3 days per week in the studio). We can provide a comprehensive relocation support package as part of any offer, should you need to relocate.\n\nWe welcome applications from all, however please note that this role is not eligible for visa.\n\nWHAT’S THE ROLE?\n\nWe’re looking for a Graduate Character Artist to join our team. As a co"
   },
   {
-   "id": "74",
+   "id": "78",
    "title": "Senior 3D Artist - UNITY",
    "studio": "TINK TEAM LTD.",
    "industry": "Games",
@@ -1490,7 +1566,7 @@
    "desc": "Platform: PC / Steam\n\nEngine: Unity\n\nAvailability: Full-time or Part-time (Remote)\n\nAbout Us\n\nWe are TINK TEAM LTD, a UK-based technology company and independent game development studio.\n\nWe are currently developing multiple Mobile-Ready PC game projects in parallel, with a strong focus on high-quality 3D gameplay, scalable production pipelines, and modern Unity workflows.\n\nEach project is led by a dedicated Senior 3D Artist, responsible for defining and executing the visual direction.\n\nQuick Note About Compensation\n\nThis role operates on a revenue-share basis rather than a fixed monthly salary.\n\nWe are a small, independent studio currently developing our first PC titles for Steam, and we follow a simple, transparent model:\n\nYou contribute to the project →\n\nOnce the game launches →\n\nYou receive your agreed share of the revenue\n\nThis is not a co-founder position and does not include large"
   },
   {
-   "id": "75",
+   "id": "79",
    "title": "Superviseur·e Texture & LookDev - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1509,7 +1585,7 @@
    "desc": "Ce que vous ferez\nLeadership du département et de l’équipe\n• Assigner les tâches, encadrer les artistes et veiller à ce que le département livre des assets organiques et hard-surface de très haut niveau pour des productions VFX haut de gamme.\n• Participer à l’embauche, aux décisions de crewing, aux évaluations des talents et à la gestion continue de la performance.\n• Faire respecter des standards rigoureux de Quality Control (QC) sur tous les assets publiés avant leur livraison aux départements en aval.\nExécution créative et Look Development\n• Créer des textures très détaillées à partir d’art interne ou de références fournies par le client.\n• Diriger le look development et le shading dans Arnold for Houdini, en livrant des matériaux physiquement exacts pour des créatures, des personnages et des assets hard-surface qui tiennent la route en contexte de plan.\n• Collaborer étroitement avec l"
   },
   {
-   "id": "76",
+   "id": "80",
    "title": "3D Technical Artist",
    "studio": "Gameloft",
    "industry": "Games",
@@ -1528,7 +1604,7 @@
    "desc": "WHAT YOU WILL BE WORKING ON​\nWhat you will focus on\nWant to bridge art and technology? Join Gameloft Saigon's Art team as a 3D Technical Artist on an unannounced project. You'll set up workflows, optimize assets and help artists, animators, programmers and game designers get the best results in the engine. You'll also tackle optimization problems, as performance really matters.\nWhat it means on a daily basis​\n• Set up version control and game builds, and create custom placeholder VFX and master materials.\n• Build and improve import workflows, guidelines and tools that cut manual work and prevent common mistakes.\n• Write and review technical documentation for the art production pipeline.\n• Help artists integrate assets correctly into the engine, set up lighting and post-processing, and support level creation and maintenance.\n• Analyze performance issues, apply LODs and other optimizations"
   },
   {
-   "id": "77",
+   "id": "81",
    "title": "Expert Technical Artist - Shader  (F/H/NB) [AAA Project]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1547,7 +1623,7 @@
    "desc": "YOUR DAILY ADVENTURE\nThe Technical Artist works with their lead to improve the function, stability, scalability, user experience and performance of the shaders and material pipelines. They are gatekeepers of budgets and technical constraints with a focus on shaders, graphics and rendering with which they are expected to inform and guide the team. This is a key support role to provide the best tools and solutions for production.\nResponsibilities\n• Support the VFX team in implementing visual effects, ensure there are no regressions when optimising, propose improvements, and create tutorials. Provide technical solutions to artistic requirements by collaborating with GPP teams on how to achieve specific visual results\n• Produce and maintain shaders and complex VFX\n• Monitor and optimize performance: PC/Consoles profiling and optimization\n• Act as the gatekeeper of VFX constraints, pushing fo"
   },
   {
-   "id": "78",
+   "id": "82",
    "title": "Technical VFX Artist, Pokémon GO",
    "studio": "Scopely",
    "industry": "Games",
@@ -1566,7 +1642,7 @@
    "desc": "​​Pokémon GO is the global gaming sensation that has been downloaded over 1 billion times and named “Best Mobile Game” by the Game Developers Choice Awards and “Best App of the Year” by TechCrunch. Pokémon GO follows Scopely Explore’s mission of encouraging outdoor exploration, exercise, and significant social interactions, and has grossed over $6B in revenue since its debut in 2016. In order to delight our millions of players across the globe, the Pokémon GO team requires motivated and skilled individuals to develop new features and look for creative ways to optimize a continually growing game.\nWe are seeking a Technical VFX Artist with creative and technical expertise to help across a variety of live-game challenges and features. This is a hybrid role, with three days per week on-site at our Tokyo studio. You will work with cross-functional partners and bridge technical and creative as"
   },
   {
-   "id": "79",
+   "id": "83",
    "title": "Technical Artist, Pokémon GO",
    "studio": "Scopely",
    "industry": "Games",
@@ -1585,7 +1661,7 @@
    "desc": "​​Pokémon GO is the global gaming sensation that has been downloaded over 1 billion times and named “Best Mobile Game” by the Game Developers Choice Awards and “Best App of the Year” by TechCrunch. Pokémon GO follows Scopely Explore’s mission of encouraging outdoor exploration, exercise, and significant social interactions, and has grossed over $6B in revenue since its debut in 2016. In order to delight our millions of players across the globe, the Pokémon GO team requires motivated and skilled individuals to develop new features and look for creative ways to optimize a continually growing game.\nWe are seeking a Technical Artist with creative and technical expertise to help across a variety of live-game challenges and features. This is a hybrid role, with three days per week on-site at our Tokyo studio. You will work with cross-functional partners and bridge technical and creative aspect"
   },
   {
-   "id": "80",
+   "id": "84",
    "title": "Associate Art Director - League Cosmetics",
    "studio": "Riot Games",
    "industry": "Games",
@@ -1604,7 +1680,7 @@
    "desc": "We are seeking an Associate Art Director, a leader who combines artistic vision and creative tastemaking with operational discipline and managerial support. In this role, you will work closely with the Senior Art Director to drive the artistic vision for a key pillar of League of Legends, acting as the day-to-day steward of artistic quality and coherence in your area. Beyond your artistic responsibilities, you will also help support our managerial structure by providing guidance and leadership of art craft teams, as well as facilitating broader art department rituals and gatherings.\nAs an Associate Art Director on League of Legends , you will report to the Senior Art Director and drive the art direction for Cosmetics on League of Legends. You will define compelling thematics and premium cosmetic experiences, ensuring they meet League’s quality bar while resonating with a global player ba"
   },
   {
-   "id": "81",
+   "id": "85",
    "title": "Lead 3D Artist",
    "studio": "TINK TEAM LTD.",
    "industry": "Games",
@@ -1623,7 +1699,7 @@
    "desc": "Platform: PC / Steam\n\nEngine: Unity\n\nAvailability: Full-time or Part-time (Remote)\n\nAbout Us\n\nWe are TINK TEAM LTD, a UK-based technology company and independent game development studio.\n\nWe are currently developing multiple Mobile-Ready PC game projects in parallel, with a strong focus on high-quality 3D gameplay, scalable production pipelines, and modern Unity workflows.\n\nEach project is led by a dedicated Senior 3D Artist, responsible for defining and executing the visual direction.\n\nQuick Note About Compensation\n\nThis role operates on a revenue-share basis rather than a fixed monthly salary.\n\nWe are a small, independent studio currently developing our first PC titles for Steam, and we follow a simple, transparent model:\n\nYou contribute to the project →\n\nOnce the game launches →\n\nYou receive your agreed share of the revenue\n\nThis is not a co-founder position and does not include large"
   },
   {
-   "id": "82",
+   "id": "86",
    "title": "3D Animator – Wildlife Cinematic Short",
    "studio": "Twine",
    "industry": "Other",
@@ -1642,7 +1718,7 @@
    "desc": "Bring a dramatic wildlife story to life as a 3D Animator, creating a 60-second cinematic animation for vertical short-form platforms such as YouTube Shorts, TikTok, and Facebook Reels. The project centers on a fire ant colony facing rising floodwaters, showcasing their survival instincts as they form a living raft to protect their queen and young. The animation should feature stylized visuals, believable ant behavior, and a polished, suspenseful narrative arc. Cinematic camera movement, dynamic close-ups, and fast-paced editing are essential to capture viewers’ attention and deliver a compelling story in a 9:16 format. Suitable ant models may be provided or sourced to streamline production.\n\nDeliverables\n\n- Produce a 60-second stylized 3D animation in 9:16 vertical format, optimized for short-form platforms.\n\n- Animate multiple ants efficiently using reusable or duplicated models.\n\n- Int"
   },
   {
-   "id": "83",
+   "id": "87",
    "title": "Senior 3D Generalist – CGI & Generative AI",
    "studio": "TCWGlobal",
    "industry": "Other",
@@ -1661,7 +1737,7 @@
    "desc": "Senior 3D Generalist – CGI & Generative AI\n\nW2 Contract 12 Months\n\nRemote, United Kingdom\n\nGBP 63-89/hr\n\nWe are looking for a highly versatile Senior 3D Generalist (Contract) with broad experience across modeling, surfacing, shot assembly, lighting, rendering, and compositing. This is a hands-on senior artist who understands how these fields connect and can help carry work from early development through polished final imagery.\n\nThe role is intentionally broad, as production needs can change rapidly. This artist should be comfortable transitioning between assets, shot development, lighting, compositing, and technical workflows. We appreciate someone who can recognize what is holding a shot back from achieving its final quality and work collaboratively across different fields to resolve it.\n\nGenerative AI and advanced production workflows play a vital role in our developing organization. T"
   },
   {
-   "id": "84",
+   "id": "88",
    "title": "Senior Environment Artist Texture",
    "studio": "Naughty Dog",
    "industry": "Games",
@@ -1680,7 +1756,7 @@
    "desc": "This position is for temporary engagement through our staffing partner, Yoh Enterprise Solutions. Candidates must be authorized to work in the United States for this position.\nThis is a hybrid / onsite position.\nFor nearly 40 years, Naughty Dog has been crafting best-selling, critically acclaimed games that constantly push the boundaries of narrative, gameplay, and technology. Naughty Dog recently released The Last of Us Part II Remastered as well as a current generation remake of The Last of Us Part I for the PS5. We're also proud to say that The Last of Us Parts I & II are now available for the first time on PC. Currently, we’re busy at the kennel working on Intergalactic: The Heretic Prophet, and we'd love to find talented individuals to join us. Naughty Dog games have long been lauded for their evocative, character-driven stories and attention to detail. We are committed to innovatio"
   },
   {
-   "id": "85",
+   "id": "89",
    "title": "Senior VFX Artist",
    "studio": "CD PROJEKT RED",
    "industry": "Games",
@@ -1699,7 +1775,7 @@
    "desc": "We’re looking for a Senior VFX Artist to join the CD PROJEKT RED team dedicated to crafting the studio’s first-ever original IP and video game, codenamed Project Hadar. We believe the universe we are creating is one bursting with limitless potential, and we want you to help us broaden and utilize it, making sure it not only matches gamers’ high expectations set by past CD PROJEKT RED titles but exceeds them.\nAs a Senior VFX Artist, you will play an important role in defining and delivering high-quality visual effects for Project Hadar. Working closely with artists, designers, programmers, and other disciplines, you will create, prototype, and optimize real-time VFX while contributing to workflows, sharing your expertise, and helping push the visual quality of the project.\nIf you enjoy solving technical and artistic challenges, taking ownership of your work, and exploring new possibilitie"
   },
   {
-   "id": "86",
+   "id": "90",
    "title": "CG Supervisor",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1718,7 +1794,7 @@
    "desc": "What you will do\n• Work closely with the VFX Supervisor, producers, artists, and other relevant departments to create high-quality visual effects;\n• Provide clear guidance to all CG departments, set specific goals, and monitor processes, progress, and results;\n• Clearly communicate R&D and pipeline requirements to developers;\n• Determine, adjust, and maintain the most effective and efficient technical approach and workflow possible;\n• In collaboration with CG department management, participate in the design and implementation of the technical and artistic pipeline, as well as the development of the production flow, while ensuring that the tools used fully meet the needs of the project;\n• Coach Technical Directors (TDs) in solving day-to-day problems and anticipate potential pipeline tool issues before they affect production;\n• Ensure deadlines are met and that each department performs th"
   },
   {
-   "id": "87",
+   "id": "91",
    "title": "Superviseur·e CG  - Hybride VFX",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1737,7 +1813,7 @@
    "desc": "Ce que vous ferez\n• Travailler en étroite collaboration avec le ou la Superviseur·e VFX, les producteurs, les artistes et les autres départements concernés afin de créer des effets visuels de haute qualité ;\n• Fournir des directives claires à tous les départements CG, fixer des objectifs précis et assurer le suivi des processus, de la progression et des résultats ;\n• Informer clairement les développeurs des besoins en R&D et en pipeline ;\n• Déterminer, ajuster et maintenir l’approche technique et le flux de travail les plus efficaces et efficients possibles ;\n• En collaboration avec la direction du département CG, participer à la conception et à la mise en œuvre du pipeline technique et artistique, ainsi qu’à l’élaboration du flux de production, tout en veillant à ce que les outils utilisés répondent pleinement aux besoins du projet;\n• Encadrer les Directeurs Techniques (TD) dans la réso"
   },
   {
-   "id": "88",
+   "id": "92",
    "title": "Stage - 6 mois - Level Artist (F/H/NB) [AAA Project] - Décembre2026",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -1756,7 +1832,7 @@
    "desc": "La ou Le Stagiaire Level Artist contribue à la création d'environnements de jeu cohérents, lisibles et immersifs au sein de l'équipe World.\nAccompagné.e par la ou le Lead Level Art et les Level Artists, il.elle travaille en étroite collaboration avec les Level et Quest Designers pour traduire leurs intentions de conception en environnements visuels cohérents et adaptés à l'expérience joueur.\nIl.Elle apprend à concevoir ses choix artistiques en tenant compte de la jouabilité, de la navigation, de la lisibilité des espaces et des contraintes techniques du projet, tout en développant sa maîtrise des outils et méthodes de production AAA.\nIl.Elle contribue à l'application de la vision de l'Art Direction et participe progressivement aux réflexions artistiques autour des environnements.\nResponsabilités\nProduction Level Art\n• Participer à la création et à la mise en scène d'environnements de jeu"
   },
   {
-   "id": "89",
+   "id": "93",
    "title": "Freelance Animator – Virtual Influencer CGI",
    "studio": "Twine",
    "industry": "Other",
@@ -1775,7 +1851,7 @@
    "desc": "This role involves creating a stylized-realistic CGI recreation of an established virtual influencer based on provided image references. The primary objective is to achieve visual consistency, ensuring the character’s facial features, proportions, and overall aesthetic remain faithful to the reference throughout the animation. You will be responsible for producing a polished, approximately 30-second video of the character seated and speaking, with convincing facial expressions, accurate lip-sync, and subtle arm and body gestures. The final output must be suitable for social or commercial video use, free from generic AI artifacts or shifting character features. You may utilize 3D or other reliable production approaches, including AI-assisted workflows, as appropriate. Character references and further examples will be provided privately.\n\nResponsibilities\n\n- Recreate a virtual influencer c"
   },
   {
-   "id": "90",
+   "id": "94",
    "title": "Junior 3D Generalist",
    "studio": "Random42® Scientific Communication",
    "industry": "XR",
@@ -1794,7 +1870,7 @@
    "desc": "Random42 Scientific Communication is a leading scientific communication studio specialising in medical animation, extended reality (XR - AR, VR, MR), interactive experiences, and digital solutions for the pharmaceutical, biotechnology, and medical industries.\n\nFounded in 1992, the company brings more than three decades of expertise and industry leadership to every project. With a portfolio of over 380 award-winning projects, Random42 sets the standard for scientific storytelling and visual communication in healthcare. We operate at the intersection of art, science, and technology, transforming complex scientific concepts into clear and impactful digital content. Random42 is part of The Lockwood Group, offering a collaborative and innovative environment for creative and scientific professionals.\n\nRole Description This is a full-time permanent Junior 3D Generalist role based in Marylebone,"
   },
   {
-   "id": "91",
+   "id": "95",
    "title": "Graduate Character Artist",
    "studio": "Frontier Developments",
    "industry": "Games",
@@ -1813,7 +1889,7 @@
    "desc": "Frontier is an independent video game developer and publisher, crafting immersive gaming experiences with fun gameplay and unparalleled artistic quality. Renowned for its iconic creative management simulation games, Frontier captivates players worldwide with immersive and authentic game worlds. The modern studio is located in the vibrant technology hub of Cambridge (UK). The talented team at Frontier are dedicated to nurturing our existing portfolio and delivering our exciting future roadmap.\n\nThis role is offered on a full in-studio basis or a hybrid basis (minimum 3 days per week in the studio). We can provide a comprehensive relocation support package as part of any offer, should you need to relocate.\n\nWe welcome applications from all, however please note that this role is not eligible for visa.\n\nWHAT’S THE ROLE?\n\nWe’re looking for a Graduate Character Artist to join our team. As a co"
   },
   {
-   "id": "92",
+   "id": "96",
    "title": "Freelance Animator – Pool Tech Trade Show",
    "studio": "Twine",
    "industry": "Other",
@@ -1832,7 +1908,7 @@
    "desc": "This role involves developing a dynamic exhibit presentation for the launch of a patented electronic controller for in-floor pool cleaning systems at a major Pool/Spa trade show in Orlando, February 2027. The goal is to create an engaging visual experience that captures attention in a busy trade show environment and clearly communicates the product’s unique sequencing of water flow through hidden valves, plumbing, and cleaning zones. The presentation should blend animation, 3D visualization, motion graphics, product imagery, video, sound, and narration to quickly and intuitively explain the controller’s function and advantages. Additionally, you will help establish a distinct brand personality for the product, potentially including the creation of an original technician/inventor-style mascot that embodies advanced technology and supports pool professionals.\n\nDeliverables\n\n- Develop a cre"
   },
   {
-   "id": "93",
+   "id": "97",
    "title": "Freelance Environment Artist – Unreal Engine Open World",
    "studio": "Twine",
    "industry": "Games",
@@ -1851,7 +1927,7 @@
    "desc": "Join an ambitious project to enhance and complete a large-scale open-world environment in Unreal Engine 5, representing the Australian mainland and Tasmania. The existing landscape utilizes Unreal Landscape and World Partition across a 400 × 400 km terrain. The objective is to deliver a cohesive, editable, and playable world with authentic geography, terrain variation, and biome accuracy. You will assess the current landscape, recommend practical improvements, and implement advanced environment development techniques to achieve a high-quality, optimized result. This role requires direct collaboration within the existing UE5 project, with a strong emphasis on performance, scalability, and maintainable workflows for large worlds.\n\nResponsibilities\n\n- Assess and analyze the current Unreal Engine 5 landscape and World Partition setup\n\n- Recommend and implement improvements to terrain sculpti"
   },
   {
-   "id": "94",
+   "id": "98",
    "title": "Lead Animator",
    "studio": "Frontier Developments",
    "industry": "Games",
@@ -1870,7 +1946,7 @@
    "desc": "Frontier is an independent video game developer and publisher, crafting immersive gaming experiences with fun gameplay and unparalleled artistic quality. Renowned for its iconic creative management simulation games, Frontier captivates players worldwide with immersive and authentic game worlds. The modern studio is located in the vibrant technology hub of Cambridge (UK). The talented team at Frontier are dedicated to nurturing our existing portfolio and delivering our exciting future roadmap.\n\nThis role is offered on a full in-studio basis or a hybrid basis (minimum 3 days per week in the studio). We can provide a comprehensive relocation support package as part of any offer, should you need to relocate.\n\nWHAT’S THE ROLE?\n\nAre you passionate about crafting compelling character and creature animation that elevates gameplay? At Frontier, animation is at the heart of our storytelling. We’re"
   },
   {
-   "id": "95",
+   "id": "99",
    "title": "Animateur technique senior / Senior Technical Animator",
    "studio": "People Can Fly",
    "industry": "Games",
@@ -1889,7 +1965,7 @@
    "desc": "• Establish and maintain the production and software pipeline and meet deadlines in collaboration with the Lead.\n• Creating high quality characters, creatures and props rigging and skinning suitable technically to project the desired universe.\n• Autonomously Implementing rigging for characters in Maya including cloth, physics and hair setups.\n• Work closely with modelers and animators to ensure a smooth development pipeline that delivers high quality assets.\n• Create new riggings\n• Create retargeting systems/tools for old rigging to new rigging.\n• Share ownership of pipeline tools and working with engine and project leads on continuous improvement of those engine tools.\n• Support the team regarding the technical ownership of the team’s output in providing clean assets or code within established systems and requirements.\n• Providing R&D projects, pipeline and workflow improvements and pro"
   },
   {
-   "id": "96",
+   "id": "100",
    "title": "Character Artist Internship",
    "studio": "Larian Studios",
    "industry": "Games",
@@ -1908,7 +1984,7 @@
    "desc": "With multiple awards to our name, Larian Studios has proven that we’re dedicated to delivering high-quality role-playing games. As we move on to new projects, the studio that brought you Baldur’s Gate 3 & Divinity: Original Sin 2 is looking for a Character Art Intern to join the team and help us in crafting the high caliber games our fans have come to expect.\n\n\nResponsibilities\n• Bringing interesting and believable 3D character models to life, with or without concept art. Assets involved: humanoids, monsters, animals, clothing, armor, weapons, hair and much more.\n• Creating, baking and unwrapping high quality 3D models, created in Zbrush and Maya and texturing them with Substance Painter (or equivalent 3D or 2D packages).\n• Ensuring character models follow technical guidelines by working closely with other departments such as Concept art, Design, Tech Anim and Tech Art.\n\nRequirements\n• C"
   },
   {
-   "id": "97",
+   "id": "101",
    "title": "Lookdev & Texture TD (Expression of Interest)",
    "studio": "FrameStore",
    "industry": "Film & TV",
@@ -1927,7 +2003,7 @@
    "desc": "Framestore brings together world-class producers, artists, and technologists to craft visually striking work across advertising, episodic, and immersive productions. Our teams blend creative ingenuity with cutting-edge technology to deliver high-end visual effects, immersive storytelling, and premium content for global clients, brands, and broadcasters.\n\nFramestore combines talent and technology to bring life to everything we create. Driven by creativity and inspired by the future, we set out every day to reframe the possible.\n\nAbout the role\n\nThis is an expression of interest for upcoming roles within our team. As we build our talent pool for future projects, please note we are currently only considering UK-based artists at this time.\n\nAs a Lookdev & Texture Artist, you'll drive the look development of CG assets for high-end, photo-realistic projects, collaborating closely with our mode"
   },
   {
-   "id": "98",
+   "id": "102",
    "title": "3D Modeler",
    "studio": "ABI3D",
    "industry": "Other",
@@ -1946,7 +2022,7 @@
    "desc": "ABI3D is looking for a freelance Parametric 3D Modeller to develop textures, patterns and sculptural details for 3D printing directly onto fabrics.\n\nThis is a remote, contract role suited to someone who combines a strong design eye with practical modelling skills. You’ll translate sketches, artwork and visual references into editable designs for fashion and textile applications.\n\nResponsibilities\n\n- Create parametric patterns, organic textures and raised surface details.\n\n- Build editable workflows using Blender Geometry Nodes or Rhino Grasshopper.\n\n- Adapt designs to garment panels, fabric dimensions and placement requirements.\n\n- Prepare print ready geometry with suitable bases, thicknesses and clean surfaces.\n\n- Refine designs following feedback from our design and production team.\n\n- Deliver organised source files, production exports and clear visual previews.\n\nWhat we’re looking for"
   },
   {
-   "id": "99",
+   "id": "103",
    "title": "Senior 3D Visualizer – AI Workflows",
    "studio": "MAWD | March and White Design",
    "industry": "Archviz",
@@ -1965,7 +2041,7 @@
    "desc": "MAWD is seeking a talented Senior Visualizer with exceptional 3D modeling and rendering skills and a strong interest in integrating AI into the creative process.\n\nYou will work closely with our interior designers to create high-quality 3d visualizations and develop practical AI-assisted visualization workflows that can be implemented across studios. Combining a refined visual eye with technical expertise, you will help teams communicate design intent and bring greater speed, flexibility and quality to project work.\n\nThis is a hands-on creative role, with opportunities to share your expertise across our studios, help shape MAWD's visualization standards and develop practical AI-assisted workflows that improve the way our design teams work.\n\nKey responsibilities\n\n3D visualization and modeling\n\n· Produce high-quality interior and architectural visualizations for concept development, design "
   },
   {
-   "id": "100",
+   "id": "104",
    "title": "3D Player Animator wanted for Namefall ⚔️",
    "studio": "ThunderForge",
    "industry": "Games",
@@ -1984,7 +2060,7 @@
    "desc": "We're a small founder-led studio building a semi-realistic souls-like RPG in Unreal Engine 5. Traversal is in, our combat ruleset is locked, and the team is growing. The player character is the thing you look at for every second of the game, so we want one animator who owns it end to end.\n\nTeaser here: https://www.youtube.com/watch?v=QBv3V2MImD8 👀\n\nThis is a souls-like role, so we're looking for someone who lives and breathes the genre. You know why a Dark Souls roll feels different from a Devil May Cry dodge. You can feel the difference between a windup that telegraphs commitment and one that just looks flashy. Weight, timing, anticipation and recovery are what make this genre work, and that's what the player animation has to deliver.\n\nYou'd own player animation: locomotion, dodges, attack strings, parries, hit reactions. UE5 experience ideal.\n\nWhat we need to see in your reel:\n\n⚔️ Mel"
   },
   {
-   "id": "101",
+   "id": "105",
    "title": "Technical Animation Director (F/H/NB) [AAA Project]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2003,7 +2079,7 @@
    "desc": "Directement sous la responsabilité du Technical Director Pipeline, le ou la titulaire de ce poste est responsable de déterminer, de préparer et d'adapter les outils qui devront être utilisés en cours de production du côté Animation, Graph d’Animation (behavior tree).\nResponsabilités :\n• Vous définirez les chantiers et améliorations à apporter au pipeline existant ( Animation Ingame, Ragdoll, Facial, Rig, Motion Capture, Cinématiques..)\n• Développer ou trouver les meilleurs outils et méthodes possibles dans le but d’améliorer et faciliter le travail des animateurs sur tout les sujets relatifs à l'animation (chara mais aussi gear) .\n• Optimiser le graph d’animation et l’architecture\n• Supporter l’équipe animation au quotidien pour résoudre leurs problématiques techniques et les aider à prendre des décisions pour optimiser les graph d’animations ingame.\n• Garant.e Technique du respect des c"
   },
   {
-   "id": "102",
+   "id": "106",
    "title": "Art Director [Art Team]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2022,7 +2098,7 @@
    "desc": "About the Role\nThe Art Director plays a pivotal role in shaping and maintaining the visual identity of the game. This position ensures that all artistic elements meet the highest standards of quality and consistency while aligning with the game’s technical requirements. Acting as a creative visionary and strategic leader, the Art Director guides a specific art team (e.g. concept, visual effects), fosters innovation, and drives collaboration across disciplines. By setting clear artistic benchmarks and introducing cutting-edge practices, the Art Director transforms ideas into visually compelling experiences that resonate with players and elevate the overall production value.\nWhat you‘l'l’do\nArt Direction & Visual Benchmark\n• Understand and apply the art direction of the project, communicate the artistic vision and style guide to the local team.\n• Ensure consistency of visual identity acros"
   },
   {
-   "id": "103",
+   "id": "107",
    "title": "Directeur.rice technique animation (projet non annoncé)",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2041,7 +2117,7 @@
    "desc": "En tant que Directeur·trice Technique Animation à Ubisoft Montréal, vous rejoindrez une petite équipe autonome qui développe une expérience multijoueur dans Unreal Engine. Vous guiderez le développement de systèmes d’animation fluides, expressifs et performants tout en assurant l’alignement entre les objectifs créatifs et les contraintes techniques.\nVous collaborerez étroitement avec les équipes d’animation, d’armature, de programmation et d’outils afin de créer des chaînes de production fiables et évolutives adaptées aux ambitions du projet.\nCe que vous ferez:\n• Concevoir , implanter et maintenir des chaînes de production d’animation performantes et évolutives;\n• Collaborer avec l’équipe d’outils afin de développer et améliorer des scripts MotionBuilder en Python ;\n• Travailler avec les animateur·trice·s et les programmeur·euse·s pour raffiner les systèmes d’animation dans le moteur de "
   },
   {
-   "id": "104",
+   "id": "108",
    "title": "Lead Character Artist [Tom Clancy's The Division 2]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2060,7 +2136,7 @@
    "desc": "Tom Clancy’s The Division 2 is an online, open world, action shooter RPG, set in a collapsing and fractured Washington, D.C. This rich setting combines a wide variety of beautiful, iconic, and realistic environments in which the player gets to experience the series’ trademark fast-paced action, rich RPG systems and dedication to authenticity in world building.\nAs our Lead Artist you will support the team with structure, pipelines and workflows. You’ll also manage the collaboration with codev, providing feedback and guidance. You’ll also take the lead on strategic decisions regarding how to push Character Art forward.\nWhat you'll do\n• Produce and deliver quality 3D assets for the game (Character Art, NPCs, weapons and gear, Cinematic assets)\n• Prioritizing and managing the team’s day-to-day tasks to ensure that deliverables are completed on time and to specifications. Balancing your workl"
   },
   {
-   "id": "105",
+   "id": "109",
    "title": "Senior VFX Artist [Tom Clancy's The Division 3]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2079,7 +2155,7 @@
    "desc": "Before applying, please ensure you meet below eligibility criteria:\n• Be employed on a permanent or fixed-term contract\n• You need to have spent at least 1 year in your current role at Ubisoft\n• Be eligible and willing to work where the position is located and in accordance with local legal guidelines.\nIn 2023, it was announced that Massive Entertainment is leading the development of Tom Clancy's The Division 3. While we cannot unveil any details about the third entry in the series at this time, we are actively recruiting for the project.\nWe are looking for a Senior VFX Artist with a strong technical skill-set and drive, to join our team. You'll be responsible for creating astonishing visual effects aligned with the games artistic vision and utilizing the technical possibilities of our Snowdrop engine. You'll work closely with our Technical Art team, and other interdisciplinary peers.\nWh"
   },
   {
-   "id": "106",
+   "id": "110",
    "title": "Gameplay Animation Director - Beyond Good & Evil 2 - H/F/NB",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2098,7 +2174,7 @@
    "desc": "Beyond Good & Evil 2 est un jeu d'action aventure en monde ouvert qui se déroule dans un univers space opera captivant. C'est également la préquelle directe du grand classique de 2003 ! Grâce à l'avancée technologique apportée par notre moteur propriétaire Voyager, Beyond Good & Evil 2 souhaite proposer une expérience organique et sans interruption d'exploration et de piraterie de l'espace à l'échelle d'un système solaire, dans lequel on pourra retrouver des lieux exotiques, des personnages hauts en couleur, et de nombreux mystères à découvrir en solo ou avec des amis. Si vous êtes à la recherche d'une aventure unique, rejoignez notre équipe pour nous aider à créer Système 3 !\nNous cherchons notre futur.e Gameplay Animation Director qui va définir et incarner la vision animation gameplay du projet .\nCe que tu feras\nTu travailleras en collaboration avec le Directeur Créatif Fawzi Mesmar, "
   },
   {
-   "id": "107",
+   "id": "111",
    "title": "Animation Director [Rainbow Six]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2117,7 +2193,7 @@
    "desc": "About the role\nAs Animation Director, you will be responsible for the animation content for an entire project, including gameplay animations and cinematics. You will also ensure all the visual elements are credible and aligned with the overall game vision to maximize the player’s experience. This position is based in Shanghai.\n作为动画总监，您将全面负责项目中的动画内容，包括游戏动画与过场动画。您还需确保所有视觉元素真实可信，并与整体游戏愿景保持一致，从而最大化玩家的游戏体验。该职位位于上海。\nWhat you will do\n• Set out the animation artistic vision for the game & cinematic based on the creative direction by gathering and developing visual concepts and references, in close collaboration with the Creative Director and the Art Director\n• Communicate expectations of the artistic vision to the team in regards to quality and content through appropriate visual references and documents (movies, series, other video games, design documents) describing the artistic direction\n• Sup"
   },
   {
-   "id": "108",
+   "id": "112",
    "title": "Senior Technical Animator",
    "studio": "2K",
    "industry": "Games",
@@ -2142,7 +2218,7 @@
    "desc": "As a Senior Technical Animator at Cloud Chamber, you will join our talented development team to help shape advanced animation systems and runtime character performance in Unreal Engine 5. In this role, you’ll collaborate with a passionate group of game developers to build scalable technical solutions and animation workflows that support immersive gameplay to bring the richly imagined world of BioShock to life.\nWhat You’ll Do:\n• Implement and configure animation assets and systems directly inside Unreal Engine 5.\n• Author, maintain, and optimize complex Animation Blueprints as well as runtime procedural systems, including cloth, IK, and secondary dynamics.\n• Tune, refine, and troubleshoot Motion Matching and advanced locomotion systems to deliver fluid, responsive movement.\n• Ensure all animation assets, runtime systems, and editor frameworks are fully optimized for smooth runtime perform"
   },
   {
-   "id": "109",
+   "id": "113",
    "title": "Senior Technical Animator",
    "studio": "2K",
    "industry": "Games",
@@ -2161,7 +2237,7 @@
    "desc": "As a Senior Technical Animator at Cloud Chamber, you will join our talented development team to help shape advanced animation systems and runtime character performance in Unreal Engine 5. In this role, you’ll collaborate with a passionate group of game developers to build scalable technical solutions and animation workflows that support immersive gameplay to bring the richly imagined world of BioShock to life.\nWhat You’ll Do:\n• Implement and configure animation assets and systems directly inside Unreal Engine 5.\n• Author, maintain, and optimize complex Animation Blueprints as well as runtime procedural systems, including cloth, IK, and secondary dynamics.\n• Tune, refine, and troubleshoot Motion Matching and advanced locomotion systems to deliver fluid, responsive movement.\n• Ensure all animation assets, runtime systems, and editor frameworks are fully optimized for smooth runtime perform"
   },
   {
-   "id": "110",
+   "id": "114",
    "title": "Lead Animator",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2180,7 +2256,7 @@
    "desc": "What you will do\n• Be responsible for managing the production and delivery of all animation.\n• Organise and supervise animators, to prioritise and deliver upon requirements, and ensure the efficient and timely delivery of high quality assets.\n• Maintain effective relationships with our outsource partners.\n• Identify and resolve risks to both the project and outsource pipeline.\n• Planning and scheduling of animation tasks.\n• Troubleshooting and solve animation issues with all departments\n• Collaborate with the Art Director to verify in-game animation quality, consistency and iterate according to feedback.\n• Drive the development of rapid prototypes.\n• Work with Art, Tech, and Design to help define short and long-term objectives and establish workflows.\n• Provide mentorship and guidance to the animation team.\n• Manage the delicate balance between quality and delivering to aggressive deadli"
   },
   {
-   "id": "111",
+   "id": "115",
    "title": "Principal Technical Artist",
    "studio": "PlayStation Global",
    "industry": "Games",
@@ -2199,7 +2275,7 @@
    "desc": "Why Sony Interactive Entertainment?\n\nSony Interactive Entertainment isn’t just the Best Place to Play — it’s also the Best Place to Work. Sony Interactive Entertainment (SIE) is the company behind the PlayStation brand. As a subsidiary of Sony Group Corporation, we’re part of a proud legacy of innovation and excellence. SIE is a dynamic technology company, delivering cutting-edge hardware and network services to more than 100 million people and an entertainment leader, home to some of the most beloved and recognizable intellectual properties (IP) in the world. Our role at SIE is to create and nurture the experiences under the PlayStation brand, a name synonymous with entertainment excellence and creativity.\n\nWe are Media Molecule, a Guildford based game developer proudly part of the PlayStation Studios group. We have a history of creating Award winning games such as LittleBigPlanet, Tear"
   },
   {
-   "id": "112",
+   "id": "116",
    "title": "Principal Technical Artist",
    "studio": "Media Molecule",
    "industry": "Games",
@@ -2218,7 +2294,7 @@
    "desc": "We are Media Molecule, a Guildford based game developer proudly part of the PlayStation Studios group. We have a history of creating Award winning games such as LittleBigPlanet, Tearaway and Dreams.\n\nIt’s a fantastic time to join us as we embark on our next adventure, defining and executing the vision for our next ambitious project based out of our studio in central Guildford. We are now searching for an exceptional Principal Technical Artist to join us!\n\nThis will be a short-term contingent engagement through our staffing partner, Yoh Services which we anticipate will run until the end of July 2027. We are therefore open to hybrid and remote working in the UK with a preference for 1 day a week onsite in Guildford.\n\nRole Overview:\n\nThis role offers an exciting opportunity to serve as a subject-matter expert for the Art Department, applying knowledge gained through prior experience to dri"
   },
   {
-   "id": "113",
+   "id": "117",
    "title": "Lead Level Artist - (F/H/NB) [AAA PROJECT]",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2237,7 +2313,7 @@
    "desc": "Le ou la Lead Level Art est responsable de la qualité, de la cohérence et de l'exécution artistique des environnements produits par l'équipe World.\nRattaché.e au World Lead, il.elle organise, accompagne et fait progresser l'équipe Level Art afin de transformer la vision artistique, technique et gameplay en environnements lisibles, crédibles et techniquement maîtrisés.\nIl.elle travaille en partenariat étroit avec le Lead Level Design afin d'assurer une parfaite cohérence entre intentions de design, expérience de jeu et réalisation visuelle.\nIl.Elle collabore quotidiennement avec la Direction Technique afin d'intégrer les contraintes techniques, les outils de production et les méthodes permettant de garantir une production efficace et durable.\nAu-delà de son équipe, il.elle contribue activement aux décisions World et représente les enjeux artistiques auprès des autres disciplines du projet"
   },
   {
-   "id": "114",
+   "id": "118",
    "title": "Technical Artist",
    "studio": "1X2 Network",
    "industry": "Games",
@@ -2256,7 +2332,7 @@
    "desc": "1X2 Network, the multi-award-winning iGaming supplier, is looking for a Technical Artist, this is an opportunity to join a highly creative, rapidly expanding independent software company.\n\nAbout 1X2 Network\n\nFounded in 2002, 1X2 Network has pioneered Virtual Gaming products and continues to be at the forefront of game development within the iGaming industry. With a portfolio of over 150 titles spanning Virtual Sports, Table Games, Slots, Instant Win and upcoming Multiplayer games, we work with more than 250 globally recognised operators including Bet365, BetVictor and Entain (Ladbrokes, Coral, bwin and more).\n\nSeveral brands form the wider 1X2 Network, each focused on delivering unique gaming experiences across different market sectors. Our key brands include Iron Dog Studio and 1X2gaming, alongside a broad network of development and distribution partners.\n\nThe business operates across m"
   },
   {
-   "id": "115",
+   "id": "119",
    "title": "Senior Tech/VFX Artist - 6 month contract",
    "studio": "Panic Stations",
    "industry": "Games",
@@ -2275,7 +2351,7 @@
    "desc": "We’re a games studio focused on building games that bring people together.\n\nWe believe that games that deliver the most fun-per-minute have the highest chance of success. We are a start-up and not a big company, which means we’re a bit scrappy but we’re resourceful, highly collaborative and focused on outcomes and shipping builds over process and meetings.\n\nWe aim to hire multi-talented individuals who can operate autonomously and at speed, with every role at the studio being hands-on working directly on our games.\n\nRole Overview\n\nWe’re looking to bring on a Senior Tech/VFX Artist for a 6 month contract, with potential to extend further depending on how things go.\n\nWe’re looking for a Senior Technical Artist that has strong experience creating VFX and development tools to contribute to art production on an exciting unannounced co-op combat game, and support Tech Art on multiple projects "
   },
   {
-   "id": "116",
+   "id": "120",
    "title": "Senior 3D Generalist Artist",
    "studio": "Mythwright",
    "industry": "Games",
@@ -2294,7 +2370,7 @@
    "desc": "Role Overview\n\nWe're looking for a Senior 3D Generalist Artist to work on a Simulation Game. You'll work closely with a small, multidisciplinary team to build imaginative and replayable simulation games that serve a distinct genre audience and connect with players.\n\nKey Responsibilities\n\n1 - Create Game-Ready Art\n\nYou'll mainly be working on modular environments, props, set dressing and character / creature work\n\nSuccess looks like:\n\n- Understanding our art ethos and working autonomously with high level direction\n\n- Grasping the project art style and adapting quickly\n\n- Understanding how to construct modular environments and working to a grid\n\n- Rapid output by focusing on getting the core elements right rather than superficial details\n\n2 - Be a Force Multiplayer, Not Just an Asset Maker\n\nThere's more to it than just creating assets, it's about being an invaluable team member.\n\nSuccess l"
   },
   {
-   "id": "117",
+   "id": "121",
    "title": "3D Visualizer (3D Studio Max) (Retail Design)",
    "studio": "Network - Career Consultants",
    "industry": "Product viz",
@@ -2313,7 +2389,7 @@
    "desc": "A Design studio who bring beautiful designs to luxury Retail environments in mind to be built in the physical, need a 3D Studio Max Fluent 3D Visualizer who has expert skills with 3D Studio Max and Vray to make photo-realistic visuals to convey to the client for sign-off.\n\nWorking 3 days in a London office and 2 at home, this progressive company who continues to grow seek a hard-working, 3D Visualizer with strong values and a good design eye to add to their team.\n\nYou would have ideally worked on visualizations in Retail environments, or at least in Commercial environments, in interior spaces and pop-ups, shop in shops, and concessions.\n\nMoreover, your folio will be eye catching and hopefully you have worked with luxury brands in this space.\n\nThis is a role not for Motion Designers or Animators or anyone from a digital design background.\n\nIf the above sounds like you do apply with CV and"
   },
   {
-   "id": "118",
+   "id": "122",
    "title": "3D Animator (Middle/Senior)",
    "studio": "Gameloft",
    "industry": "Games",
@@ -2332,7 +2408,7 @@
    "desc": "WHAT YOU WILL BE WORKING ON\nWhat you will focus on\nDo you bring characters and game objects to life through animation? Join Gameloft Saigon's Animation team. You'll create believable, high-quality animations for ongoing projects. You'll work with Lead Animators, Lead Artists, designers and programmers to get the best result on every platform. Middle-level animators will grow their craft in a strong art team. Senior animators will also help shape our guidelines and coach junior talent.\nWhat it means on a daily basis\n• Create believable, high-quality key-framed animations for real-time and pre-rendered sequences.\n• Animate characters and game objects, in either a cartoony, stylized or realistic style.\n• Rig and skin your assets, including complex rigs.\n• Work with game designers and programmers to deliver the best animation within platform limits.\n• Work with the production team, Lead Anim"
   },
   {
-   "id": "119",
+   "id": "123",
    "title": "Senior Technical Animator (contract)",
    "studio": "CD PROJEKT RED",
    "industry": "Games",
@@ -2351,7 +2427,7 @@
    "desc": "CD PROJEKT RED is looking for a Senior Technical Animator to join our Technical Animation team working on The Witcher 4 on a 6 month fixed-term employment contract . This is a temporary position covering the absence of an existing team member.\nIn this role, you will focus on the implementation, development, and stabilization of character animation systems using Unreal Engine 5's Unreal Animation Framework (UAF/AnimNext). You will take ownership of existing technical animation solutions, adapt them to the new framework, and ensure they are robust, performant, and reusable across different character types, including NPCs, humanoid enemies, and monsters.\nWe are particularly interested in someone with extensive hands-on Unreal Engine experience who can quickly familiarize themselves with existing systems and independently drive technical solutions to completion. Working with rapidly evolving"
   },
   {
-   "id": "120",
+   "id": "124",
    "title": "Cinematic Presentation Animation Intern [Spring 2027]",
    "studio": "Crystal Dynamics",
    "industry": "Games",
@@ -2370,7 +2446,7 @@
    "desc": "Crystal Dynamics is constantly seeking the best gaming talent worldwide to add to our 30-plus year legacy of game development creating new and iconic franchises. We are committed to making great games with great people and living the dream while doing it.\nBenefits for our regular full-time positions include, but are not limited to, a competitive regional salary, 100% employer-paid medical, dental, and vision insurance options, professional development reimbursement, flexible hybrid on-site/off-site work opportunities, company paid holidays, plus additional paid days in December when the studio is closed for holiday break, and the ability to accrue additional paid time-off.\nJoin us and help shape an amazing studio culture, where we’re building award-winning franchises like Tomb Raider and more!\nJOB DESCRIPTION\nCrystal Dynamics is now accepting applications for a remote spring internship, "
   },
   {
-   "id": "121",
+   "id": "125",
    "title": "3D AI Generalist - 6 Months Contract",
    "studio": "Rodeo FX",
    "industry": "Film & TV",
@@ -2389,26 +2465,7 @@
    "desc": "The Generative AI Artist creates images and sequences that support every stage of a project at Rodeo FX: visual direction, pitches, previs, IP development, and increasingly, final shots for broadcast. At Rodeo FX, AI is a creative tool in service of an artistic intention. It does not replace it.\nWithin the Toronto Ads, Post & AI department, this person works closely with our compositing, 3D, real-time, and art direction teams. Their role is to extend what these teams can do: explore more creative directions earlier and deliver imagery that holds up in production.\nThis is a hybrid role grounded in the realities of advertising production, requiring both a strong creative eye and technical rigor.\nKey Responsibilities\nMaster Your Craft\n• Build and maintain your own workflows in ComfyUI, combining multiple models based on the needs of each shot.\n• Train LoRAs on image and video models and pre"
   },
   {
-   "id": "122",
-   "title": "Modeler (Vegetation)",
-   "studio": "Ubisoft",
-   "industry": "Games",
-   "location": "Québec City, QC, Canada",
-   "region": "North America",
-   "mode": "Not stated",
-   "type": "Full-time",
-   "disc": "Modelling",
-   "level": "Mid",
-   "salary": null,
-   "posted": "2026-10-27T18:38:45.376Z",
-   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000158126459",
-   "source": "smartrecruiters",
-   "via": null,
-   "recruiter": false,
-   "desc": "As a 3D Vegetation Modeler at Ubisoft Québec, you will create 3D game-ready assets, contribute to the development of production pipelines, and research and develop new production techniques.\nWhat you’ll do\n• Create 3D vegetation models for the game\n• Gather references and prepare concepts and preliminary versions of assets\n• Model assets in high and low resolution\n• Apply or modify textures\n• Integrate 3D assets into the game engine\n• Work with technical, game and art teams to meet the game’s needs\nWhat you bring to the team\n• Proficiency in SpeedTree and ZBrush\n• Proficiency in Photoshop and either Substance 3D Painter, Substance 3D Designer or both\n• Proficiency in a 3D modeling tool , such as Maya, 3ds Max or Blender\n• Organizational skills and an ability to take initiative\n• Ability to create custom foliage atlases without using Megascans\n• Flexibility in working methods\n• Assets : e"
-  },
-  {
-   "id": "123",
+   "id": "126",
    "title": "Freelance Senior Lighting Artist",
    "studio": "Outpost VFX",
    "industry": "Film & TV",
@@ -2427,7 +2484,7 @@
    "desc": "The role\nAs a Freelance Senior Lighting artist, you’ll be working alongside our incredible 2D & 3D team in Mumbai. Lending your illumination skills and eye for mood setting to a variety of film and episodic productions. Whether it’s matching a plate, enhancing a LookDev or lighting a full CG shot, there’s plenty for you to sink your teeth into.\nKey skills\n• Industry standard software knowledge (Maya, Houdini, Arnold, Nuke…)\n• Understanding of VFX lighting principles.\n• A strong eye for detail, composition, colour and lighting.\n• Good knowledge of Shading networks and LookDev techniques.\nWhat happens next?\nIf you think Outpost sounds like a good fit for you, or you simply want to chat with someone about the role and our culture, get in touch today!\nEqual opportunities\nAt Outpost we believe that our strength lies in our differences. These help us to take different perspectives, challenge n"
   },
   {
-   "id": "124",
+   "id": "127",
    "title": "Rigger",
    "studio": "Ubisoft",
    "industry": "Games",
@@ -2446,7 +2503,7 @@
    "desc": "The rigger will bridge needs between the modellers and animators to maximize efficiency of rigging (joints/bones) and skinning (skin and clothes meshing), and work in close collaboration with the technical director to create tools that the animators will need.\nResponsibilities\n• Based on the models provided by character modelers, carry out character rigging and skinning to meet the needs of the project’s animators, technical directors, and art directors.\n• Adjust the skeleton whenever necessary.\n• Create and use tools to increase animation quality and effectiveness and incorporate them into the project’s game engine through close collaboration with the animation TD while being able to assess the relevance of tool implementation.\n• Coach modelers on ways to adapt their work to better suit the animation and the art director’s vision.\n• Configure the ragdolls (procedural animations with phy"
   },
   {
-   "id": "125",
+   "id": "128",
    "title": "Senior Environment Artist",
    "studio": "PlayStation Global",
    "industry": "Games",
@@ -2465,7 +2522,7 @@
    "desc": "Why Sony Interactive Entertainment?\n\nSony Interactive Entertainment isn’t just the Best Place to Play — it’s also the Best Place to Work. Sony Interactive Entertainment (SIE) is the company behind the PlayStation brand. As a subsidiary of Sony Group Corporation, we’re part of a proud legacy of innovation and excellence. SIE is a dynamic technology company, delivering cutting-edge hardware and network services to more than 100 million people and an entertainment leader, home to some of the most beloved and recognizable intellectual properties (IP) in the world. Our role at SIE is to create and nurture the experiences under the PlayStation brand, a name synonymous with entertainment excellence and creativity.\n\nWe are Media Molecule, a Guildford based game developer proudly part of the PlayStation Studios group. We have a history of creating Award winning games such as LittleBigPlanet, Tear"
   },
   {
-   "id": "126",
+   "id": "129",
    "title": "Senior Technical Animator (Unreal Engine )",
    "studio": "Jobgether",
    "industry": "Games",
@@ -2484,7 +2541,7 @@
    "desc": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Senior Technical Animator (Unreal Engine | Remote) based in United Kingdom.\n\nAs a Senior Technical Animator, you’ll develop the technical systems and workflows that bring characters to life in an unannounced game project. You’ll combine advanced rigging expertise with deep Unreal Engine knowledge to build reliable, scalable animation solutions for real-time gameplay. Working closely with animators, technical artists, and gameplay programmers, you’ll solve complex challenges involving character deformation, animation logic, and engine integration. You’ll also improve production pipelines connecting digital content creation tools with Unreal Engine, helping teams work more efficiently and consistently. This hands-on senior role offers meaningful technical owners"
   },
   {
-   "id": "127",
+   "id": "130",
    "title": "Senior VFX Artist (Stylized Games | Unity3D)",
    "studio": "Jobgether",
    "industry": "Games",
@@ -2503,7 +2560,7 @@
    "desc": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Senior VFX Artist (Stylized Games | Unity3D) based in United Kingdom.\n\nAs a Senior VFX Artist, you’ll create expressive, polished real-time visual effects that bring gameplay to life and make every interaction feel impactful and rewarding. You’ll work across combat, character abilities, and environmental effects, combining artistic creativity with technical precision to deliver distinctive visual experiences. You’ll play a key role in shaping visual quality, ensuring effects communicate gameplay clearly while maintaining strong artistic consistency and performance. Collaborating with art directors, game designers, technical artists, and engineers, you’ll transform creative concepts into high-quality in-engine results. This is a hands-on senior role offering su"
   },
   {
-   "id": "128",
+   "id": "131",
    "title": "Senior Environment Artist",
    "studio": "Media Molecule",
    "industry": "Games",
@@ -2522,7 +2579,7 @@
    "desc": "We are Media Molecule, a Guildford based game developer proudly part of the PlayStation Studios group. We have a history of creating Award winning games such as LittleBigPlanet, Tearaway and Dreams.\n\nIt’s a fantastic time to join us as we embark on our next adventure, defining and executing the vision for our next ambitious project based out of our studio in central Guildford. We are now searching for 2 exceptional Senior 3D Environment Artists to join us!\n\nThis will be a short-term contingent engagement through our staffing partner, Yoh Services which we anticipate will run until the end of July 2027. We are therefore open to hybrid and remote working in the UK with a preference for 1 day a week onsite in Guildford.\n\nRole Overview\n\nAs a Senior 3D Environment Artist, you'll be working with a world class team of Artists to bring our game levels to the highest quality, under guidance by ou"
   },
   {
-   "id": "129",
+   "id": "132",
    "title": "3D Artist (Environment & Hard-Surface) - Namefall",
    "studio": "ThunderForge",
    "industry": "Games",
@@ -2541,7 +2598,7 @@
    "desc": "3D Environment & Hard-Surface Artist wanted for Namefall ⚔️\n\nWe're a small founder-led studio building a semi-realistic souls-like RPG in Unreal Engine 5. Programmers and combat animators are on board, traversal is done, combat is in progress. Now we need someone to build the world the characters live and fight in.\n\nTeaser here: https://www.youtube.com/watch?v=QBv3V2MImD8 👀\n\nOn the visual side: think FromSoftware. Grounded, believable materials and architecture, no stylised or cartoon shapes. Our world leans heavily on religious and medieval architecture, with a sense of former grandeur that has been corrupted over time. Weathered stone, rusted iron, rotting timber, history in every surface. We tell the story through material and damage rather than spectacle. Readability matters too: players need to read a space, and a weapon in a hand, at a glance.\n\nYou'd be owning environments, modula"
   },
   {
-   "id": "130",
+   "id": "133",
    "title": "Senior Environment Artist",
    "studio": "Sony Interactive Entertainment",
    "industry": "Games",
@@ -2560,7 +2617,7 @@
    "desc": "Why Sony Interactive Entertainment?\n\nSony Interactive Entertainment isn’t just the Best Place to Play — it’s also the Best Place to Work. Sony Interactive Entertainment (SIE) is the company behind the PlayStation brand. As a subsidiary of Sony Group Corporation, we’re part of a proud legacy of innovation and excellence. SIE is a dynamic technology company, delivering cutting-edge hardware and network services to more than 100 million people and an entertainment leader, home to some of the most beloved and recognizable intellectual properties (IP) in the world. Our role at SIE is to create and nurture the experiences under the PlayStation brand, a name synonymous with entertainment excellence and creativity.\n\nWe are Media Molecule, a Guildford based game developer proudly part of the PlayStation Studios group. We have a history of creating Award winning games such as LittleBigPlanet, Tear"
   },
   {
-   "id": "131",
+   "id": "134",
    "title": "Senior 3D Character Artist (Stylized Games | Unity3D)",
    "studio": "Jobgether",
    "industry": "Games",
@@ -2579,7 +2636,7 @@
    "desc": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Senior 3D Character Artist (Stylized Games | Unity3D) based remotely in United Kingdom.\n\nJoin an international game development team and create expressive, visually distinctive 3D characters that bring game worlds to life. As a Senior 3D Character Artist, you will transform 2D concepts into polished, production-ready characters, combining artistic creativity with technical precision. You will shape every detail, from silhouettes and proportions to textures, materials, and surface finishes, ensuring each character has a memorable personality. Working across the full production pipeline, you will prepare optimized assets for real-time implementation, particularly in Unity3D. You will collaborate closely with Concept Artists, Animators, Rigging Specialists, and T"
   },
   {
-   "id": "132",
+   "id": "135",
    "title": "Senior Environment Artist (Stylized Games | Real-Time)",
    "studio": "Jobgether",
    "industry": "Games",
@@ -2598,7 +2655,7 @@
    "desc": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Senior Environment Artist (Stylized Games | Real-Time) based remotely in United Kingdom.\n\nJoin an international game development team as a Senior Environment Artist, creating visually striking, immersive worlds that bring gameplay experiences to life. In this hands-on senior role, you will transform concepts and artistic references into polished, production-ready environments that combine distinctive stylized aesthetics with real-time performance. You will shape everything from architectural elements and terrain to props, vegetation, and complete playable scenes. Working closely with Art Directors, Environment Leads, Level Designers, and Technical Artists, you will help establish cohesive visual identities and compelling environmental storytelling. Your expert"
   },
   {
-   "id": "133",
+   "id": "136",
    "title": "Senior Technical Artist (Houdini | Procedural Game Art)",
    "studio": "Jobgether",
    "industry": "Games",
@@ -2617,7 +2674,7 @@
    "desc": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Senior Technical Artist (Houdini | Procedural Game Art) based remotely in United Kingdom.\n\nCombine technical expertise and artistic creativity to build procedural systems that transform game art production. In this role, you will design and develop scalable tools, generators, and workflows using Houdini, enabling artists to create high-quality assets with greater efficiency and flexibility. You will work across procedural modeling, geometry processing, environment creation, and real-time game pipelines, turning complex technical challenges into intuitive, production-ready solutions. By developing reusable Houdini Digital Assets and automating repetitive tasks, you will help teams improve consistency while preserving creative freedom. Working closely with artis"
   },
   {
-   "id": "134",
+   "id": "137",
    "title": "3D Artist",
    "studio": "TINK TEAM LTD.",
    "industry": "Games",
@@ -2636,7 +2693,7 @@
    "desc": "PC / Steam / UNITY / Remote\n\nAbout Us\n\nWe are TINK TEAM LTD, a UK-based technology company and newly formed independent game development studio.\n\nOur team is currently developing multiple PC / Steam games, with a focus on engaging gameplay, polished player experience, strong visual presentation, and modern Unity workflows.\n\nAs we expand our game division, we are looking for a Senior Game Designer who can strengthen our game concepts, develop compelling mechanics, and build interconnected gameplay systems that make players want to keep playing and come back.\n\nQuick Note About Compensation\n\nThis role works on a revenue-share basis rather than a monthly salary.\n\nWe are a new independent studio developing multiple PC games for the Steam platform, and we prefer a simple, transparent collaboration model:\n\nYou contribute to the project →\n\nOnce the game launches →\n\nYou receive your agreed share "
   },
   {
-   "id": "135",
+   "id": "138",
    "title": "3D Art Intern [Spring 2027]",
    "studio": "Crystal Dynamics",
    "industry": "Games",
@@ -2655,7 +2712,7 @@
    "desc": "Crystal Dynamics is constantly seeking the best gaming talent worldwide to add to our 30-plus year legacy of game development creating new and iconic franchises. We are committed to making great games with great people and living the dream while doing it.\nBenefits for our regular full-time positions include, but are not limited to, a competitive regional salary, 100% employer-paid medical, dental, and vision insurance options, professional development reimbursement, flexible hybrid on-site/off-site work opportunities, company paid holidays, plus additional paid days in December when the studio is closed for holiday break, and the ability to accrue additional paid time-off.\nJoin us and help shape an amazing studio culture, where we’re building award-winning franchises like Tomb Raider and more!\nJOB DESCRIPTION\nCrystal Dynamics is now accepting applications for a remote spring internship, "
   },
   {
-   "id": "136",
+   "id": "139",
    "title": "Technical Artist, Environment Optimization Intern [Spring 2027]",
    "studio": "Crystal Dynamics",
    "industry": "Games",
@@ -2674,7 +2731,7 @@
    "desc": "Crystal Dynamics is constantly seeking the best gaming talent worldwide to add to our 30-plus year legacy of game development creating new and iconic franchises. We are committed to making great games with great people and living the dream while doing it.\nBenefits for our regular full-time positions include, but are not limited to, a competitive regional salary, 100% employer-paid medical, dental, and vision insurance options, professional development reimbursement, flexible hybrid on-site/off-site work opportunities, company paid holidays, plus additional paid days in December when the studio is closed for holiday break, and the ability to accrue additional paid time-off.\nJoin us and help shape an amazing studio culture, where we’re building award-winning franchises like Tomb Raider and more!\nJOB DESCRIPTION\nCrystal Dynamics is now accepting applications for a remote spring internship, "
   },
   {
-   "id": "137",
+   "id": "140",
    "title": "Senior Technical Artist",
    "studio": "Roblox",
    "industry": "Games",
@@ -2699,7 +2756,7 @@
    "desc": "Every day, tens of millions of people come to Roblox to explore, create, play, learn, and connect with friends in 3D immersive digital experiences– all created by our global community of developers and creators.\nAt Roblox, we’re building the tools and platform that empower our community to bring any experience that they can imagine to life. Our vision is to reimagine the way people come together, from anywhere in the world, and on any device. We’re on a mission to connect a billion people with optimism and civility, and looking for amazing talent to help us get there.\nA career at Roblox means you’ll be working to shape the future of human interaction, solving unique technical challenges at scale, and helping to create safer, more civil shared experiences for everyone.\nRoblox is building the future of user-generated content - a platform where millions of creators design immersive 3D world"
   },
   {
-   "id": "138",
+   "id": "141",
    "title": "Gameplay Animator",
    "studio": "2K",
    "industry": "Games",
@@ -2718,7 +2775,7 @@
    "desc": "Who We Are\nFounded in 2023, Small Axe Studios is 2K’s newest stand-alone studio, built to push the boundaries of game development and bring 2K’s next groundbreaking sports franchise to life. Headquartered in Burnaby, we are assembling a world-class team of visionaries, builders, and passionate gamers who thrive on creative collaboration, technical excellence, and bold ideas. At Small Axe Studios, we believe big things start with sharp focus—and we’re crafting an exceptional, player-first experience from the ground up. If you’re ready to tackle unique challenges, leave your mark on a brand-new IP, and help shape the future of interactive sports entertainment, we want you on our team!\nWhat We Need\nOur studio is looking for an experienced Gameplay Animator who has a high quality bar and a passion for replicating authentic sports behaviors. In this role, you will work closely with AI and Ani"
   },
   {
-   "id": "139",
+   "id": "142",
    "title": "Senior Character Artist",
    "studio": "Epic Games",
    "industry": "Games",
@@ -2743,7 +2800,7 @@
    "desc": "WHAT MAKES US EPIC?\nAt the core of Epic’s success are talented, passionate people. Epic prides itself on creating a collaborative, welcoming, and creative environment. Whether it’s building award-winning games or crafting engine technology that enables others to make visually stunning interactive experiences, we’re always innovating.\nBeing Epic means being a part of a team that continually strives to do right by our community and users. We’re constantly innovating to raise the bar of engine and game development.\nART\nWhat We Do\nPush your artistic talent to the limit on a team of world-class environment, character and concept artists who strive to innovate and inspire.\nWhat You'll Do\nEpic Games is searching for experienced Character Artists to join our team working on Fortnite. In this role you will create top-quality characters for use in gameplay, cinematics, and marketing material. You "
   },
   {
-   "id": "140",
+   "id": "143",
    "title": "Senior Character Artist",
    "studio": "Epic Games",
    "industry": "Games",
@@ -2760,63 +2817,6 @@
    "via": null,
    "recruiter": false,
    "desc": "WHAT MAKES US EPIC?\nAt the core of Epic’s success are talented, passionate people. Epic prides itself on creating a collaborative, welcoming, and creative environment. Whether it’s building award-winning games or crafting engine technology that enables others to make visually stunning interactive experiences, we’re always innovating.\nBeing Epic means being a part of a team that continually strives to do right by our community and users. We’re constantly innovating to raise the bar of engine and game development.\nART\nWhat We Do\nPush your artistic talent to the limit on a team of world-class environment, character and concept artists who strive to innovate and inspire.\nWhat You'll Do\nEpic Games is searching for experienced Character Artists to join our team working on Fortnite. In this role you will create top-quality characters for use in gameplay, cinematics, and marketing material. You "
-  },
-  {
-   "id": "141",
-   "title": "FX Artist - Mid and Senior - Multiple Positions",
-   "studio": "Rodeo FX",
-   "industry": "Film & TV",
-   "location": "Toronto, ON, Canada",
-   "region": "North America",
-   "mode": "Not stated",
-   "type": "Full-time",
-   "disc": "VFX",
-   "level": "Senior",
-   "salary": null,
-   "posted": "2026-10-22T18:16:04.788Z",
-   "url": "https://jobs.smartrecruiters.com/rodeofx/744000157204897",
-   "source": "smartrecruiters",
-   "via": null,
-   "recruiter": false,
-   "desc": "The FX Artist designs and creates complex visual simulations such as fire, smoke, fluids, destructions, and abstract effects, while respecting Rodeo FX’s artistic and technical standards. Integrated at the heart of the 3D pipeline, they collaborate closely with the FX and CG supervision teams, as well as with other departments, to deliver photorealistic, dynamic, and technically solid shots. Their creativity, precision, and mastery of procedural tools allow them to effectively translate the project's visual intentions.\nMain responsibilities:\nMastery of his craft\n• Produce complex simulations (smoke, fire, explosions, liquids, destruction, magical or abstract effects) while respecting artistic and technical guidelines.\n• Use Houdini effectively (Pyro, Flip, RBD, Vellum, SOPs) to generate optimized and adaptable effects.\n• Maintain a high level of autonomy in the management of assigned FX "
-  },
-  {
-   "id": "142",
-   "title": "Artiste FX - Senior et intermédiaire - Multiple positions",
-   "studio": "Rodeo FX",
-   "industry": "Film & TV",
-   "location": "Montreal and Quebec City, QC, Canada",
-   "region": "North America",
-   "mode": "Not stated",
-   "type": "Contract",
-   "disc": "VFX",
-   "level": "Senior",
-   "salary": null,
-   "posted": "2026-10-22T18:14:34.383Z",
-   "url": "https://jobs.smartrecruiters.com/rodeofx/744000157201791",
-   "source": "smartrecruiters",
-   "via": null,
-   "recruiter": false,
-   "desc": "L’artiste d’effets conçoit et réalise des simulations visuelles complexes, feu, fumée, fluides, destructions, effets abstraits, dans le respect des standards artistiques et techniques de Rodeo FX. Intégré.e au cœur du pipeline 3D, il.elle collabore étroitement avec la supervision FX, CG et les autres départements pour livrer des plans photoréalistes, dynamiques et techniquement solides. Sa créativité, sa rigueur et sa maîtrise des outils procéduraux permettent de traduire les intentions visuelles du projet avec efficacité.\nPrincipales responsabilités :\nMaîtrise de son métier\n• Produire des simulations complexes (fumée, feu, explosions, liquides, destructions, effets magiques ou abstraits) en respectant les directives artistiques et techniques.\n• Utiliser Houdini avec efficacité (Pyro, Flip, RBD, Vellum, SOPs) pour générer des effets optimisés et adaptables.\n• Maintenir un haut niveau d’a"
-  },
-  {
-   "id": "143",
-   "title": "FX Artist - Mid and Senior - Multiple Positions",
-   "studio": "Rodeo FX",
-   "industry": "Film & TV",
-   "location": "Montreal and Quebec City, QC, Canada",
-   "region": "North America",
-   "mode": "Not stated",
-   "type": "Contract",
-   "disc": "VFX",
-   "level": "Senior",
-   "salary": null,
-   "posted": "2026-10-22T18:14:01.229Z",
-   "url": "https://jobs.smartrecruiters.com/rodeofx/744000157204799",
-   "source": "smartrecruiters",
-   "via": null,
-   "recruiter": false,
-   "desc": "The FX Artist designs and creates complex visual simulations such as fire, smoke, fluids, destructions, and abstract effects, while respecting Rodeo FX’s artistic and technical standards. Integrated at the heart of the 3D pipeline, they collaborate closely with the FX and CG supervision teams, as well as with other departments, to deliver photorealistic, dynamic, and technically solid shots. Their creativity, precision, and mastery of procedural tools allow them to effectively translate the project's visual intentions.\nMain responsibilities:\nMastery of his craft\n• Produce complex simulations (smoke, fire, explosions, liquids, destruction, magical or abstract effects) while respecting artistic and technical guidelines.\n• Use Houdini effectively (Pyro, Flip, RBD, Vellum, SOPs) to generate optimized and adaptable effects.\n• Maintain a high level of autonomy in the management of assigned FX "
   },
   {
    "id": "144",
@@ -5149,28 +5149,28 @@
    "name": "Riot Games",
    "kind": "studio",
    "ok": true,
-   "total": 198,
+   "total": 199,
    "art": 11
   },
   {
    "name": "Epic Games",
    "kind": "studio",
    "ok": true,
-   "total": 136,
+   "total": 137,
    "art": 10
   },
   {
    "name": "2K",
    "kind": "studio",
    "ok": true,
-   "total": 79,
+   "total": 84,
    "art": 12
   },
   {
    "name": "Rockstar Games",
    "kind": "studio",
    "ok": true,
-   "total": 16,
+   "total": 15,
    "art": 0
   },
   {
@@ -5247,7 +5247,7 @@
    "name": "Roblox",
    "kind": "studio",
    "ok": true,
-   "total": 255,
+   "total": 254,
    "art": 2
   },
   {
@@ -5268,7 +5268,7 @@
    "name": "Krafton",
    "kind": "studio",
    "ok": true,
-   "total": 66,
+   "total": 68,
    "art": 2
   },
   {
@@ -5289,28 +5289,28 @@
    "name": "Kabam",
    "kind": "studio",
    "ok": true,
-   "total": 32,
+   "total": 34,
    "art": 2
   },
   {
    "name": "Supercell",
    "kind": "studio",
    "ok": true,
-   "total": 26,
+   "total": 27,
    "art": 3
   },
   {
    "name": "thatgamecompany",
    "kind": "studio",
    "ok": true,
-   "total": 40,
+   "total": 39,
    "art": 1
   },
   {
    "name": "Ubisoft",
    "kind": "studio",
    "ok": true,
-   "total": 230,
+   "total": 227,
    "art": 44
   },
   {
@@ -5331,7 +5331,7 @@
    "name": "Gameloft",
    "kind": "studio",
    "ok": true,
-   "total": 46,
+   "total": 45,
    "art": 11
   },
   {
@@ -5359,7 +5359,7 @@
    "name": "Rodeo FX",
    "kind": "studio",
    "ok": true,
-   "total": 51,
+   "total": 48,
    "art": 14
   },
   {
@@ -5373,15 +5373,15 @@
    "name": "Rebellion",
    "kind": "studio",
    "ok": true,
-   "total": 40,
+   "total": 41,
    "art": 4
   },
   {
    "name": "JobsPipe",
    "kind": "board",
    "ok": true,
-   "total": 7,
-   "art": 2
+   "total": 6,
+   "art": 0
   },
   {
    "name": "Adzuna",
